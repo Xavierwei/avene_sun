@@ -71,7 +71,7 @@
         		}
 
         		var time = 1000;
-        		var vy = -1;
+        		var vy = -1.2;
         		var a = ( ( tar.top - curr.top ) - vy * time ) * 2 / time / time ;
 
         		var startTime = new Date();
@@ -92,6 +92,11 @@
         				top: curr.top + vy * d + 1 / 2 * a * d * d 
         			}
 
+        			// fix overflow
+        			if( d / time > 0.3 ){
+        				$wrap.css('overflow' , 'visible');
+        			}
+
         			$ball.css( status );
         			var r = "rotate(" + parseInt( curr.rotate + ( tar.rotate - curr.rotate ) * p ) + 'deg)';
         			$ball[0].style['-webkit-transform'] = r;
@@ -107,16 +112,16 @@
         var $wrap = $('.game-wrap');
         $wrap.on( 'click'  , '.game-btn' , function(){
         		$wrap.find('.game-g1')
-        			.animate({left: 700} , 500)
+        			.animate({left: 700} , 500  , function(){$(this).hide()})
 
         			.end()
         			.find('.game-btn')
         			.delay(300)
-        			.animate({top: -90} , 500)
+        			.animate({top: -90} , 500 , function(){$(this).hide()})
 
         			.end()
         			.find('.game-w')
-        			.animate({bottom:-68} , 500)
+        			.animate({height:155} , 500)
 
         			.end()
         			.find('.game-g2')
