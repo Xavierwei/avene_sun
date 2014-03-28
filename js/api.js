@@ -22,7 +22,7 @@ define(function( require , exports , model ){
     //      needLogin: {boolean} 是否需要登录
     // 配置
     var _api = {
-
+        newsletter: {path: './newsletter.php', method:'post'}
     };
 
     // 内部API

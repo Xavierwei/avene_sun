@@ -72,6 +72,7 @@
         <div class="ft-item ft-item4">
             <input class="ft-ipt" type="text" id="newsletter-email" />
             <a href="#" class="ft-submit" data-a="newsletter_submit"></a>
+            <div class="error">请填写正确的邮箱</div>
         </div>
     </div>
     <!--  -->
@@ -89,6 +90,14 @@
                 <param name="allowFullScreen" value="true"/>
                 <embed name="player" src="video/player.swf" allowFullScreen="true" flashVars="source=1.mp4&autoplay=true&skinMode=show&onPlay=play()&onPlayComplete=playComplete()&fengmian=video/1.jpg" quality="high" pluginspage="http://www.adobe.com/shockwave/download/download.cgi?P1_Prod_Version=ShockwaveFlash" type="application/x-shockwave-flash" width="800" height="450" allowScriptAccess="always"></embed>
             </object>
+        </div>
+    </script>
+
+    <script type="text/tpl" id="newsletter-pop-template">
+        <div class="overlay" data-a="close_pop"></div>
+        <div class="popup newsletter-popup">
+            <div class="popup-close" data-a="close_pop"></div>
+            <div class="newsletter-box newsletter-{{status}}"></div>
         </div>
     </script>
 
