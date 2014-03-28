@@ -2,78 +2,37 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5df1b99b-6417-4291-85ff-70d2ec065f1e" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/video-js/video-js.swf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/video-js/font/vjs.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/video-js/font/vjs.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/video-js/font/vjs.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/DD_belatedPNG.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/api-m.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/api.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/avene_sun.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/config-m.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/config.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/raphael/eve.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/plugin/flash_detect_min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/handlebars/handlebars-v1.1.2.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/ie8.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/util/imgHelper.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/jquery/jquery-1.102.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/jquery/jquery-1.8.3.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/plugin/jquery-ui-1.10.3.custom.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/plugin/jquery.easing.1.3.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/plugin/jquery.fileupload.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/plugin/jquery.form.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/plugin/jquery.hammer.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/plugin/jquery.isotope.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/plugin/jquery.jscrollpane.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/plugin/jquery.mousewheel.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/plugin/jquery.queryloader22.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/plugin/jquery.transit.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/plugin/jquery.ui.widget.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/plugin/jquery.validate.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/lp.base-m.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/lp.base.bak.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/lp.base.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/lp.core.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/lp.login.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/plugin/modernizr-2.5.3.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/sea/plugin-combo.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/sea/plugin-debug.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/sea/plugin-flush.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/sea/plugin-nocache.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/sea/plugin-shim.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/sea/plugin-style.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/sea/plugin-text.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/sea/plugin-warning.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/raphael/raphaeljs.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/scopes/scope_settings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/plugin/scrollfix.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/sea/sea-debug.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/sea/sea.js.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/sea/sea.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/plugin/skrollr.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/plugin/swfupload.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/plugin/swfupload.queue.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/plugin/swfupload.speed.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/video-js/video-js.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/video-js/video-js.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/video-js/video.dev.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/video-js/video.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/video-js/font/vjs.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/ie8.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/page1.html" afterPath="$PROJECT_DIR$/experts.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/page2.html" afterPath="$PROJECT_DIR$/reflexe.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/page3.html" afterPath="$PROJECT_DIR$/family.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/page4.html" afterPath="$PROJECT_DIR$/kol.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/page5.html" afterPath="$PROJECT_DIR$/ask.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/page3_titfont1.png" afterPath="$PROJECT_DIR$/img/page3_titfont1.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/page3other2_txt3.png" afterPath="$PROJECT_DIR$/img/page3other2_txt3.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/page3video.jpg" afterPath="$PROJECT_DIR$/img/page3video.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/page4test2_name.png" afterPath="$PROJECT_DIR$/img/page4test2_name.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/page4test2_tit.png" afterPath="$PROJECT_DIR$/img/page4test2_tit.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/page4test3_name.png" afterPath="$PROJECT_DIR$/img/page4test3_name.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/page4test3_tit.png" afterPath="$PROJECT_DIR$/img/page4test3_tit.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/lp.base.js" afterPath="$PROJECT_DIR$/js/lp.base.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/style.css" afterPath="$PROJECT_DIR$/css/style.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="avene_sun.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="5df1b99b-6417-4291-85ff-70d2ec065f1e" time="1395938127154" ignored="false" />
-    <file path="/index.html" changelist="5df1b99b-6417-4291-85ff-70d2ec065f1e" time="1395939188293" ignored="false" />
-    <file path="/style.css" changelist="5df1b99b-6417-4291-85ff-70d2ec065f1e" time="1395939084271" ignored="false" />
+    <file path="/Dummy.txt" changelist="5df1b99b-6417-4291-85ff-70d2ec065f1e" time="1395973607926" ignored="false" />
+    <file path="/index.html" changelist="5df1b99b-6417-4291-85ff-70d2ec065f1e" time="1395994449110" ignored="false" />
+    <file path="/style.css" changelist="5df1b99b-6417-4291-85ff-70d2ec065f1e" time="1395994990347" ignored="false" />
     <file path="/page1.html" changelist="5df1b99b-6417-4291-85ff-70d2ec065f1e" time="1395942867134" ignored="false" />
-    <file path="/page2.html" changelist="5df1b99b-6417-4291-85ff-70d2ec065f1e" time="1395943648168" ignored="false" />
-    <file path="/page3.html" changelist="5df1b99b-6417-4291-85ff-70d2ec065f1e" time="1395943778053" ignored="false" />
-    <file path="/page4.html" changelist="5df1b99b-6417-4291-85ff-70d2ec065f1e" time="1395944861508" ignored="false" />
+    <file path="/page2.html" changelist="5df1b99b-6417-4291-85ff-70d2ec065f1e" time="1395992922479" ignored="false" />
+    <file path="/page3.html" changelist="5df1b99b-6417-4291-85ff-70d2ec065f1e" time="1395993064573" ignored="false" />
+    <file path="/page4.html" changelist="5df1b99b-6417-4291-85ff-70d2ec065f1e" time="1395988715840" ignored="false" />
+    <file path="/lp.base.js" changelist="5df1b99b-6417-4291-85ff-70d2ec065f1e" time="1395991878419" ignored="false" />
+    <file path="/jquery.queryloader22.js" changelist="5df1b99b-6417-4291-85ff-70d2ec065f1e" time="1395992658640" ignored="false" />
+    <file path="/ie8.css" changelist="5df1b99b-6417-4291-85ff-70d2ec065f1e" time="1395994489557" ignored="false" />
+    <file path="/reflexe.html" changelist="5df1b99b-6417-4291-85ff-70d2ec065f1e" time="1395994774920" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -96,63 +55,32 @@
       <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="48" column="13" selection-start="2311" selection-end="2419" vertical-scroll-proportion="-10.714286">
+            <state line="23" column="25" selection-start="1031" selection-end="1567" vertical-scroll-proportion="-15.607142">
               <folding>
-                <marker date="1395942161000" expanded="true" signature="3487:3588" placeholder="..." />
+                <marker date="1395995037000" expanded="true" signature="5493:5594" placeholder="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="page1.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/page1.html">
+      <file leaf-file-name="experts.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/experts.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="51" column="40" selection-start="3092" selection-end="3136" vertical-scroll-proportion="-15.464286">
+            <state line="25" column="73" selection-start="1034" selection-end="1034" vertical-scroll-proportion="-16.964285">
               <folding>
-                <marker date="1395943008000" expanded="true" signature="4632:4733" placeholder="..." />
+                <marker date="1395995078000" expanded="true" signature="5226:5327" placeholder="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="page2.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/page2.html">
+      <file leaf-file-name="reflexe.html" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/reflexe.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="90" column="13" selection-start="4651" selection-end="4756" vertical-scroll-proportion="-11.392858">
+            <state line="34" column="13" selection-start="1462" selection-end="1462" vertical-scroll-proportion="0.60600376">
               <folding>
-                <marker date="1395943647000" expanded="true" signature="5825:5926" placeholder="..." />
+                <marker date="1395994776000" expanded="true" signature="7887:7988" placeholder="..." />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="page3.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/page3.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="67" column="13" selection-start="3349" selection-end="3454" vertical-scroll-proportion="-9.571428">
-              <folding>
-                <marker date="1395943823000" expanded="true" signature="4523:4624" placeholder="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="page4.html" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/page4.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="72" column="46" selection-start="3725" selection-end="3725" vertical-scroll-proportion="0.8276182">
-              <folding>
-                <marker date="1395944882000" expanded="true" signature="5155:5256" placeholder="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="style.css" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/css/style.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="207" column="38" selection-start="19185" selection-end="19185" vertical-scroll-proportion="0.0">
-              <folding />
             </state>
           </provider>
         </entry>
@@ -160,9 +88,67 @@
       <file leaf-file-name="lp.base.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/lp.base.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="201" column="36" selection-start="6660" selection-end="6660" vertical-scroll-proportion="0.0">
+            <state line="65" column="21" selection-start="2003" selection-end="2012" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="jquery.queryloader22.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/plugin/jquery.queryloader22.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="76" column="30" selection-start="2128" selection-end="2128" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="style.css" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/css/style.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="54" column="28" selection-start="3395" selection-end="3395" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ie8.css" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/css/ie8.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="26" selection-start="26" selection-end="26" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="family.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/family.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="29" column="72" selection-start="1270" selection-end="1270" vertical-scroll-proportion="-12.892858">
               <folding>
-                <element signature="n#!!doc" expanded="true" />
+                <marker date="1395995082000" expanded="true" signature="6376:6477" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="kol.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/kol.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="28" column="69" selection-start="1192" selection-end="1192" vertical-scroll-proportion="-19.0">
+              <folding>
+                <marker date="1395995091000" expanded="true" signature="5924:6025" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ask.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ask.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="30" column="63" selection-start="1224" selection-end="1224" vertical-scroll-proportion="-20.357143">
+              <folding>
+                <marker date="1395994515000" expanded="true" signature="5781:5882" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -187,17 +173,24 @@
     <option name="changedFiles">
       <list>
         <option value="$PROJECT_DIR$/js/lp.base.js" />
-        <option value="$PROJECT_DIR$/js/plugin/jquery.queryloader22.js" />
-        <option value="$PROJECT_DIR$/index.html" />
-        <option value="$PROJECT_DIR$/experts.html" />
         <option value="$PROJECT_DIR$/page1.html" />
+        <option value="$PROJECT_DIR$/page4.html" />
+        <option value="$PROJECT_DIR$/page5.html" />
         <option value="$PROJECT_DIR$/page2.html" />
         <option value="$PROJECT_DIR$/page3.html" />
+        <option value="$PROJECT_DIR$/js/plugin/jquery.queryloader22.js" />
+        <option value="$PROJECT_DIR$/css/ie8.css" />
+        <option value="$PROJECT_DIR$/ask.html" />
         <option value="$PROJECT_DIR$/css/style.css" />
-        <option value="$PROJECT_DIR$/page4.html" />
+        <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/reflexe.html" />
+        <option value="$PROJECT_DIR$/experts.html" />
+        <option value="$PROJECT_DIR$/family.html" />
+        <option value="$PROJECT_DIR$/kol.html" />
       </list>
     </option>
   </component>
+  <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
     <option name="x" value="80" />
     <option name="y" value="77" />
@@ -230,6 +223,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -296,7 +290,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -304,13 +297,15 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/css" />
+      <recent name="$PROJECT_DIR$/js/plugin" />
       <recent name="$PROJECT_DIR$/js" />
     </key>
   </component>
   <component name="RunManager">
     <configuration default="true" type="JavascriptDebugSession" factoryName="Local" singleton="true">
       <JSDebuggerConfigurationSettings>
-        <option name="engineId" />
+        <option name="engineId" value="embedded" />
         <option name="fileUrl" />
       </JSDebuggerConfigurationSettings>
       <method />
@@ -347,23 +342,23 @@
     <frame x="80" y="77" width="2203" height="1255" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2498841" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25220212" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -427,93 +422,130 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/js/api-m.js">
+    <entry file="file://$PROJECT_DIR$/../gerlain0228/video.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="27" selection-start="606" selection-end="606" vertical-scroll-proportion="0.23985572">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/plugin/jquery.queryloader22.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="66" column="9" selection-start="1976" selection-end="1976" vertical-scroll-proportion="0.051490515">
+        <state line="125" column="29" selection-start="10845" selection-end="10906" vertical-scroll-proportion="-20.428572">
           <folding>
-            <element signature="n#!!doc" expanded="true" />
+            <marker date="1395036383000" expanded="true" signature="-1:-1" placeholder="..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../gl0228/index.html">
+    <entry file="file://$PROJECT_DIR$/../../../XAMPP/xamppfiles/htdocs/avene_redness/0110/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="101" column="48" selection-start="9404" selection-end="9404" vertical-scroll-proportion="1.2317073">
+        <state line="90" column="12" selection-start="5386" selection-end="5386" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../gerlain0228/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="73" column="10" selection-start="4892" selection-end="4892" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/plugin/jquery.hammer-full.min.map">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="80" column="5" selection-start="1812" selection-end="1812" vertical-scroll-proportion="0.6178862">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../gerlain0228/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="29" selection-start="811" selection-end="811" vertical-scroll-proportion="23.071428">
           <folding>
-            <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#a#0;n#div#0;n#div#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#2;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#3;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <marker date="1394997487000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1395036383000" expanded="true" signature="-1:-1" placeholder="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/lp.base.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="201" column="36" selection-start="6660" selection-end="6660" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
+        <state line="65" column="21" selection-start="2003" selection-end="2012" vertical-scroll-proportion="0.0">
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
+    <entry file="file://$PROJECT_DIR$/js/plugin/jquery.queryloader22.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="48" column="13" selection-start="2311" selection-end="2419" vertical-scroll-proportion="-10.714286">
-          <folding>
-            <marker date="1395942161000" expanded="true" signature="3487:3588" placeholder="..." />
-          </folding>
+        <state line="76" column="30" selection-start="2128" selection-end="2128" vertical-scroll-proportion="0.0">
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/page1.html">
+    <entry file="file://$PROJECT_DIR$/css/ie8.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="51" column="40" selection-start="3092" selection-end="3136" vertical-scroll-proportion="-15.464286">
-          <folding>
-            <marker date="1395943008000" expanded="true" signature="4632:4733" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/page2.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="90" column="13" selection-start="4651" selection-end="4756" vertical-scroll-proportion="-11.392858">
-          <folding>
-            <marker date="1395943647000" expanded="true" signature="5825:5926" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/page3.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="67" column="13" selection-start="3349" selection-end="3454" vertical-scroll-proportion="-9.571428">
-          <folding>
-            <marker date="1395943823000" expanded="true" signature="4523:4624" placeholder="..." />
-          </folding>
+        <state line="0" column="26" selection-start="26" selection-end="26" vertical-scroll-proportion="0.0">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="207" column="38" selection-start="19185" selection-end="19185" vertical-scroll-proportion="0.0">
+        <state line="54" column="28" selection-start="3395" selection-end="3395" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/page4.html">
+    <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="72" column="46" selection-start="3725" selection-end="3725" vertical-scroll-proportion="0.8276182">
+        <state line="23" column="25" selection-start="1031" selection-end="1567" vertical-scroll-proportion="-15.607142">
           <folding>
-            <marker date="1395944882000" expanded="true" signature="5155:5256" placeholder="..." />
+            <marker date="1395995037000" expanded="true" signature="5493:5594" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ask.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="30" column="63" selection-start="1224" selection-end="1224" vertical-scroll-proportion="-20.357143">
+          <folding>
+            <marker date="1395994515000" expanded="true" signature="5781:5882" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/experts.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="25" column="73" selection-start="1034" selection-end="1034" vertical-scroll-proportion="-16.964285">
+          <folding>
+            <marker date="1395995078000" expanded="true" signature="5226:5327" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/family.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="72" selection-start="1270" selection-end="1270" vertical-scroll-proportion="-12.892858">
+          <folding>
+            <marker date="1395995082000" expanded="true" signature="6376:6477" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kol.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="28" column="69" selection-start="1192" selection-end="1192" vertical-scroll-proportion="-19.0">
+          <folding>
+            <marker date="1395995091000" expanded="true" signature="5924:6025" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/reflexe.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="34" column="13" selection-start="1462" selection-end="1462" vertical-scroll-proportion="0.60600376">
+          <folding>
+            <marker date="1395994776000" expanded="true" signature="7887:7988" placeholder="..." />
           </folding>
         </state>
       </provider>

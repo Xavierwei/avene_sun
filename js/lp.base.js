@@ -29,166 +29,36 @@ LP.use(['jquery', 'api', 'easing', 'skrollr', 'flash-detect', 'hammer', 'transit
         }
     });
 
-	var sideDirection;
-    if($('html').hasClass('touch')) {
-        $('body').hammer()
-            .on("release dragleft dragright swipeleft swiperight", function(ev) {
-                switch(ev.type) {
-                    case 'swipeleft':
-                        break;
-                    case 'dragleft':
-                        sideDirection = 'right';
-                        $('body').bind('touchmove', function(e){e.preventDefault()});
-                        break;
-                    case 'swiperight':
-                        break;
-                    case 'dragright':
-                        sideDirection = 'left';
-                        $('body').bind('touchmove', function(e){e.preventDefault()});
-                        break;
-                    case 'release':
-                        $('body').unbind('touchmove');
-                        if(sideDirection && !$('.inner').is(':visible') || sideDirection == 'right' && !$('.side').hasClass('closed')) {
-                            if(Math.abs(ev.gesture.deltaX) < 160 && sideDirection == 'left') {
-                                return;
-                            }
-                            LP.triggerAction('toggle_side_bar', sideDirection);
-                            sideDirection = '';
-                        }
-                        break;
-                    default:
-                        sideDirection = '';
-                }
-            }
-        );
-    }
-
-
-    $('body').delegate('video','click',function(){
-        $(this)[0].pause();
-    });
-
-
-
-
-  	$('.mobile_nav a').on('click', function(e){
-		e.preventDefault();
-        if($(this).hasClass('mshare')) return;
-		LP.triggerAction('toggle_side_bar', 'left');
-		var _this = $(this);
-		setTimeout(function(){
-			var href = _this.attr('href');
-			window.location = href;
-		}, 700);
-
-	});
-
-
-    if($('body').hasClass('video-page')) {
-        if($('html').hasClass('video') && !isFirefox) {
-            LP.compile( 'html5-player-template' , {} , function( html ){
-                $('.page1video').html(html);
-                if($(window).width() <= 640) {
-                    $('.page1video video').attr('poster', './imgMobile/page1video.jpg');
-					if(isIphone) {
-						$('.page1video video').width(640).height(360);
-					}
-                }
-                else {
-                    LP.use('video-js' , function(){
-                        videojs( "inner-video" , {}, function(){
-                            if(getQueryString('video')) {
-                                $('video').attr('autoplay','autoplay');
-                            }
-                            $('.vjs-big-play-button').on('click',function(){
-                                $('video').attr('poster','');
-                            });
-
-                            $('video').on('ended', function(){
-                                $('.vjs-poster').show();
-                                $(window).trigger('resize');
-                            });
-                        });
-                    });
-                }
-            });
-        }
-        else {
-            if(getQueryString('video')) {
-                LP.compile( 'flash-player-auto-template' , {} , function( html ){
-                    $('.page1video').html(html);
-                    var height = $(window).width()*0.9 / (1280/720);
-                    $('.page1video').height(height);
-                });
-            }
-            else {
-                LP.compile( 'flash-player-template' , {} , function( html ){
-                    $('.page1video').html(html);
-                    var height = $(window).width()*0.9 / (1280/720);
-                    $('.page1video').height(height);
-                });
-            }
-
-        }
-    }
-
-
-    $(window).resize(function(){
-        var height = $(window).width()*0.9 / (1280/720);
-        $('.page1video, .vjs-poster').height(height);
-    });
-
-
-	LP.action('toggle_side_bar', function(type){
-		var $side = $('.mobile_options');
-		var $wrap = $('.wrap');
-		if($side.hasClass('moving')) return;
-		$side.addClass('moving');
-		setTimeout(function(){
-			$side.removeClass('moving');
-		}, 800);
-		if(typeof type == 'string') {
-			if(type == 'right') {
-				if(!$side.hasClass('closed')) return;
-				$side.css({x:windWidth+3}).show().removeClass('closed').transit({x:0}, 500);
-				$wrap.transit({x:-windWidth}, 500);
-			}
-			else {
-				$side.addClass('closed').transit({x:windWidth+3}, 500);
-				$wrap.transit({x:0}, 500);
-			}
-		}
-		else {
-			if($side.hasClass('closed')) {
-				$side.css({x:windWidth+3}).show().removeClass('closed').transit({x:0}, 500);
-				$wrap.transit({x:-windWidth}, 500);
-			}
-			else {
-				$side.addClass('closed').transit({x:windWidth+3}, 500);
-				$wrap.transit({x:0}, 500);
-			}
-		}
-	});
-
-	LP.action('toggle_share', function(){
-		$('.mobile_share').fadeIn();
-	});
-
-    LP.action('open_more_info', function(){
-        $('.page2share').fadeIn();
-        $('.pop-rule').css({top:'-50%'}).fadeIn().dequeue().animate({top:'50%'}, 500, 'easeOutQuart');
-    });
-
-    LP.action('share_weixin', function(){
-        $('.page2share').fadeIn();
-        $('.pop-weixin').css({top:'-50%'}).fadeIn().dequeue().animate({top:'50%'}, 500, 'easeOutQuart');
-    });
 
     LP.action('close_popup', function(){
         $('.page2share').fadeOut();
         $('.page2pop').fadeOut();
     });
 
+    LP.action('open_home_video', function(){
+        LP.compile( 'flash-player-template' , {} , function( html ){
+            $('body').append(html);
+            $('.overlay').fadeIn();
+            $('.popup').css({top:'-50%'}).fadeIn().dequeue().animate({top:'50%'}, 800, 'easeOutQuart');
+        });
+    });
+
+    LP.action('close_pop', function(){
+        $('.overlay').fadeOut();
+        $('.popup').fadeOut(
+            function(){
+                $('.overlay,.popup').remove();
+            }
+        );
+    });
+
+    LP.action('expand_video', function(){
+        $('.page3-video').animate({height:535}, 800, 'easeOutQuart');
+        LP.compile( 'flash-player-template' , {} , function( html ){
+            $('.page3-video').append(html);
+            $('.page3-video .video-player').delay(800).fadeIn(500);
+        });
+    });
 
 
     var init = function(){
@@ -196,14 +66,11 @@ LP.use(['jquery', 'api', 'easing', 'skrollr', 'flash-detect', 'hammer', 'transit
             onLoading : function( percentage ){
                 var per = parseInt(percentage);
                 $('.loading-percentage').html(per+'%');
-                $('.loading-line').css({'width':per+'%'});
+                $('.loading-bar').css({'width':per+'%'});
             },
             onComplete : function(){
-                $('.hide-bar').hide();
-                $('.page3-background-cover').delay(400).fadeOut();
-                $('.page-wrap').fadeIn(600);
-                $('.nav').fadeIn(600);
-                $('.share').fadeIn(600);
+                $('.loading-wrap').fadeOut();
+
                 /* for animation */
                 var isUglyIe = $.browser.msie && $.browser.version <= 8;
                 if(isUglyIe && $('#scheme').length > 0)
@@ -257,7 +124,8 @@ LP.use(['jquery', 'api', 'easing', 'skrollr', 'flash-detect', 'hammer', 'transit
                 setTimeout(function(){
                     var s = skrollr.init({
                         smoothScrollingDuration:200,
-                        smoothScrolling:true
+                        smoothScrolling:true,
+                        forceHeight: false
                     });
 
                 },timeoffset);
@@ -286,14 +154,11 @@ LP.use(['jquery', 'api', 'easing', 'skrollr', 'flash-detect', 'hammer', 'transit
     });
 
 
-    function getQueryString(name) {
-        var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
-        var r = window.location.search.substr(1).match(reg);
-        if (r != null) return unescape(r[2]); return null;
-    }
-
 
 
 });
 
-
+function playComplete(){
+    $('.video-player').fadeOut();
+    $('.page3-video').animate({height:139});
+}

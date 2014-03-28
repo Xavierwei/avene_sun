@@ -1,5 +1,5 @@
-<!DOCTYPE html>
-<html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <title>雅漾</title>
     <meta name="keywords" content="雅漾舒护活泉水,雅漾活泉水喷雾,敏感皮肤,敏感肌肤护肤品" />
@@ -7,18 +7,28 @@
 
     <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
     <link href="css/style.css" rel="stylesheet" type="text/css" />
+    <!--[if IE 8]>
+    <link href="css/ie8.css" rel="stylesheet" type="text/css" />
+    <![endif]-->
 </head>
 <body>
+    <div class="loading-wrap">
+        <div class="logo"></div>
+        <div class="loading-loader">
+            <div class="loading-bar"></div>
+        </div>
+        <div class="loading-percentage"></div>
+    </div>
     <div class="header" data-style="margin-top:-90px;" data-animate="margin-top:0px;" data-delay="0" data-time="500" data-easing="easeOutQuart">
         <a href="index.html" class="logo"></a>
         <div class="nav">
-            <a class="nav1 on" href="index.html" title="">首页</a>
-            <a class="nav2" href="page1.html" title="">专家建议</a>
-            <a class="nav3" href="experts.html" title="">防晒“小金刚”</a>
-            <a class="nav4" href="page3.html" title="">防晒家族</a>
-            <a class="nav5" href="page4.html" title="">达人分享</a>
-            <a class="nav6" href="page5.html" title="">参与游戏</a>
-            <a class="nav7" href="page6.html" title="">申请试用</a>
+            <a class="nav1" href="index.html" title=""><span class="on">首页</span></a>
+            <a class="nav2" href="experts.html" title=""><span>专家建议</span></a>
+            <a class="nav3" href="reflexe.html" title=""><span>防晒“小金刚”</span></a>
+            <a class="nav5" href="kol.html" title=""><span>达人分享</span></a>
+            <a class="nav4" href="family.html" title=""><span>防晒家族</span></a>
+            <a class="nav6" href="#" title=""><span>参与游戏</span></a>
+            <a class="nav7" href="#" title=""><span>申请试用</span></a>
         </div>
     </div>
     <!--  -->
@@ -37,23 +47,24 @@
             <div class="home-vd" data-style="opacity:0;" data-animate="opacity:1;" data-delay="700" data-time="500">
                 <div class="home-vdshare"></div>
                 <div class="home-vdcontit"></div>
-                <div class="home-vdbox"></div>
+                <div class="home-vdbox btn" data-a="open_home_video"></div>
             </div>
             <div class="home-vb" data-style="opacity:0;" data-animate="opacity:1;" data-delay="900" data-time="500">
                 <div class="home-vbshare"></div>
-                <a href="#" target="_blank" class="home-vbtn1"></a>
-                <a href="#" target="_blank" class="home-vbtn2"></a>
+                <a href="#" target="_blank" class="home-vbtn1 btn"></a>
+                <a href="#" target="_blank" class="home-vbtn2 btn"></a>
             </div>
         </div>
     </div>
+
     <!--  -->
     <div class="footer" data-style="opacity:0;" data-animate="opacity:1;" data-delay="700" data-time="500">
         <div class="ft-item ft-item1">
-            <a href="#" target="_blank" class="ft-gw"></a>
+            <a href="http://www.eau-thermale-avene.cn/" target="_blank" class="ft-gw"></a>
         </div>
         <div class="ft-item ft-item2 cs-clear">
-            <a href="#" target="_blank" class="ft-btn1"></a>
-            <a href="#" target="_blank" class="ft-btn2"></a>
+            <a href="http://e.weibo.com/eauthermaleavene" target="_blank" class="ft-btn1"></a>
+            <a href="http://e.weibo.com/2166726834/app_2960845660" target="_blank" class="ft-btn2"></a>
         </div>
         <div class="ft-item ft-item3">
             <a href="#" target="_blank" class="ft-weixin"></a>
@@ -64,6 +75,22 @@
         </div>
     </div>
     <!--  -->
+
+    <img src="img/space.gif" />
+    <script type="text/tpl" id="flash-player-template">
+        <div class="overlay" data-a="close_pop"></div>
+        <div class="popup video-popup">
+            <div class="popup-close" data-a="close_pop"></div>
+            <object id="player" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=10,0,0,0" width="800" height="450">
+                <param name="allowScriptAccess" value="always"/>
+                <param name="movie" value="video/player.swf"/>
+                <param name="flashVars" value="source=1.mp4&autoplay=true&skinMode=show&onPlay=play()&onPlayComplete=playComplete()&fengmian=video/1.jpg"/>
+                <param name="quality" value="high"/>
+                <param name="allowFullScreen" value="true"/>
+                <embed name="player" src="video/player.swf" allowFullScreen="true" flashVars="source=1.mp4&autoplay=true&skinMode=show&onPlay=play()&onPlayComplete=playComplete()&fengmian=video/1.jpg" quality="high" pluginspage="http://www.adobe.com/shockwave/download/download.cgi?P1_Prod_Version=ShockwaveFlash" type="application/x-shockwave-flash" width="800" height="450" allowScriptAccess="always"></embed>
+            </object>
+        </div>
+    </script>
 
     <script type="text/javascript" src="./js/plugin/modernizr-2.5.3.min.js"></script>
     <script type="text/javascript" src="./js/sea/sea-debug.js" data-config="../config.js"></script>
@@ -79,6 +106,5 @@
 </script>
 <![endif]-->
 <!--  -->
-<script src="js/jquery-1.8.3.min.js"></script>
 </body>
 </html>
