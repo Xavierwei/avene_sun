@@ -60,6 +60,18 @@ LP.use(['jquery', 'api', 'easing', 'skrollr', 'flash-detect', 'hammer', 'transit
         });
     });
 
+    LP.action('newsletter_submit', function(){
+        var email = $('#newsletter-email').val();
+        var exp = /^([a-zA-Z0-9]+[_|\_|\.]?)*[a-zA-Z0-9]+@([a-zA-Z0-9]+[_|\-|\_|\.]?)*[a-zA-Z0-9]+\.(.*?)$/;
+        if (!exp.test(email)) {
+            console.log(1);
+        }
+        else
+        {
+            console.log(2);
+        }
+    });
+
 
     var init = function(){
         $(document.body).queryLoader2({
@@ -152,6 +164,8 @@ LP.use(['jquery', 'api', 'easing', 'skrollr', 'flash-detect', 'hammer', 'transit
             });
         }
     });
+
+
 
 
 

@@ -2,37 +2,30 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5df1b99b-6417-4291-85ff-70d2ec065f1e" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/ie8.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/page1.html" afterPath="$PROJECT_DIR$/experts.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/page2.html" afterPath="$PROJECT_DIR$/reflexe.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/page3.html" afterPath="$PROJECT_DIR$/family.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/page4.html" afterPath="$PROJECT_DIR$/kol.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/page5.html" afterPath="$PROJECT_DIR$/ask.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/page3_titfont1.png" afterPath="$PROJECT_DIR$/img/page3_titfont1.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/page3other2_txt3.png" afterPath="$PROJECT_DIR$/img/page3other2_txt3.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/page3video.jpg" afterPath="$PROJECT_DIR$/img/page3video.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/page4test2_name.png" afterPath="$PROJECT_DIR$/img/page4test2_name.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/page4test2_tit.png" afterPath="$PROJECT_DIR$/img/page4test2_tit.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/page4test3_name.png" afterPath="$PROJECT_DIR$/img/page4test3_name.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/page4test3_tit.png" afterPath="$PROJECT_DIR$/img/page4test3_tit.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/lp.base.js" afterPath="$PROJECT_DIR$/js/lp.base.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/style.css" afterPath="$PROJECT_DIR$/css/style.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="avene_sun.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/Dummy.txt" changelist="5df1b99b-6417-4291-85ff-70d2ec065f1e" time="1395973607926" ignored="false" />
-    <file path="/index.html" changelist="5df1b99b-6417-4291-85ff-70d2ec065f1e" time="1395994449110" ignored="false" />
-    <file path="/style.css" changelist="5df1b99b-6417-4291-85ff-70d2ec065f1e" time="1395994990347" ignored="false" />
+    <file path="/index.html" changelist="5df1b99b-6417-4291-85ff-70d2ec065f1e" time="1396004424438" ignored="false" />
+    <file path="/style.css" changelist="5df1b99b-6417-4291-85ff-70d2ec065f1e" time="1396011659766" ignored="false" />
     <file path="/page1.html" changelist="5df1b99b-6417-4291-85ff-70d2ec065f1e" time="1395942867134" ignored="false" />
     <file path="/page2.html" changelist="5df1b99b-6417-4291-85ff-70d2ec065f1e" time="1395992922479" ignored="false" />
     <file path="/page3.html" changelist="5df1b99b-6417-4291-85ff-70d2ec065f1e" time="1395993064573" ignored="false" />
     <file path="/page4.html" changelist="5df1b99b-6417-4291-85ff-70d2ec065f1e" time="1395988715840" ignored="false" />
-    <file path="/lp.base.js" changelist="5df1b99b-6417-4291-85ff-70d2ec065f1e" time="1395991878419" ignored="false" />
+    <file path="/lp.base.js" changelist="5df1b99b-6417-4291-85ff-70d2ec065f1e" time="1396004312874" ignored="false" />
     <file path="/jquery.queryloader22.js" changelist="5df1b99b-6417-4291-85ff-70d2ec065f1e" time="1395992658640" ignored="false" />
     <file path="/ie8.css" changelist="5df1b99b-6417-4291-85ff-70d2ec065f1e" time="1395994489557" ignored="false" />
     <file path="/reflexe.html" changelist="5df1b99b-6417-4291-85ff-70d2ec065f1e" time="1395994774920" ignored="false" />
+    <file path="$PROJECT_DIR$/../carambar_03/css/style.css" changelist="5df1b99b-6417-4291-85ff-70d2ec065f1e" time="1396012271904" ignored="false" />
+    <file path="$PROJECT_DIR$/../carambar_03/js/lp.index.js" changelist="5df1b99b-6417-4291-85ff-70d2ec065f1e" time="1396011172477" ignored="false" />
+    <file path="$PROJECT_DIR$/../carambar_03/protected/controllers/TwitterController.php" changelist="5df1b99b-6417-4291-85ff-70d2ec065f1e" time="1396003307155" ignored="false" />
+    <file path="/TwitterController.php" changelist="5df1b99b-6417-4291-85ff-70d2ec065f1e" time="1396003305816" ignored="false" />
+    <file path="$PROJECT_DIR$/../carambar_03/protected/views/index/index.php" changelist="5df1b99b-6417-4291-85ff-70d2ec065f1e" time="1396010463264" ignored="false" />
+    <file path="/index.php" changelist="5df1b99b-6417-4291-85ff-70d2ec065f1e" time="1396010497387" ignored="false" />
+    <file path="$PROJECT_DIR$/../carambar_03/protected/views/layouts/index.php" changelist="5df1b99b-6417-4291-85ff-70d2ec065f1e" time="1396010497387" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,9 +48,9 @@
       <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="25" selection-start="1031" selection-end="1567" vertical-scroll-proportion="-15.607142">
+            <state line="73" column="67" selection-start="3703" selection-end="3703" vertical-scroll-proportion="-16.357143">
               <folding>
-                <marker date="1395995037000" expanded="true" signature="5493:5594" placeholder="..." />
+                <marker date="1396004425000" expanded="true" signature="5542:5643" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -74,10 +67,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="reflexe.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="reflexe.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/reflexe.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="34" column="13" selection-start="1462" selection-end="1462" vertical-scroll-proportion="0.60600376">
+            <state line="10" column="53" selection-start="409" selection-end="409" vertical-scroll-proportion="-6.785714">
               <folding>
                 <marker date="1395994776000" expanded="true" signature="7887:7988" placeholder="..." />
               </folding>
@@ -85,10 +78,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="lp.base.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="lp.base.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/lp.base.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="65" column="21" selection-start="2003" selection-end="2012" vertical-scroll-proportion="0.0">
+            <state line="35" column="7" selection-start="1090" selection-end="1090" vertical-scroll-proportion="0.22764228">
               <folding />
             </state>
           </provider>
@@ -172,7 +165,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/js/lp.base.js" />
         <option value="$PROJECT_DIR$/page1.html" />
         <option value="$PROJECT_DIR$/page4.html" />
         <option value="$PROJECT_DIR$/page5.html" />
@@ -182,11 +174,12 @@
         <option value="$PROJECT_DIR$/css/ie8.css" />
         <option value="$PROJECT_DIR$/ask.html" />
         <option value="$PROJECT_DIR$/css/style.css" />
-        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/reflexe.html" />
         <option value="$PROJECT_DIR$/experts.html" />
         <option value="$PROJECT_DIR$/family.html" />
         <option value="$PROJECT_DIR$/kol.html" />
+        <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/js/lp.base.js" />
       </list>
     </option>
   </component>
@@ -468,13 +461,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/lp.base.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="65" column="21" selection-start="2003" selection-end="2012" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/plugin/jquery.queryloader22.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="76" column="30" selection-start="2128" selection-end="2128" vertical-scroll-proportion="0.0">
@@ -493,15 +479,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="54" column="28" selection-start="3395" selection-end="3395" vertical-scroll-proportion="0.0">
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="25" selection-start="1031" selection-end="1567" vertical-scroll-proportion="-15.607142">
-          <folding>
-            <marker date="1395995037000" expanded="true" signature="5493:5594" placeholder="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -543,10 +520,26 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/reflexe.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="13" selection-start="1462" selection-end="1462" vertical-scroll-proportion="0.60600376">
+        <state line="10" column="53" selection-start="409" selection-end="409" vertical-scroll-proportion="-6.785714">
           <folding>
             <marker date="1395994776000" expanded="true" signature="7887:7988" placeholder="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="73" column="67" selection-start="3703" selection-end="3703" vertical-scroll-proportion="-16.357143">
+          <folding>
+            <marker date="1396004425000" expanded="true" signature="5542:5643" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/lp.base.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="35" column="7" selection-start="1090" selection-end="1090" vertical-scroll-proportion="0.22764228">
+          <folding />
         </state>
       </provider>
     </entry>
