@@ -5,6 +5,7 @@
     <meta name="keywords" content="雅漾舒护活泉水,雅漾活泉水喷雾,敏感皮肤,敏感肌肤护肤品" />
     <meta name="description" content="雅漾带您一起探索并解密孕育肌肤之水的双重特性，追溯雅漾活泉水往事。" />
 
+	<meta name="viewport" content="width=640, minimum-scale=0.5, maximum-scale=1, target-densityDpi=290,user-scalable = no" />
     <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
     <link href="css/style.css" rel="stylesheet" type="text/css" />
     <!--[if IE 8]>
@@ -28,8 +29,10 @@
             <a class="nav5" href="kol.html" title=""><span>达人分享</span></a>
             <a class="nav4" href="family.html" title=""><span>防晒家族</span></a>
             <a class="nav6" href="#" title=""><span>参与游戏</span></a>
-            <a class="nav7" href="#" title=""><span>申请试用</span></a>
+	        <a class="nav7" href="#" title=""><span>申领试用</span></a>
+	        <span class="navicon dis_mobile"></span>
         </div>
+	    <a class="navbtn dis_mobile" data-a="toggle_nav"></a>
     </div>
     <!--  -->
     <div class="content home cs-clear" data-style="opacity:0;" data-animate="opacity:1;" data-delay="500" data-time="500">
@@ -79,17 +82,25 @@
 
     <img src="img/space.gif" />
     <script type="text/tpl" id="flash-player-template">
-        <div class="overlay" data-a="close_pop"></div>
+        <div class="overlay btn" data-a="close_pop"></div>
         <div class="popup video-popup">
-            <div class="popup-close" data-a="close_pop"></div>
-            <object id="player" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=10,0,0,0" width="800" height="450">
-                <param name="allowScriptAccess" value="always"/>
-                <param name="movie" value="video/player.swf"/>
-                <param name="flashVars" value="source=1.mp4&autoplay=true&skinMode=show&onPlay=play()&onPlayComplete=playComplete()&fengmian=video/1.jpg"/>
-                <param name="quality" value="high"/>
-                <param name="allowFullScreen" value="true"/>
-                <embed name="player" src="video/player.swf" allowFullScreen="true" flashVars="source=1.mp4&autoplay=true&skinMode=show&onPlay=play()&onPlayComplete=playComplete()&fengmian=video/1.jpg" quality="high" pluginspage="http://www.adobe.com/shockwave/download/download.cgi?P1_Prod_Version=ShockwaveFlash" type="application/x-shockwave-flash" width="800" height="450" allowScriptAccess="always"></embed>
-            </object>
+            <div class="popup-close btn" data-a="close_pop"></div>
+	        <div class="popup-body">
+		        <div class="video-player">
+			        {{#if flash}}
+			        <object id="player" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=10,0,0,0" width="950" height="532">
+				        <param name="allowScriptAccess" value="always"/>
+				        <param name="movie" value="video/player.swf"/>
+				        <param name="flashVars" value="source=1.mp4&autoplay=true&skinMode=show&onPlay=play()&onPlayComplete=playComplete()&fengmian=video/1.jpg"/>
+				        <param name="quality" value="high"/>
+				        <param name="allowFullScreen" value="true"/>
+				        <embed name="player" src="video/player.swf" allowFullScreen="true" flashVars="source=1.mp4&autoplay=true&skinMode=show&onPlay=play()&onPlayComplete=playComplete()&fengmian=video/1.jpg" quality="high" pluginspage="http://www.adobe.com/shockwave/download/download.cgi?P1_Prod_Version=ShockwaveFlash" type="application/x-shockwave-flash" width="950" height="535" allowScriptAccess="always"></embed>
+			        </object>
+			        {{else}}
+			        <video autoplay="autoplay" width="640" height="360" controls><source src="video/1.mp4" type="video/mp4" /></video>
+			        {{/if}}
+		        </div>
+	        </div>
         </div>
     </script>
 

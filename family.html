@@ -5,6 +5,7 @@
     <meta name="keywords" content="雅漾舒护活泉水,雅漾活泉水喷雾,敏感皮肤,敏感肌肤护肤品" />
     <meta name="description" content="雅漾带您一起探索并解密孕育肌肤之水的双重特性，追溯雅漾活泉水往事。" />
 
+	<meta name="viewport" content="width=640, minimum-scale=0.5, maximum-scale=1, target-densityDpi=290,user-scalable = no" />
     <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
     <link href="css/style.css" rel="stylesheet" type="text/css" />
     <!--[if IE 8]>
@@ -22,15 +23,16 @@
 	<div class="header" data-style="margin-top:-90px;" data-animate="margin-top:0px;" data-delay="0" data-time="500" data-easing="easeOutQuart">
         <a href="index.html" class="logo"></a>
         <div class="nav">
-
             <a class="nav1" href="index.html" title=""><span>首页</span></a>
             <a class="nav2" href="experts.html" title=""><span>专家建议</span></a>
             <a class="nav3" href="reflexe.html" title=""><span>防晒“小金刚”</span></a>
             <a class="nav5" href="kol.html" title=""><span>达人分享</span></a>
             <a class="nav4" href="family.html" title=""><span class="on">防晒家族</span></a>
             <a class="nav6" href="#" title=""><span>参与游戏</span></a>
-            <a class="nav7" href="#" title=""><span>申请试用</span></a>
+            <a class="nav7" href="#" title=""><span>申领试用</span></a>
+	        <span class="navicon dis_mobile"></span>
         </div>
+		<a class="navbtn dis_mobile" data-a="toggle_nav"></a>
     </div>
     <!--  -->
 	<div class="content page3 cs-clear" data-style="opacity:0;" data-animate="opacity:1;" data-delay="500" data-time="500">
@@ -51,7 +53,7 @@
             <div class="page3intro-img"></div>
         </div>
         <div class="page3-video" data-style="opacity:0;" data-animate="opacity:1;" data-delay="700" data-time="500">
-            <img class="btn" data-a="expand_video" src="img/page3video.jpg" />
+            <div class="video-img btn" data-a="expand_video"></div>
         </div>
         <div class="page3-otherpro">
             <div class="page3-otherpro1" data-style="opacity:0;" data-animate="opacity:1;" data-delay="800" data-time="500">
@@ -81,21 +83,22 @@
         </div>
     </div>
     <!--  -->
-	<div class="footer" data-style="opacity:0;" data-animate="opacity:1;" data-delay="700" data-time="500">
-        <div class="ft-item ft-item1">
-            <a href="#" target="_blank" class="ft-gw"></a>
-        </div>
-        <div class="ft-item ft-item2 cs-clear">
-            <a href="#" target="_blank" class="ft-btn1 btn"></a>
-            <a href="#" target="_blank" class="ft-btn2 btn"></a>
-        </div>
-        <div class="ft-item ft-item3">
-            <a href="#" target="_blank" class="ft-weixin"></a>
-        </div>
-        <div class="ft-item ft-item4">
-            <input class="ft-ipt" type="text" />
-            <a href="#" class="ft-submit"></a>
-        </div>
+    <div class="footer" data-style="opacity:0;" data-animate="opacity:1;" data-delay="700" data-time="500">
+	    <div class="ft-item ft-item1">
+		    <a href="http://www.eau-thermale-avene.cn/" target="_blank" class="ft-gw"></a>
+	    </div>
+	    <div class="ft-item ft-item2 cs-clear">
+		    <a href="http://e.weibo.com/eauthermaleavene" target="_blank" class="ft-btn1"></a>
+		    <a href="http://e.weibo.com/2166726834/app_2960845660" target="_blank" class="ft-btn2"></a>
+	    </div>
+	    <div class="ft-item ft-item3">
+		    <a href="#" target="_blank" class="ft-weixin"></a>
+	    </div>
+	    <div class="ft-item ft-item4">
+		    <input class="ft-ipt" type="text" id="newsletter-email" />
+		    <a href="#" class="ft-submit" data-a="newsletter_submit"></a>
+		    <div class="error">请填写正确的邮箱</div>
+	    </div>
     </div>
     <!--  -->
     <img src="img/space.gif" />
@@ -103,6 +106,7 @@
     <script type="text/tpl" id="flash-player-template">
         <div class="video-player">
             <div class="popup-close" data-a="close_pop"></div>
+	        {{#if flash}}
             <object id="player" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=10,0,0,0" width="950" height="532">
                 <param name="allowScriptAccess" value="always"/>
                 <param name="movie" value="video/player.swf"/>
@@ -111,6 +115,9 @@
                 <param name="allowFullScreen" value="true"/>
                 <embed name="player" src="video/player.swf" allowFullScreen="true" flashVars="source=1.mp4&autoplay=true&skinMode=show&onPlay=play()&onPlayComplete=playComplete()&fengmian=video/1.jpg" quality="high" pluginspage="http://www.adobe.com/shockwave/download/download.cgi?P1_Prod_Version=ShockwaveFlash" type="application/x-shockwave-flash" width="950" height="535" allowScriptAccess="always"></embed>
             </object>
+	        {{else}}
+	        <video autoplay="autoplay" width="640" height="360" controls><source src="video/1.mp4" type="video/mp4" /></video>
+	        {{/if}}
         </div>
     </script>
 
