@@ -58,14 +58,14 @@ img,a,div,span{
     .game-bg{position: absolute;top:0;left:0;width: 100%;height: 100%;z-index: -1;background: white;opacity: 0.5;}
     .game-btn{position: absolute;width: 200px;height: 50px;background:#ff7311; color:white; left:50%;margin-left: -90px;top:90px; line-height: 50px;font-size: 16px;}
     .game-btn span{vertical-align: middle; border-left:14px solid white;border-top:15px solid #ff7311;border-bottom:15px solid #ff7311;font-size: 0px;line-height: 0;margin-left: 33px;margin-right: 30px;z-index: 1;}
-    .game-w{position: absolute;bottom:0;left:0;z-index: 1;width: 100%;overflow: hidden;font-size: 0;line-height: 0;}
-    .game-ball{position: absolute;left:243px; top: 250px;z-index: 2;}
+    .game-w{position: absolute;bottom:0;left:0;z-index: 950;width: 100%;overflow: hidden;font-size: 0;line-height: 0;}
+    .game-ball{position: absolute;left:243px; top: 250px;z-index: 1000;}
 
     .game-g1,.game-g2,.game-g3,.game-g4,.game-dir,.game-tar1,.game-tar2,.game-tar3{position: absolute;}
     .game-g2{left: -100px;top:150px;}
     .game-g3{top: 163px;left:777px;}
     .game-g4{top: 161px;left: 777px;}
-    .game-dir{top: 190px;left: 225px;z-index: 1; display: none; }
+    .game-dir{top: 190px;left: 225px;z-index: 1000; display: none; }
 
     .game-tar1,.game-tar2,.game-tar3{display: none; top: 45px;width: 108px; height: 108px;background: url(../img/sun.png); font-size: 30px;color:white;text-transform: uppercase;line-height: 108px;text-align: center;}
     .game-tar1{left: 106px;}
