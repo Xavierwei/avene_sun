@@ -147,6 +147,27 @@
         			.fadeIn( 1000 );
         	});
 
+        var isMouseDown = false;
+        var startPos = null;
+
+        $(document)
+            // drag to throw ball
+            .on('mousedown' , '.game-ball' , function( ev ){
+                isMouseDown = true;
+                startPos = { left: ev.pageX , top: ev.pageY };
+            })
+            .on('mousemove' , function(){
+                if( !isMouseDown ) return;
+                //TODO：： 可以显示 一个蓄力的
+            })
+            .on('mouseup' , function(){
+                if( isMouseDown ){
+                    //  计算位置和方向
+                    
+                }
+                isMouseDown = false;
+            });
+
         var throwBall = false;
         $wrap.on( 'click' , '.game-tar1,.game-tar2,.game-tar3' , function(){
         		if( throwBall ) return;
