@@ -43,7 +43,7 @@ body{background:#efdcc2 url('../img/bg.jpg') no-repeat center top;background-siz
 	.ft-item2{background:url('../img/ft_item.png') no-repeat center right;width:160px;padding: 0 0 0 30px}
 		.ft-btn1{background: url('../img/ft_btn1.png') no-repeat center;height: 52px;width: 58px;float:left}
 		.ft-btn2{background: url('../img/ft_btn2.png') no-repeat center;height: 52px;width: 58px;float: left;}
-	.ft-item3{background:url('../img/ft_item.png') no-repeat center right;width:214px;}
+	.ft-item3{display:none;background:url('../img/ft_item.png') no-repeat center right;width:214px;}
 		.ft-weixin{background: url('../img/ft_weixin.png') no-repeat center;margin:0 auto;width: 121px;height: 52px;display: block;}
 	.ft-item4{float:right;width:294px;background: url('../img/ft_item4.png') no-repeat center;position: relative;}
 		.ft-ipt{position: absolute;width: 114px;height: 22px;left:107px;color:#555;padding:0;top:14px;background: none;border:0;}
@@ -194,7 +194,7 @@ body{background:#efdcc2 url('../img/bg.jpg') no-repeat center top;background-siz
 	.page3-tit{width:950px;height:182px;position: relative;margin: 0 0 15px;}
 		.page3tit-share{width:950px;height: 97px;position: absolute;background: #ff7311;top:38px;left:0;}
 		.page3tit-pho{width: 182px;height: 182px;background: url('../img/page3_titpho.png') no-repeat;position: absolute;left:149px;top:0}
-		.page3tit-txt1{width: 208px;height: 36px;background: url('../img/page3_titfont1.png') no-repeat;position: absolute;left:394px;top:53px;}
+		.page3tit-txt1{width: 258px;height: 36px;background: url('../img/page3_titfont1.png') no-repeat;position: absolute;left:394px;top:53px;}
 		.page3tit-txt2{width: 368px;height: 33px;background: url('../img/page3_titfont2.png') no-repeat;position: absolute;left:394px;top:91px}
 	.page3-intro{width:950px;height:385px;position: relative;margin: 0 0 15px;}
 		.page3intro-share{width:950px;height: 385px;position: absolute;background: #fff url('../img/page3_introimg.jpg') no-repeat 674px 10px;opacity: 0.8;filter:alpha(opacity=80);top:0;left:0;}
@@ -356,7 +356,7 @@ body{background:#efdcc2 url('../img/bg.jpg') no-repeat center top;background-siz
     .newsletter-failed {background:#fff url('../img/newsletter_failed.png') no-repeat center;width:300px;height:105px;}
 
 
-
+.coming {background: url(../img/comingsoon.png) no-repeat center;height:400px;}
 
 
 /* Mobile Used
