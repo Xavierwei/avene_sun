@@ -175,7 +175,7 @@ LP.use(['jquery', 'api', 'easing', 'skrollr', 'flash-detect', 'hammer', 'transit
             return;
         }
 
-        api.ajax('newsletter', {name:name, email:email, tel:tel}, function(res){
+        api.ajax('game', {name:name, email:email, tel:tel}, function(res){
             console.log(res);
         });
 
