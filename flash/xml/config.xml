@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config
+	time="4"
+	speed="50"
+	g="1.9"
+	dis="100"
+	ground_y="600"
+	langan_y="300"
+	langan_z="800"
+	target_z="1100"
+>
+	
+	<hit action='hit(${id});'/>
+	<reset callback="resetFlash"/>
+	
+</config>

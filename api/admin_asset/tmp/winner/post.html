@@ -1,0 +1,66 @@
+<form name="form">
+    <div class="winner-form">
+        <div class="form-group">
+            <label>Month</label>
+            <select class="form-control" name="month" ng-model="winner.month" required>
+                <option value="">Select Month</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+            </select>
+            <div class="error" ng-show="form.month.$error.required">Please select month</div>
+        </div>
+
+        <input class="form-control" type="hidden" ng-model="winner.wid">
+
+        <div class="form-group">
+            <label>Weibo Name</label>
+            <input class="form-control" type="text" name="name" ng-model="winner.name" required />
+            <div class="error" ng-show="form.name.$error.required">Please input weibo name</div>
+        </div>
+
+        <div class="form-group">
+            <label>Avatar URL</label><small> (Copy the avatar url from Weibo)</small>
+            <input class="form-control" type="text" name="avatar" ng-model="winner.avatar" required />
+            <div class="error" ng-show="form.avatar.$error.required">Please input avatar url</div>
+        </div>
+
+        <div class="form-group">
+            <label>Weibo URL</label><small> (Copy the weibo url e.g: <span>http://weibo.com/1249729383/Aw31nkCyu</span>, DON'T include the url params after ?)</small>
+            <input class="form-control" type="text" name="url" ng-model="winner.url" required />
+            <div class="error" ng-show="form.url.$error.required">Please input weibo url</div>
+        </div>
+
+
+        <div class="form-group">
+            <label>Photo</label><small> (Size: 363pixel x 176pixel)</small>
+            <input name="photo" type="file" ng-file-select="onFileSelect($files,'photo')" />
+            <img height="80" src="{{winner.photo_preview}}" ng-show="winner.photo_preview" />
+            <div class="error" ng-show="form.photo_preview.$error.required">Please upload photo</div>
+        </div>
+
+        <div class="form-group">
+            <label>Prize</label>
+            <input class="form-control" name="prize" type="text" ng-model="winner.prize" required />
+            <div class="error" ng-show="form.prize.$error.required">Please input prize</div>
+        </div>
+
+        <div class="form-group">
+            <label>Prize Image</label><small> (Size: 125pixel x 120pixel)</small>
+            <input type="file" name="prize_img" ng-file-select="onFileSelect($files,'prize_img')" />
+            <img height="80" src="{{winner.prize_img_preview}}" ng-show="winner.prize_img_preview" />
+            <div class="error" ng-hide="winner.prize_img_preview">Please upload prize image</div>
+        </div>
+        <br />
+        <button ng-disabled="form.$invalid || isUnchanged(winner)" class="btn btn-info" ng-click="submit()">Save The Winner</button>
+        <a class="btn btn-default" ng-href="#/winner/list">Cancel</a>
+    </div>
+</form>

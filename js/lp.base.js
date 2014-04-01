@@ -125,7 +125,6 @@ LP.use(['jquery', 'api', 'easing', 'skrollr', 'flash-detect', 'hammer', 'transit
                 else {
                     var status = 'failed';
                 }
-                console.log(status);
                 LP.compile( 'newsletter-pop-template' , {status:status} , function( html ){
                     $('body').append(html);
                     $('.overlay').fadeIn();
@@ -133,6 +132,71 @@ LP.use(['jquery', 'api', 'easing', 'skrollr', 'flash-detect', 'hammer', 'transit
                 });
             });
         }
+    });
+
+
+    LP.action('game_answer', function(data){
+		$('.game3-radio').removeClass('game3-radioed');
+		$(this).find('.game3-radio').addClass('game3-radioed');
+		api.ajax('answer', {answer:data.answer}, function(res){
+			$('.game-box3').fadeOut();
+			if(res == '1') {
+				$('.game-box4').fadeIn();
+			}
+			else {
+				$('.game-box5').fadeIn();
+			}
+		});
+
+    });
+
+    LP.action('game_again', function(){
+        $('.game-box5').fadeOut();
+        $('.game-box1').fadeIn();
+    });
+
+    LP.action('game_share', function(){
+        $('.game-box4').fadeOut();
+        $('.game-box6').fadeIn();
+    });
+
+    LP.action('game_submit', function(){
+
+		if($(this).hasClass('submitting')) {
+			return;
+		}
+        var name = $('#game-form input[name="name"]').val();
+        var email = $('#game-form input[name="email"]').val();
+        var tel = $('#game-form input[name="tel"]').val();
+        var validate = true;
+        $('.game6-error').fadeOut();
+        if(name == '') {
+            validate = false;
+            $('.game6-error-name').fadeIn();
+        }
+        var exp = /^([a-zA-Z0-9]+[_|\_|\.]?)*[a-zA-Z0-9]+@([a-zA-Z0-9]+[_|\-|\_|\.]?)*[a-zA-Z0-9]+\.(.*?)$/;
+        if(!exp.test(email)) {
+            validate = false;
+            $('.game6-error-email').fadeIn();
+        }
+        if(tel == '') {
+            validate = false;
+            $('.game6-error-tel').fadeIn();
+        }
+
+        if(!validate) {
+            return;
+        }
+
+		$(this).addClass('submitting');
+        api.ajax('game', {name:name, email:email, tel:tel}, function(res){
+			$(this).removeClass('submitting');
+            if(res == '1') {
+				$('.game-box6').fadeOut();
+				$('.game-box7').fadeIn();
+			}
+        });
+
     });
 
 
@@ -230,10 +294,6 @@ LP.use(['jquery', 'api', 'easing', 'skrollr', 'flash-detect', 'hammer', 'transit
     });
 
 
-
-
-
-
 });
 
 function play(){
@@ -245,4 +305,13 @@ function playComplete(){
     $('.video-player').fadeOut();
     $('.page3-video').animate({height:139});
 	$('.page3-video .video-img').fadeIn();
+}
+
+
+function hit(id){
+	$('.game3-radio').removeClass('game3-radioed');
+    $('.game-box1').fadeOut();
+    $('.game-box3').fadeIn();
+	$('.game3').hide();
+	$('.game3-'+(id+1)).show();
 }

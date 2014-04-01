@@ -1,0 +1,89 @@
+/* Reset
+================================================================================================= */
+* {outline: none;}
+body{color:#000;font-size:12px;line-height:1.8em;background: #fff;font-family: arial;}
+body,input,textarea{font-family:"Microsoft YaHei",arial,sans-serif;}
+h1,h2,h3{font-size:100%;font-weight:600}
+body,h1,h2,h3,h4,ul,li,p,img,input,textarea{margin:0;padding:0;border:0;}
+img{margin:0;line-height:normal;}
+em,i{font-style:normal;text-decoration:none}
+ul{list-style:none;}
+/* Commonly Used
+================================================================================================= */
+a{text-decoration:none;color:#666}
+a:hover {color:#888;}
+/*a:hover{color:#ccc;}*/
+.clear{+zoom:1;}
+.clear:before,
+.clear:after{clear:both;content:".";font-size:0;display:block;height:0;overflow:hidden;visibility:hidden;}
+.needlogin {display:none;width:400px;background:#dc0000;color:#fff;padding:5px 20px;}
+.needlogin a {color:#fff;font-weight: bold;font-style:italic;}
+.needlogin-true {display: block;}
+.header {height:57px;background:#666;position: relative;padding-top:1px;}
+    .header .logo {background:url(../img/logo.png) no-repeat;width:121px;height:45px;margin:12px 0 0 40px;}
+    .header .nav {position: absolute;left:200px;bottom:0;font-weight: bold;}
+    .header .nav-tabs {border: none;}
+    .header .nav-tabs > li > a {color:#ccc;}
+    .header .nav-tabs > li.active > a {color:#666;}
+    .header .nav-tabs > li > a:hover {color:#777;}
+    .header .logout {position: absolute;right:15px;top:15px;font-size:14px;color:#eee;}
+    .header .logout a {color:#eee;}
+    .header .logout span {margin:0 10px 0 0;}
+.sub-nav {clear: both;margin:20px 0px 10px 0;float:left;}
+.sub-nav > li {margin:0 20px 0 0;}
+.sub-nav > li > a {padding:4px 8px;}
+.sub-nav li.active a,.sub-nav li.active a:focus {background:#f58774;}
+
+.search {margin:0px 0 0 0px;height:100px;padding:20px 0 0;border-top:1px solid #eee;}
+.search .form-group {float:left;}
+.search .form-control {width:140px;margin:0 10px 0 0;}
+.search .form-gender {width:90px;}
+.search .btn {float:left;margin-left:10px;margin-top:27px;}
+
+.loginpage {width:400px;margin:40px auto 0 auto;}
+.loginlogo {background: url(../img/login_logo.png) no-repeat;width:167px;height:103px;margin:0 auto;}
+.loginpage .btn {display: block;margin:0 auto;}
+
+.page {width:90%;margin:0 auto;color:#666;}
+
+.refresh {font-size:22px;float:right;margin:24px 0 0 0;cursor: pointer;}
+.refresh:hover {opacity:0.6;}
+
+.production h3 {font-size:24px;margin:40px 0 5px 0;}
+.production table {width:100%;}
+.production .btn {margin:30px auto 0 auto;display: block;width:200px;}
+
+table th {background:#eee;padding:5px 0;}
+table tr:hover td {background:#f7f7f7;}
+.btn-success {background:#80b580;}
+.btn-danger {}
+table .btn {text-transform: capitalize;}
+
+.loading {background: url(../img/loading.gif) no-repeat;width:28px;height:28px;margin:20px 0;}
+.list li {float:left;width:191px;height:228px;margin:10px;}
+.list li em {color:#aaa;font-style: italic;}
+.list li .photo {position: relative;}
+.list li .photo img {border: 1px solid #eee;}
+.list li .black-overlay {display:block;opacity:1;position: absolute;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.4);}
+.list li .status-1 .black-overlay {opacity:0;}
+.list li .switch {background: url(../img/switch.gif) no-repeat right 0;width:57px;height:22px;display:block;position: absolute;top:0;right:0;}
+.list li .switch-1 {background-position:left 0;}
+.list li .user {margin:4px 0 0;}
+.list li .user img {vertical-align: middle;}
+.list li .user.gender_f {background: url(../img/gender_f.gif) no-repeat 0 2px;padding:0 0 0 20px;}
+.list li .user.gender_m {background: url(../img/gender_m.gif) no-repeat 0 2px;padding:0 0 0 20px;}
+
+.winner-form {width:600px;}
+.btn-create-winner {margin-bottom: 20px;}
+form .error {font-size:11px;font-style: italic;color:#e2c094;}
+
+.modal {top:30%;}
+.modal-header {border: none;}
+.modal h2 {font-size:26px;text-align: center;padding-top:20px;color:#666;}
+
+.pagination li {cursor: pointer;}
+.pagination > .active > a, .pagination > .active > span, .pagination > .active > a:hover, .pagination > .active > span:hover, .pagination > .active > a:focus, .pagination > .active > span:focus
+{background-color:#888;border-color:#888;}
+
+a,table td,.refresh, .btn,.list li .black-overlay
+{-webkit-transition:   all 0.3s ease;-moz-transition:  all 0.3s ease;-o-transition:  all 0.3s ease;-ms-transition:  all 0.3s ease;transition:  all 0.3s ease;}
