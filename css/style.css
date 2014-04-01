@@ -300,10 +300,11 @@ body{background:#efdcc2 url('../img/bg.jpg') no-repeat center top;background-siz
 			.game-box3{width: 689px;height: 370px;position: absolute;left:0;top:0}
 				.game3-tit{width: 367px;height: 24px;left:27px;top:31px;background: url('../img/game3_tit.png') no-repeat;position: absolute;}
 				.game3-queimg{width: 470px;height: 264px;left:27px;top:76px;background: url('../img/game3_queimg.jpg') no-repeat;position: absolute;}
-				.game3-answer1{width: 40px;height: 18px;left:553px;top:129px;background: url('../img/game3_an1.png') no-repeat;position: absolute;cursor: pointer;}
-				.game3-answer2{width: 53px;height: 18px;left:553px;top:193px;background: url('../img/game3_an2.png') no-repeat;position: absolute;cursor: pointer;}
-				.game3-answer3{width: 105px;height: 46px;left:553px;top:257px;background: url('../img/game3_an3.png') no-repeat;position: absolute;cursor: pointer;}
-				.game3-radio{width: 18px;height: 18px;left:-25px;top:1px;background: url('../img/game3_radio.png') no-repeat 0 -20px;position: absolute}
+                .game3-answer {position: absolute;cursor: pointer;}
+                .game3-answer1_1{width: 125px;height: 18px;left:533px;top:129px;background: url('../img/game3_an1.png') no-repeat 20px 0;}
+				.game3-answer1_2{width: 125px;height: 18px;left:533px;top:193px;background: url('../img/game3_an2.png') no-repeat 20px 0;}
+				.game3-answer1_3{width: 125px;height: 46px;left:533px;top:257px;background: url('../img/game3_an3.png') no-repeat 20px 0;}
+				.game3-radio{width: 18px;height: 18px;left:0px;top:1px;background: url('../img/game3_radio.png') no-repeat 0 -20px;position: absolute}
 				.game3-radioed{background: url('../img/game3_radio.png') no-repeat 0 0;}
 			.game-box4{width: 689px;height: 370px;position: absolute;left:0;top:0}
 				.game4-tit{width: 200px;height: 30px;left:370px;top:116px;background: url('../img/game4_tit.png') no-repeat;position: absolute;}
@@ -318,6 +319,7 @@ body{background:#efdcc2 url('../img/bg.jpg') no-repeat center top;background-siz
 				.game6-fi{height: 60px;padding:0 0 0 56px;}
 				.game6-ipt{float:left}
 				.game6-ipt input{background: #fff;width:380px;height: 28px;padding: 0;border: 0;padding:0 10px}
+                .game6-error {display:none;clear:both;margin:8px 0 0 130px;color:#fff;}
 				.game6-fitit{float: left;width: 128px;height: 28px;}
 				.game6-fitit1{background: url('../img/game6_tit1.gif') no-repeat center 0;}
 				.game6-fitit2{background: url('../img/game6_tit2.gif') no-repeat center 0;}

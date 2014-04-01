@@ -136,6 +136,52 @@ LP.use(['jquery', 'api', 'easing', 'skrollr', 'flash-detect', 'hammer', 'transit
     });
 
 
+    LP.action('game_answer', function(data){
+        $('.game-box3').fadeOut();
+        $('.game-box4').fadeIn();
+    });
+
+    LP.action('game_again', function(){
+        $('.game-box5').fadeOut();
+        $('.game-box1').fadeIn();
+    });
+
+    LP.action('game_share', function(){
+        $('.game-box4').fadeOut();
+        $('.game-box6').fadeIn();
+    });
+
+    LP.action('game_submit', function(){
+        var name = $('#game-form input[name="name"]').val();
+        var email = $('#game-form input[name="email"]').val();
+        var tel = $('#game-form input[name="tel"]').val();
+        var validate = true;
+        $('.game6-error').fadeOut();
+        if(name == '') {
+            validate = false;
+            $('.game6-error-name').fadeIn();
+        }
+        var exp = /^([a-zA-Z0-9]+[_|\_|\.]?)*[a-zA-Z0-9]+@([a-zA-Z0-9]+[_|\-|\_|\.]?)*[a-zA-Z0-9]+\.(.*?)$/;
+        if(!exp.test(email)) {
+            validate = false;
+            $('.game6-error-email').fadeIn();
+        }
+        if(tel == '') {
+            validate = false;
+            $('.game6-error-tel').fadeIn();
+        }
+
+        if(!validate) {
+            return;
+        }
+
+        api.ajax('newsletter', {name:name, email:email, tel:tel}, function(res){
+            console.log(res);
+        });
+
+    });
+
+
     var init = function(){
         $(document.body).queryLoader2({
             onLoading : function( percentage ){
@@ -230,10 +276,6 @@ LP.use(['jquery', 'api', 'easing', 'skrollr', 'flash-detect', 'hammer', 'transit
     });
 
 
-
-
-
-
 });
 
 function play(){
@@ -245,4 +287,10 @@ function playComplete(){
     $('.video-player').fadeOut();
     $('.page3-video').animate({height:139});
 	$('.page3-video .video-img').fadeIn();
+}
+
+
+function hit(id){
+    $('.game-box1').fadeOut();
+    $('.game-box3').fadeIn();
 }

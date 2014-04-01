@@ -1,0 +1,40 @@
+<div ng-show="showSubNav" class="search">
+    <div class="form-group">
+        <label>Gender</label>
+        <select class="form-control form-gender" ng-model="gender">
+            <option value="">All</option>
+            <option value="f">Female</option>
+            <option value="m">Male</option>
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label>Weibo Name</label>
+        <input class="form-control" search-input ng-model="username" type="text" />
+    </div>
+
+    <div class="form-group">
+        <label>Location</label>
+        <input class="form-control" search-input ng-model="location" type="text" />
+    </div>
+    <input ng-click="search(1)" type="button" class="btn btn-default" value="Search" />
+</div>
+
+<div ng-hide="photos" class="loading"></div>
+<ul class="list">
+    <li ng-repeat="photo in photos">
+        <div class="status-{{photo.status}}">
+            <div class="photo">
+                <img src="{{photo.image | thumbnail}}" />
+                <a title="{{photo.content}}" class="black-overlay" href="http://weibo.com/{{photo.link}}" target="_blank"></a>
+                <a href="javascript:void(0)" class="switch switch-{{photo.status}}" ng-click="approve(photo)"></a>
+            </div>
+            <div class="user gender_{{photo.gender}}">
+                <a target="_blank" href="http://weibo.com/{{photo.sns_uid}}">{{photo.screen_name}}</a>
+                <em>from</em> {{photo.location}}
+            </div>
+        </div>
+    </li>
+</ul>
+<div class="clear"></div>
+<pagination on-select-page="pageChanged(page)" total-items="bigTotalItems" items-per-page="itemsPerPage" page="bigCurrentPage" max-size="maxSize" class="pagination-sm" boundary-links="true" rotate="false" num-pages="numPages"></pagination>
