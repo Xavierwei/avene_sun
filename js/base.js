@@ -49,21 +49,8 @@
                 var dis = gameMgr.getDistance( pos1 , pos2 );
             },
             throwBall: function( info , success , failure ){
-                // var top = parseInt( $tar.css('top') );
-                // var left = parseInt( $tar.css('left') );
-                // var center = { top: top + 108 / 2 , left: left + 108 / 2 };
-
                 // // run animate
                 var $ball = $('.game-ball');
-                // var tar = {
-                //     width: 50,
-                //     height: 50,
-                //     zIndex: 1,
-                //     left: center.left - 25,
-                //     top: center.top - 25,
-                //     rotate: 140 + ~~( 240 * Math.random() )
-                // }
-
 
                 var curr = {
                     width: $ball.width(),
@@ -101,17 +88,18 @@
                         left: curr.cx + vx * d - w / 2 ,
                         top: curr.cy + vy * d - w / 2 + 1 / 2 * a * d * d 
                     }
-                    if( vz * d >= zDis - 50 && vz * d <= zDis + 50 ){
+                    if( vz * d >= zDis - 70 && vz * d <= zDis + 70 ){
                         //判断是否相交 
                         var isMeet = false;
                         $.each( centers , function( i , pos ){
                             var dis = gameMgr.getDistance( pos , {left: status.left + status.width / 2 , top: status.top + status.width / 2} );
-                            if( dis < 80 ){
+                            if( dis < 60 ){
                                 isMeet = true;
                                 return false;
                             }
                         });
                         if( isMeet ){
+                            $('.game-wrap').css('overflow' , 'hidden');
                             success && success();
                             return;
                         }
@@ -125,14 +113,13 @@
                         failure && failure();
                         return ;
                     }
-                    console.log( status.zIndex )
-
-                    // // fix overflow
-                    // if( d / time > 0.3 ){
-                    //     $wrap.css('overflow' , 'visible');
-                    // }
 
                     $ball.css( status );
+                    if( status.top < $('.game-wrap').offset().top ){
+                        $('.game-wrap').css('overflow' , 'visible');
+                    } else {
+                        $('.game-wrap').css('overflow' , 'hidden');
+                    }
                     var r = "rotate(" + parseInt( curr.rotate + d / 1000 * 360 ) + 'deg)';
                     $ball[0].style['-webkit-transform'] = r;
                     $ball[0].style['-ms-transform'] = r;
@@ -207,7 +194,16 @@
             getDistance: function( pos1 , pos2 ){
                 return Math.sqrt( Math.pow( pos1.left - pos2.left , 2 ) + Math.pow( pos1.top - pos2.top , 2 ) );
             },
-
+            getBallCenter: function(){
+                var off = $('.game-ball').offset();
+                var w = $('.game-ball').width();
+                return { left: off.left + w / 2 , top: off.top + w / 2 };
+            },
+            getEventCenter: function( ev ){
+                var px = isTouchSupport ? ev.originalEvent.changedTouches[0].pageX : ev.pageX;
+                var py = isTouchSupport ? ev.originalEvent.changedTouches[0].pageY : ev.pageY;
+                return {left: px , top: py};
+            },
             prepareThrow: function( strPos , tarPos ){
                 var dis = gameMgr.getDistance( strPos , tarPos );
                 // 距离与速度的关系
@@ -268,35 +264,42 @@
         	});
 
         var isMouseDown = false;
-        var startPos = null;
         var throwBall = false;
         var minDis  = 100;
+        var isTouchSupport = "createTouch" in document ;
         $wrap
             // drag to throw ball
-            .on('mousedown' , '.game-ball' , function( ev ){
+            .on( isTouchSupport ? 'touchstart' : 'mousedown' , '.game-ball' , function( ev ){
                 if( isGameStart ){
                     isMouseDown = true;
                 }
             })
-            .on('mousemove.ball-drag' , function( ev ){
+            .on( isTouchSupport ? 'touchmove' : 'mousemove.ball-drag' , function( ev ){
                 if( !isMouseDown ) return;
-                //TODO：： 可以显示 一个蓄力的
-            })
-            .on('mouseup' , function( ev ){
-                if( isMouseDown && !throwBall ){
-                    throwBall = true;
+                var dis = gameMgr.getDistance( gameMgr.getBallCenter() , gameMgr.getEventCenter(ev) );
 
+                $('.game-power').html( 'power :' + ~~dis );
+                return false;
+            })
+            .on( isTouchSupport ? 'touchend' : 'mouseup' , function( ev ){
+                if( isMouseDown && !throwBall ){
+                    var pdata = gameMgr.prepareThrow( gameMgr.getBallCenter() , gameMgr.getEventCenter(ev) );
+                    if( pdata.dis < 150 ){ return ;}
+                    throwBall = true;
                     gameMgr.stopFlicker();
                     $('.game-dir').stop( true , true )
                         .fadeOut();
-
-                    var off = $('.game-ball').offset();
-                    var w = $('.game-ball').width();
-                    startPos = { left: off.left + w / 2 , top: off.top + w / 2 };
-                    gameMgr.throwBall( gameMgr.prepareThrow( startPos , {left: ev.pageX , top: ev.pageY} ) , function(){
+                    
+                    gameMgr.throwBall( gameMgr.prepareThrow( gameMgr.getBallCenter() , gameMgr.getEventCenter(ev) ) , function(){
                         throwBall = false;
-                        $('.game-inner').fadeOut();
-                        $('.ques-inner').fadeIn();
+                        alert('got it');
+                        $('.game-ball')
+                            .animate( {
+                                top: 264
+                            } , 500 )
+                            [0].style.cssText = 'top: 370px;';
+                        // $('.game-inner').fadeOut();
+                        // $('.ques-inner').fadeIn();
                     } , function(){
                         throwBall = false;
                         $('.game-dir').fadeIn();
@@ -304,7 +307,7 @@
                 }
             });
         $(document)
-            .on('mouseup' , function( ev ){
+            .on( isTouchSupport ? 'touchend' : 'mouseup' , function( ev ){
                 isMouseDown = false;
             });
         
