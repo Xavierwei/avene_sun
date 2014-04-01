@@ -34,7 +34,7 @@
         <a class="navbtn dis_mobile" data-a="toggle_nav"></a>
     </div>
     <!--  -->
-    <div class="content page5 cs-clear">
+    <div class="content page5 cs-clear" data-style="opacity:0;" data-animate="opacity:1;" data-delay="500" data-time="500">
         <div class="page5-main">
             <div class="page5main-tit"></div>
             <div class="page5main-tit2"></div>
@@ -42,7 +42,7 @@
             <a href="#" target="_blank" class="page5main-btn"></a>
             <div class="page5-game">
                 <div class="game-share"></div>
-                <div class="game-box1" style="display:none">
+                <div class="game-box game-box1">
                     <object id="flash" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=10,0,0,0" width="689" height="369">
                         <param name="allowScriptAccess" value="always"/>
                         <param name="movie" value="flash/ball_game.swf"/>
@@ -52,24 +52,40 @@
                         <embed name="flash" src="flash/ball_game.swf" quality="high" wmode="transparent" flashVars="xml=flash/xml/config.xml" pluginspage="http://www.adobe.com/shockwave/download/download.cgi?P1_Prod_Version=ShockwaveFlash" type="application/x-shockwave-flash" width="689" height="369" allowScriptAccess="always"></embed>
                     </object>
                 </div>
-                <div class="game-box3" style="display:none;">
-                    <div class="game3-tit"></div>
-                    <div class="game3-queimg"></div>
-                    <div class="game3-answer game3-answer1_1" data-a="game_answer" data-d="answer=1_1"><p class="game3-radio game3-radioed"></p></div>
-                    <div class="game3-answer game3-answer1_2" data-a="game_answer" data-d="answer=1_2"><p class="game3-radio"></p></div>
-                    <div class="game3-answer game3-answer1_3" data-a="game_answer" data-d="answer=1_3"><p class="game3-radio"></p></div>
+                <div class="game-box game-box3">
+	                <div class="game3 game3-1">
+		                <div class="game3-tit1"></div>
+		                <div class="game3-queimg1"></div>
+		                <div class="game3-answer game3-answer1_1" data-a="game_answer" data-d="answer=1_1"><p class="game3-radio game3-radioed"></p></div>
+		                <div class="game3-answer game3-answer1_2" data-a="game_answer" data-d="answer=1_2"><p class="game3-radio"></p></div>
+		                <div class="game3-answer game3-answer1_3" data-a="game_answer" data-d="answer=1_3"><p class="game3-radio"></p></div>
+	                </div>
+	                <div class="game3 game3-2">
+		                <div class="game3-tit2"></div>
+		                <div class="game3-queimg2"></div>
+		                <div class="game3-answer game3-answer2_1" data-a="game_answer" data-d="answer=2_1"><p class="game3-radio game3-radioed"></p></div>
+		                <div class="game3-answer game3-answer2_2" data-a="game_answer" data-d="answer=2_2"><p class="game3-radio"></p></div>
+		                <div class="game3-answer game3-answer2_3" data-a="game_answer" data-d="answer=2_3"><p class="game3-radio"></p></div>
+	                </div>
+	                <div class="game3 game3-3">
+		                <div class="game3-tit3"></div>
+		                <div class="game3-queimg3"></div>
+		                <div class="game3-answer game3-answer3_1" data-a="game_answer" data-d="answer=3_1"><p class="game3-radio"></p></div>
+		                <div class="game3-answer game3-answer3_2" data-a="game_answer" data-d="answer=3_2"><p class="game3-radio"></p></div>
+		                <div class="game3-answer game3-answer3_3" data-a="game_answer" data-d="answer=3_3"><p class="game3-radio"></p></div>
+	                </div>
                 </div>
-                <div class="game-box4" style="display:none">
+                <div class="game-box game-box4">
                     <div class="game4-tit"></div>
                     <div class="game4-img"></div>
                     <a class="game4-btn" data-a="game_share" href="http://weibo.com" target="_blank"></a>
                 </div>
-                <div class="game-box5" style="display:none">
+                <div class="game-box game-box5">
                     <div class="game5-tit"></div>
                     <div class="game5-img"></div>
                     <div class="game5-btn btn" data-a="game_again"></div>
                 </div>
-                <div class="game-box6" id="game-form" style="display:block">
+                <div class="game-box game-box6" id="game-form">
                     <div class="game6-tit"><img src="img/game6_tit.gif" /></div>
                     <div class="game6-fi cs-clear">
                         <div class="game6-fitit game6-fitit1"></div>
@@ -89,6 +105,7 @@
                     <div class="game6-btn" data-a="game_submit"></div>
 
                 </div>
+	            <div class="game-box game-box7"></div>
 
             </div>
         </div>
@@ -113,7 +130,7 @@
         </div>
     </div>
     <!--  -->
-    <div class="footer">
+    <div class="footer" data-style="opacity:0;" data-animate="opacity:1;" data-delay="700" data-time="500">
         <div class="ft-item ft-item1">
             <a href="#" target="_blank" class="ft-gw"></a>
         </div>

@@ -125,7 +125,6 @@ LP.use(['jquery', 'api', 'easing', 'skrollr', 'flash-detect', 'hammer', 'transit
                 else {
                     var status = 'failed';
                 }
-                console.log(status);
                 LP.compile( 'newsletter-pop-template' , {status:status} , function( html ){
                     $('body').append(html);
                     $('.overlay').fadeIn();
@@ -137,8 +136,18 @@ LP.use(['jquery', 'api', 'easing', 'skrollr', 'flash-detect', 'hammer', 'transit
 
 
     LP.action('game_answer', function(data){
-        $('.game-box3').fadeOut();
-        $('.game-box4').fadeIn();
+		$('.game3-radio').removeClass('game3-radioed');
+		$(this).find('.game3-radio').addClass('game3-radioed');
+		api.ajax('answer', {answer:data.answer}, function(res){
+			$('.game-box3').fadeOut();
+			if(res == '1') {
+				$('.game-box4').fadeIn();
+			}
+			else {
+				$('.game-box5').fadeIn();
+			}
+		});
+
     });
 
     LP.action('game_again', function(){
@@ -152,6 +161,10 @@ LP.use(['jquery', 'api', 'easing', 'skrollr', 'flash-detect', 'hammer', 'transit
     });
 
     LP.action('game_submit', function(){
+
+		if($(this).hasClass('submitting')) {
+			return;
+		}
         var name = $('#game-form input[name="name"]').val();
         var email = $('#game-form input[name="email"]').val();
         var tel = $('#game-form input[name="tel"]').val();
@@ -175,8 +188,13 @@ LP.use(['jquery', 'api', 'easing', 'skrollr', 'flash-detect', 'hammer', 'transit
             return;
         }
 
+		$(this).addClass('submitting');
         api.ajax('game', {name:name, email:email, tel:tel}, function(res){
-            console.log(res);
+			$(this).removeClass('submitting');
+            if(res == '1') {
+				$('.game-box6').fadeOut();
+				$('.game-box7').fadeIn();
+			}
         });
 
     });
@@ -291,6 +309,9 @@ function playComplete(){
 
 
 function hit(id){
+	$('.game3-radio').removeClass('game3-radioed');
     $('.game-box1').fadeOut();
     $('.game-box3').fadeIn();
+	$('.game3').hide();
+	$('.game3-'+(id+1)).show();
 }

@@ -2,6 +2,10 @@
 
 class GameController extends Controller
 {
+	private $_answer = array(
+		'1_3', '2_1', '3_2'
+	);
+
 	public function getRole() {
 		return Yii::app()->session['user_role'];
 	}
@@ -23,14 +27,21 @@ class GameController extends Controller
 		$game->save();
 		if($game->validate()) {
 			$game->save();
-			echo 1;
+			echo '1';
 		}
 		else {
-			echo 0;
+			echo '-1';
 		}
 	}
 
 	public function actionAnswer() {
-		
+		$request = Yii::app()->getRequest();
+		$answer = $request->getPost('answer');
+		if(in_array($answer, $this->_answer)) {
+			echo '1';
+		}
+		else {
+			echo '-1';
+		}
 	}
 }

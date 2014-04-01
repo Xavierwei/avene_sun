@@ -23,6 +23,7 @@ define(function( require , exports , model ){
     // 配置
     var _api = {
         newsletter: {path: './newsletter.php', method:'post'},
+		answer: {path: './api/game/answer', method:'post'},
         game: {path: './api/game/post', method:'post'}
     };
 
