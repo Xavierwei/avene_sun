@@ -278,7 +278,7 @@
                 if( !isMouseDown ) return;
                 var dis = gameMgr.getDistance( gameMgr.getBallCenter() , gameMgr.getEventCenter(ev) );
 
-                $('.game-power').html( 'power :' + ~~dis );
+                //$('.game-power').html( 'power :' + ~~dis );
                 return false;
             })
             .on( isTouchSupport ? 'touchend' : 'mouseup' , function( ev ){

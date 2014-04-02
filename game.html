@@ -5,6 +5,7 @@
     <meta name="keywords" content="雅漾舒护活泉水,雅漾活泉水喷雾,敏感皮肤,敏感肌肤护肤品" />
     <meta name="description" content="雅漾带您一起探索并解密孕育肌肤之水的双重特性，追溯雅漾活泉水往事。" />
 
+    <meta name="viewport" content="width=640, minimum-scale=0.5, maximum-scale=1, target-densityDpi=290,user-scalable = no" />
     <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
     <link href="css/style.css" rel="stylesheet" type="text/css" />
     <!--[if IE 8]>
@@ -27,7 +28,7 @@
             <a class="nav3" href="reflexe.html" title=""><span>防晒“小金刚”</span></a>
             <a class="nav5" href="kol.html" title=""><span>达人分享</span></a>
             <a class="nav4" href="family.html" title=""><span>防晒家族</span></a>
-            <a class="nav6" href="comingsoon.html" title=""><span class="on">参与游戏</span></a>
+            <a class="nav6" href="game.html" title=""><span class="on">参与游戏</span></a>
             <a class="nav7" href="comingsoon.html" title=""><span>申领试用</span></a>
             <span class="navicon dis_mobile"></span>
         </div>
@@ -43,36 +44,67 @@
             <div class="page5-game">
                 <div class="game-share"></div>
                 <div class="game-box game-box1">
-                    <object id="flash" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=10,0,0,0" width="689" height="369">
-                        <param name="allowScriptAccess" value="always"/>
-                        <param name="movie" value="flash/ball_game.swf"/>
-                        <param name="quality" value="high"/>
-                        <param name="wmode" value="transparent"/>
-                        <param name="flashVars" value="xml=flash/xml/config.xml"/>
-                        <embed name="flash" src="flash/ball_game.swf" quality="high" wmode="transparent" flashVars="xml=flash/xml/config.xml" pluginspage="http://www.adobe.com/shockwave/download/download.cgi?P1_Prod_Version=ShockwaveFlash" type="application/x-shockwave-flash" width="689" height="369" allowScriptAccess="always"></embed>
-                    </object>
+                    <!-- game wrap -->
+                    <div class="game-wrap dis_mobile">
+                        <div class="game-bg"></div>
+                        <div class="game-inner">
+                            <a href="#" data-animate="top:90px;" data-delay="600" data-time="600" style="top:-90px;" class="game-btn"><span></span>开 始 游 戏</a>
+                            <div class="game-w" style="bottom:-300px;" data-animate="bottom:0px;" data-time="400" >
+                                <img src="./img/wang.png">
+                            </div>
+
+                            <img class="game-ball" style="top:400px;"  data-animate="top:264px;" data-delay="400"  data-time="600" src="./img/ball.png">
+
+                            <img class="game-g1" style="display:block;left:-300px;top:45px;"  data-animate="left:55px;" data-delay="300"  data-time="600" src="./img/g1.png">
+                            <img class="game-g2" src="./img/g2.png">
+                            <img class="game-g3" src="./img/g3.png">
+                            <img class="game-g4" src="./img/g4.png">
+
+                            <img class="game-dir" src="./img/dir.png">
+                            <div data-index="1" class="game-tar1">A</div>
+                            <div data-index="2" class="game-tar2">B</div>
+                            <div data-index="3" class="game-tar3">C</div>
+                            <span class="game-tip">选择一个方向投出你的排球</span>
+                        </div>
+                        <div class="ques-inner">
+                            <!-- todo add ques here -->
+                        </div>
+                    </div>
+                    <!-- game wrap -->
+
+                    <div class="dis_desktop">
+                        <object id="flash" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=10,0,0,0" width="689" height="369">
+                            <param name="allowScriptAccess" value="always"/>
+                            <param name="movie" value="flash/ball_game.swf"/>
+                            <param name="quality" value="high"/>
+                            <param name="wmode" value="transparent"/>
+                            <param name="flashVars" value="xml=flash/xml/config.xml"/>
+                            <embed name="flash" src="flash/ball_game.swf" quality="high" wmode="transparent" flashVars="xml=flash/xml/config.xml" pluginspage="http://www.adobe.com/shockwave/download/download.cgi?P1_Prod_Version=ShockwaveFlash" type="application/x-shockwave-flash" width="689" height="369" allowScriptAccess="always"></embed>
+                        </object>
+                    </div>
+
                 </div>
                 <div class="game-box game-box3">
 	                <div class="game3 game3-1">
 		                <div class="game3-tit1"></div>
 		                <div class="game3-queimg1"></div>
-		                <div class="game3-answer game3-answer1_1" data-a="game_answer" data-d="answer=1_1"><p class="game3-radio game3-radioed"></p></div>
-		                <div class="game3-answer game3-answer1_2" data-a="game_answer" data-d="answer=1_2"><p class="game3-radio"></p></div>
-		                <div class="game3-answer game3-answer1_3" data-a="game_answer" data-d="answer=1_3"><p class="game3-radio"></p></div>
+		                <div class="game3-answer game3-answer1_1" data-a="game_answer" data-d="answer=1_1"><p class="game3-radio">&gt; PA＋</p></div>
+		                <div class="game3-answer game3-answer1_2" data-a="game_answer" data-d="answer=1_2"><p class="game3-radio">&gt; PA＋＋</p></div>
+		                <div class="game3-answer game3-answer1_3" data-a="game_answer" data-d="answer=1_3"><p class="game3-radio">&gt; PA＋＋＋</p></div>
 	                </div>
 	                <div class="game3 game3-2">
 		                <div class="game3-tit2"></div>
 		                <div class="game3-queimg2"></div>
-		                <div class="game3-answer game3-answer2_1" data-a="game_answer" data-d="answer=2_1"><p class="game3-radio game3-radioed"></p></div>
-		                <div class="game3-answer game3-answer2_2" data-a="game_answer" data-d="answer=2_2"><p class="game3-radio"></p></div>
-		                <div class="game3-answer game3-answer2_3" data-a="game_answer" data-d="answer=2_3"><p class="game3-radio"></p></div>
+		                <div class="game3-answer game3-answer2_1" data-a="game_answer" data-d="answer=2_1"><p class="game3-radio">&gt; 手机</p></div>
+		                <div class="game3-answer game3-answer2_2" data-a="game_answer" data-d="answer=2_2"><p class="game3-radio">&gt; 信用卡</p></div>
+		                <div class="game3-answer game3-answer2_3" data-a="game_answer" data-d="answer=2_3"><p class="game3-radio">&gt; 雅漾小喷</p></div>
 	                </div>
 	                <div class="game3 game3-3">
 		                <div class="game3-tit3"></div>
 		                <div class="game3-queimg3"></div>
-		                <div class="game3-answer game3-answer3_1" data-a="game_answer" data-d="answer=3_1"><p class="game3-radio"></p></div>
-		                <div class="game3-answer game3-answer3_2" data-a="game_answer" data-d="answer=3_2"><p class="game3-radio"></p></div>
-		                <div class="game3-answer game3-answer3_3" data-a="game_answer" data-d="answer=3_3"><p class="game3-radio"></p></div>
+		                <div class="game3-answer game3-answer3_1" data-a="game_answer" data-d="answer=3_1"><p class="game3-radio">&gt; 中国医师协会<br/>皮肤科医师分会</p></div>
+		                <div class="game3-answer game3-answer3_2" data-a="game_answer" data-d="answer=3_2"><p class="game3-radio">&gt; 国际皮肤癌<br/>基金会</p></div>
+		                <div class="game3-answer game3-answer3_3" data-a="game_answer" data-d="answer=3_3"><p class="game3-radio">&gt; 世界卫生组织</p></div>
 	                </div>
                 </div>
                 <div class="game-box game-box4">
@@ -86,7 +118,7 @@
                     <div class="game5-btn btn" data-a="game_again"></div>
                 </div>
                 <div class="game-box game-box6" id="game-form">
-                    <div class="game6-tit"><img src="img/game6_tit.gif" /></div>
+                    <div class="game6-tit"></div>
                     <div class="game6-fi cs-clear">
                         <div class="game6-fitit game6-fitit1"></div>
                         <div class="game6-ipt"><input name="name" type="text" /></div>
