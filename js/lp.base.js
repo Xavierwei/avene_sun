@@ -107,6 +107,15 @@ LP.use(['jquery', 'api', 'easing', 'skrollr', 'flash-detect', 'hammer', 'transit
         }
     });
 
+	LP.action('newsletter_m', function(){
+		if($(window).width() <= 640) {
+			$(this).css('background','none');
+			$('#newsletter-email').show();
+			$('.ft-submit').show();
+		}
+
+	});
+
     LP.action('newsletter_submit', function(){
         $('.ft-item4 .error').fadeOut();
         var email = $('#newsletter-email').val();
