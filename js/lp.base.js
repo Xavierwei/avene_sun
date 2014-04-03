@@ -172,8 +172,42 @@ LP.use(['jquery', 'api', 'easing', 'skrollr', 'flash-detect', 'hammer', 'transit
         $('.game-box6').fadeIn();
     });
 
-    LP.action('game_submit', function(){
+    LP.action('etrial_submit', function(){
+        if($(this).hasClass('submitting')) {
+            return;
+        }
+        var name = $('#etrial-form input[name="name"]').val();
+        var address = $('#etrial-form input[name="address"]').val();
+        var tel = $('#etrial-form input[name="tel"]').val();
+        var validate = true;
+        $('.page6-error').fadeOut();
+        if(name == '') {
+            validate = false;
+            $('.page6-error-name').fadeIn();
+        }
+        if(address == '') {
+            validate = false;
+            $('.page6-error-address').fadeIn();
+        }
+        if(tel == '') {
+            validate = false;
+            $('.page6-error-tel').fadeIn();
+        }
 
+        if(!validate) {
+            return;
+        }
+
+        $(this).addClass('submitting');
+        api.ajax('trial', {name:name, address:address, tel:tel}, function(res){
+            $(this).removeClass('submitting');
+            if(res == '1') {
+
+            }
+        });
+    });
+
+    LP.action('game_submit', function(){
 		if($(this).hasClass('submitting')) {
 			return;
 		}
@@ -208,7 +242,6 @@ LP.use(['jquery', 'api', 'easing', 'skrollr', 'flash-detect', 'hammer', 'transit
 				$('.game-box7').fadeIn();
 			}
         });
-
     });
 
 
@@ -535,6 +568,11 @@ LP.use(['jquery', 'api', 'easing', 'skrollr', 'flash-detect', 'hammer', 'transit
                         }
                     });
 
+                var autoplay = getQueryString('autoplay');
+                if(autoplay) {
+                    LP.triggerAction('open_home_video');
+                }
+
                 var timeoffset = isUglyIe?0:0;
                 setTimeout(function(){
 					if($('html').hasClass('touch')) {
@@ -573,6 +611,11 @@ LP.use(['jquery', 'api', 'easing', 'skrollr', 'flash-detect', 'hammer', 'transit
         }
     });
 
+    var getQueryString = function(name) {
+        var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+        var r = window.location.search.substr(1).match(reg);
+        if (r != null) return unescape(r[2]); return null;
+    }
 
 });
 
@@ -582,6 +625,7 @@ function play(){
 
 
 function playComplete(){
+    LP.triggerAction('close_pop');
     $('.video-player').fadeOut();
     $('.page3-video').animate({height:139});
 	$('.page3-video .video-img').fadeIn();

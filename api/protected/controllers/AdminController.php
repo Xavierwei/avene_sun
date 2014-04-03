@@ -87,9 +87,9 @@ class AdminController extends Controller
 	}
 
 	public function actionAdminStatus(){
-		if($this->getRole() != 2) {
-			return;
-		}
+//		if($this->getRole() != 2) {
+//			return;
+//		}
 		$adminUid = Yii::app()->params['adminWeiboUid'];
 		$adminUser = User::model()->findByAttributes(array('sns_uid'=>$adminUid));
 		$access_token = $adminUser->access_token;

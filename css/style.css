@@ -333,8 +333,9 @@ body{background:#efdcc2 url('../img/bg.jpg') no-repeat center top;background-siz
                 .game3-answer3_1{width: 138px;height: 36px;left:522px;top:129px;background: url('../img/game3_an3_1.png') no-repeat 20px 0;}
                 .game3-answer3_2{width: 156px;height: 18px;left:522px;top:193px;background: url('../img/game3_an3_2.png') no-repeat 20px 0;}
                 .game3-answer3_3{width: 125px;height: 46px;left:522px;top:257px;background: url('../img/game3_an3_3.png') no-repeat 20px 0;}
-				.game3-radio{text-indent:-999em;width: 18px;height: 18px;left:0px;top:1px;background: url('../img/game3_radio.png') no-repeat 0 -20px;position: absolute}
-				.game3-radioed{background: url('../img/game3_radio.png') no-repeat 0 0;}
+				.game3-radio{text-indent:-999em;width: 18px;height: 18px;left:0px;top:1px;background: url('../img/game3_radio.png') no-repeat 0 -20px;position: absolute;}
+                .content .game3-radio {font-size:0;}
+                .game3-radioed{background: url('../img/game3_radio.png') no-repeat 0 0;}
 			.game-box4{width: 689px;height: 370px;position: absolute;left:0;top:0}
 				.game4-tit{width: 200px;height: 30px;left:370px;top:116px;background: url('../img/game4_tit.png') no-repeat;position: absolute;}
 				.game4-img{width: 251px;height: 312px;left:59px;top:30px;background: url('../img/game4_img.png') no-repeat;position: absolute;}
@@ -379,6 +380,7 @@ body{background:#efdcc2 url('../img/bg.jpg') no-repeat center top;background-siz
 .page6{width: 950px;margin: 0 auto 0;}
 .page6main-tit {background: url('../img/page6_tit1.png') no-repeat;width:451px;height:111px;margin:0 auto;}
 .etrial-btn {background: url('../img/page6_etrial_btn.png') no-repeat;width:107px;height:36px;}
+.page6-error {display: none;}
 
 /* Popup Used
 ================================================================================================= */
@@ -404,10 +406,15 @@ body{background:#efdcc2 url('../img/bg.jpg') no-repeat center top;background-siz
 /* Mobile Used
 ================================================================================================= */
 .dis_mobile{display: none}
+.game_mobile {display: none;}
 @media screen and (max-width:640px){
     body{background: #fff url('../imgm/bg.jpg') no-repeat top center;overflow-x:hidden}
     .dis_mobile{display: block}
     .dis_desktop {display: none;}
+    .touch .game_mobile {display: block;}
+    .touch .game_desktop {display: none;}
+    .game_desktop {margin-left:-50px;}
+
     .loading-wrap .logo {margin-left:-89px;}
 
     /*header*/
@@ -688,7 +695,7 @@ body{background:#efdcc2 url('../img/bg.jpg') no-repeat center top;background-siz
     .game3-answer {text-align:center;background: none!important;color:#ff7311;font-size:22px;width:202px;border:1px solid #ff9f23;border-right:none;height:87px;line-height:87px;position: relative;float:left;top:335px;left:auto;}
     .game3-answer:hover {background:#ff9f23!important;color:#fff;}
     .game3-answer:last-child {border-right:1px solid #ff9f23;}
-    .game3-radio {position:relative;text-indent:0;width:auto;background:none;}
+    .game3-radio {position:relative;text-indent:0;width:auto;background:none;font-size:24px!important;}
     .game5-img {left:83px;top:128px;}
     .game5-tit {background: url('../imgm/game5_tit.png') no-repeat;width:265px;height:44px;left:263px;}
     .game5-btn {background: url('../imgm/game5_btn.gif') no-repeat;width:301px;height:89px;left:250px;}

@@ -1,4 +1,4 @@
 <?php
-define( "WB_AKEY" , '4266983005' );
-define( "WB_SKEY" , '869c086b483ff5e8da8d5647f328af7a');
-define( "WB_CALLBACK_URL" , 'http://www.eau-thermale-avene.cn/photowall/test/api/index.php/user/Sinacallback' );
+define( "WB_AKEY" , '3655479508' );
+define( "WB_SKEY" , '25563a2c26cba7329a058b7acd50a05c');
+define( "WB_CALLBACK_URL" , 'http://lily.local:8888/avene_sun/api/user/Sinacallback' );
