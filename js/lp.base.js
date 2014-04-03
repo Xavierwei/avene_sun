@@ -301,7 +301,7 @@ LP.use(['jquery', 'api', 'easing', 'skrollr', 'flash-detect', 'hammer', 'transit
                         left: curr.cx + vx * d - w / 2 ,
                         top: curr.cy + vy * d - w / 2 + 1 / 2 * a * d * d
                     }
-                    if( vz * d >= zDis + 50 ){
+                    if( vz * d >= zDis + 50 && vz * d <= zDis + 170 ){
                         //判断是否相交
                         var isMeet = false;
                         var index;
