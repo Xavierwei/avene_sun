@@ -374,6 +374,12 @@ body{background:#efdcc2 url('../img/bg.jpg') no-repeat center top;background-siz
 
 
 
+/* PAGE 6 Used
+================================================================================================= */
+.page6{width: 950px;margin: 0 auto 0;}
+.page6main-tit {background: url('../img/page6_tit1.png') no-repeat;width:451px;height:111px;margin:0 auto;}
+.etrial-btn {background: url('../img/page6_etrial_btn.png') no-repeat;width:107px;height:36px;}
+
 /* Popup Used
 ================================================================================================= */
 .overlay {display:none;background:#fff;position:fixed;top:0;left:0;width:100%;height:100%;opacity:0.7;filter:alpha(opacity=70);}
