@@ -162,40 +162,41 @@ class Photo extends CActiveRecord
 		$save = file_put_contents(ROOT_PATH.$filename, $imageString);
 		if($save) {
 			$thumb = new EasyImage(ROOT_PATH.$filename);
-			$size = getimagesize(ROOT_PATH.$filename);
-			$w = 190;
-			$h = 190;
-			$s_w = $size[0];
-			$s_h = $size[1];
-
-			$r1 = $w / $s_w;
-			$r2 = $h / $s_h;
-			$widthSamller = TRUE;
-			if ($r1 > $r2) {
-				$r = $r1;
-			}
-			else {
-				$widthSamller = FALSE;
-				$r = $r2;
-			}
-			$t_w = $r * $s_w;
-			$t_h = $r * $s_h;
-
-			// 先等比例 resize
-			$thumb->resize($t_w, $t_h);
-			// 再裁剪
-			// 裁剪 多余的宽
-			if (!$widthSamller) {
-				$start_x = ($t_w - $w)/2;
-				$start_y = 0;
-				$thumb->crop($w, $h, $start_x, $start_y);
-			}
-			// 裁剪多余的 高
-			else {
-				$start_x = 0;
-				$start_y = ($t_h - $h);
-				$thumb->crop($w, $h, $start_x, $start_y);
-			}
+//			$size = getimagesize(ROOT_PATH.$filename);
+//			$w = 190;
+//			$h = 190;
+//			$s_w = $size[0];
+//			$s_h = $size[1];
+//
+//			$r1 = $w / $s_w;
+//			$r2 = $h / $s_h;
+//			$widthSamller = TRUE;
+//			if ($r1 > $r2) {
+//				$r = $r1;
+//			}
+//			else {
+//				$widthSamller = FALSE;
+//				$r = $r2;
+//			}
+//			$t_w = $r * $s_w;
+//			$t_h = $r * $s_h;
+//
+//			// 先等比例 resize
+//			$thumb->resize($t_w, $t_h);
+//			// 再裁剪
+//			// 裁剪 多余的宽
+//			if (!$widthSamller) {
+//				$start_x = ($t_w - $w)/2;
+//				$start_y = 0;
+//				$thumb->crop($w, $h, $start_x, $start_y);
+//			}
+//			// 裁剪多余的 高
+//			else {
+//				$start_x = 0;
+//				$start_y = ($t_h - $h);
+//				$thumb->crop($w, $h, $start_x, $start_y);
+//			}
+			$thumb->resize(250, 1000);
 			$thumb->save(ROOT_PATH.$imgPath.$weibo['id'].'_thumb.jpg');
 			return $filename;
 		}

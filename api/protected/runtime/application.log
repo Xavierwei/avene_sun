@@ -1747,3 +1747,51 @@ Stack trace:
 REQUEST_URI=/avene_photowall/api//upload/20140207/3675445952706528_thumb.jpg
 HTTP_REFERER=http://localhost:8888/avene_photowall/api/index.php/admin/index
 ---
+2014/04/03 16:38:19 [error] [php] Trying to get property of non-object (/Applications/MAMP/htdocs/avene_sun/api/protected/controllers/AdminController.php:95)
+Stack trace:
+#0 /Applications/MAMP/htdocs/avene_sun/api/framework/web/CController.php(286): AdminController->runAction()
+#1 /Applications/MAMP/htdocs/avene_sun/api/framework/web/CController.php(265): AdminController->runActionWithFilters()
+#2 /Applications/MAMP/htdocs/avene_sun/api/framework/web/CWebApplication.php(282): AdminController->run()
+#3 /Applications/MAMP/htdocs/avene_sun/api/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#4 /Applications/MAMP/htdocs/avene_sun/api/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#5 /Applications/MAMP/htdocs/avene_sun/api/index.php(20): CWebApplication->run()
+REQUEST_URI=/avene_sun/api/admin/AdminStatus
+in /Applications/MAMP/htdocs/avene_sun/api/protected/controllers/AdminController.php (95)
+in /Applications/MAMP/htdocs/avene_sun/api/index.php (20)
+2014/04/03 16:38:28 [error] [php] Trying to get property of non-object (/Applications/MAMP/htdocs/avene_sun/api/protected/controllers/AdminController.php:96)
+Stack trace:
+#0 /Applications/MAMP/htdocs/avene_sun/api/framework/web/CController.php(286): AdminController->runAction()
+#1 /Applications/MAMP/htdocs/avene_sun/api/framework/web/CController.php(265): AdminController->runActionWithFilters()
+#2 /Applications/MAMP/htdocs/avene_sun/api/framework/web/CWebApplication.php(282): AdminController->run()
+#3 /Applications/MAMP/htdocs/avene_sun/api/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#4 /Applications/MAMP/htdocs/avene_sun/api/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#5 /Applications/MAMP/htdocs/avene_sun/api/index.php(20): CWebApplication->run()
+REQUEST_URI=/avene_sun/api/admin/AdminStatus
+in /Applications/MAMP/htdocs/avene_sun/api/protected/controllers/AdminController.php (96)
+in /Applications/MAMP/htdocs/avene_sun/api/index.php (20)
+2014/04/03 16:38:43 [error] [php] Trying to get property of non-object (/Applications/MAMP/htdocs/avene_sun/api/protected/controllers/AdminController.php:97)
+Stack trace:
+#0 /Applications/MAMP/htdocs/avene_sun/api/framework/web/CController.php(286): AdminController->runAction()
+#1 /Applications/MAMP/htdocs/avene_sun/api/framework/web/CController.php(265): AdminController->runActionWithFilters()
+#2 /Applications/MAMP/htdocs/avene_sun/api/framework/web/CWebApplication.php(282): AdminController->run()
+#3 /Applications/MAMP/htdocs/avene_sun/api/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#4 /Applications/MAMP/htdocs/avene_sun/api/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#5 /Applications/MAMP/htdocs/avene_sun/api/index.php(20): CWebApplication->run()
+REQUEST_URI=/avene_sun/api/admin/AdminStatus
+in /Applications/MAMP/htdocs/avene_sun/api/protected/controllers/AdminController.php (97)
+in /Applications/MAMP/htdocs/avene_sun/api/index.php (20)
+2014/04/03 16:38:58 [error] [php] Cannot modify header information - headers already sent by (output started at /Applications/MAMP/htdocs/avene_sun/api/protected/controllers/AdminController.php:94) (/Applications/MAMP/htdocs/avene_sun/api/protected/components/Controller.php:56)
+Stack trace:
+#0 /Applications/MAMP/htdocs/avene_sun/api/protected/controllers/AdminController.php(106): AdminController->responseJSON()
+#1 /Applications/MAMP/htdocs/avene_sun/api/framework/web/actions/CInlineAction.php(49): AdminController->actionAdminStatus()
+#2 /Applications/MAMP/htdocs/avene_sun/api/framework/web/CController.php(308): CInlineAction->runWithParams()
+#3 /Applications/MAMP/htdocs/avene_sun/api/framework/web/CController.php(286): AdminController->runAction()
+#4 /Applications/MAMP/htdocs/avene_sun/api/framework/web/CController.php(265): AdminController->runActionWithFilters()
+#5 /Applications/MAMP/htdocs/avene_sun/api/framework/web/CWebApplication.php(282): AdminController->run()
+#6 /Applications/MAMP/htdocs/avene_sun/api/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#7 /Applications/MAMP/htdocs/avene_sun/api/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#8 /Applications/MAMP/htdocs/avene_sun/api/index.php(20): CWebApplication->run()
+REQUEST_URI=/avene_sun/api/admin/AdminStatus
+in /Applications/MAMP/htdocs/avene_sun/api/protected/components/Controller.php (56)
+in /Applications/MAMP/htdocs/avene_sun/api/protected/components/Controller.php (38)
+in /Applications/MAMP/htdocs/avene_sun/api/protected/controllers/AdminController.php (106)

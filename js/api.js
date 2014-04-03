@@ -25,7 +25,8 @@ define(function( require , exports , model ){
         newsletter: {path: './newsletter.php', method:'post'},
 		answer: {path: './api/game/answer', method:'post'},
         game: {path: './api/game/post', method:'post'},
-        trial: {path: './api/trial/post', method:'post'}
+        trial: {path: './api/trial/post', method:'post'},
+		list: {path: 'api/photo/list', method:'get'}
     };
 
     // 内部API

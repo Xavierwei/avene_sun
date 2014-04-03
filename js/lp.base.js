@@ -1,12 +1,18 @@
 /*
  * page base action
  */
-LP.use(['jquery', 'api', 'easing', 'skrollr', 'flash-detect', 'hammer', 'transit', 'queryloader'] , function( $ , api ){
-    'use strict'
+LP.use(['jquery' ,'api', 'easing', 'skrollr', 'flash-detect', 'hammer', 'transit', 'queryloader','isotope'] , function( $ , api ){
+	'use strict'
 
     var isFirefox = navigator.userAgent.toLowerCase().indexOf('firefox') > 0;
 	var isIphone = navigator.userAgent.toLowerCase().indexOf('iphone') > 0;
+	var isIpad = navigator.userAgent.toLowerCase().indexOf('ipad') > 0;
 	var windWidth = $(window).width() - 90;
+	var $loading = $('.list-loading');
+
+	if(isIpad) {
+		$('body').addClass('ipad');
+	}
 
     if (navigator.userAgent.match(/IEMobile\/10\.0/)) {
         var msViewportStyle = document.createElement("style");
@@ -21,16 +27,26 @@ LP.use(['jquery', 'api', 'easing', 'skrollr', 'flash-detect', 'hammer', 'transit
     
     $(window).bind('orientationchange', function() {
         var o = window.orientation;
-
-        if (o != 90 && o != -90) {
-            $('.turn_device').hide();
-        } else {
-            $('.turn_device').show();
-        }
+		if(!isIpad) {
+			if (o != 90 && o != -90) {
+				$('.turn_device').hide();
+			} else {
+				$('.turn_device').show();
+			}
+		}
+		else{
+			if (o != 90 && o != -90) {
+				$('meta[name=viewport]').attr('content','width=1000, minimum-scale=0.77, maximum-scale=0.77, target-densityDpi=290,user-scalable=no');
+			} else {
+				$('meta[name=viewport]').attr('content','width=1000, minimum-scale=1, maximum-scale=1, target-densityDpi=290,user-scalable=no');
+			}
+		}
     });
 
+	$(window).trigger('orientationchange');
+
 	$('body').on('click', function(e){
-		if(!$('html').hasClass('touch')) {
+		if(!$('html').hasClass('touch') || isIpad) {
 			return;
 		}
 		var $target = $(e.target);
@@ -244,6 +260,130 @@ LP.use(['jquery', 'api', 'easing', 'skrollr', 'flash-detect', 'hammer', 'transit
         });
     });
 
+	LP.action('load_more', function(){
+		$loading.fadeIn();
+		var pageParam = $('#wall-list').data('param');
+		pageParam.page ++;
+		$('#symj_list').data('param',pageParam);
+		api.ajax('list', pageParam, function( result ){
+			$loading.fadeOut();
+			nodeActions.inserNode( $('#wall-list') , result.data );
+		});
+	});
+
+
+	var nodeActions = {
+		prependNode: function( $dom , nodes ){
+			var aHtml = [];
+			var lastDate = null;
+			//var pageParm = $main.data('param'); //TODO:  pageParm.orderby == 'like' || pageParm.orderby == 'random' 此时不显示日历
+			nodes = nodes || [];
+
+			// save nodes to cache
+			var cache = $dom.data('nodes') || [];
+			var lastPid = cache[0].pid;
+			var lastNode = getObjectIndex(nodes, 'pid', lastPid);
+			var newNodes = nodes.splice(0,lastNode);
+			var count = cache.length - newNodes.length;
+			cache = cache.splice(0, count);
+			for(var i = 0; i < newNodes.length; i++ ) {
+				var $items = $dom.find('.photo_item');
+				$items.eq($items.length-1).remove();
+			}
+			$dom.data('nodes' , newNodes.concat( cache ) );
+			$.each( newNodes , function( index , node ){
+				node.thumb = node.image.replace('.jpg','_thumb.jpg');
+				node.sharecontent = encodeURI(node.content).replace(new RegExp('#',"gm"),'%23')
+				if(node.content.length > 100) {
+					node.shortcontent = node.content.substring(0,100)+'...';
+				}
+				LP.compile( 'node-item-template' ,
+					node ,
+					function( html ){
+						aHtml.push( html );
+						if( index == newNodes.length - 1 ){
+							// render html
+							$dom.prepend(aHtml.join(''));
+							$dom.find('.photo_item:not(.reversal)').css({'opacity':0});
+							//nodeActions.setItemWidth( $dom );
+							nodeActions.setItemReversal( $dom );
+						}
+					});
+			} );
+		},
+
+		inserNode: function( $dom , nodes ){
+			console.log($dom);
+			var aHtml = [];
+			var $aHtml = [];
+			var lastDate = null;
+			//var pageParm = $main.data('param'); //TODO:  pageParm.orderby == 'like' || pageParm.orderby == 'random' 此时不显示日历
+			nodes = nodes || [];
+
+			// save nodes to cache
+			var cache = $dom.data('nodes') || [];
+			$dom.data('nodes' , cache.concat( nodes ) );
+
+			$.each( nodes , function( index , node ){
+				node.thumb = node.image.replace('.jpg','_thumb.jpg');
+				node.sharecontent = encodeURI(node.content).replace(new RegExp('#',"gm"),'%23');
+				node.shortcontent = node.content;
+				if(node.content.length > 100) {
+					node.shortcontent = node.content.substring(0,100)+'...';
+				}
+				LP.compile( 'node-item-template' ,
+					node ,
+					function( html ){
+						aHtml.push( html );
+						$aHtml.push( $(html) );
+						if( index == nodes.length - 1 ){
+							// render html
+							//$dom.find('.photo_item:not(.reversal)').css({'opacity':0});
+							//nodeActions.setItemWidth( $dom );
+							//nodeActions.setItemReversal( $dom );
+							if($dom.data('isotope')) {
+								$('#wall-list-prepend').append(aHtml);
+								var $elems = $('#wall-list-prepend').find('.photo_item');
+								$dom.append($elems).isotope('appended', $elems);
+							}
+							else {
+								$dom.append($aHtml);
+								$dom.isotope({
+									// options
+									itemSelector: '.photo_item'
+								});
+							}
+
+						}
+					} );
+
+			} );
+		},
+		// start pic reversal animation
+		setItemReversal: function( $dom ){
+			// fix all the items , set position: relative
+			$dom.children()
+				.css('position' , 'relative');
+			// get first time item , which is not opend
+			// wait for it's items prepared ( load images )
+			// run the animate
+
+			// if has time items, it means it needs to reversal from last node-item element
+			// which is not be resersaled
+			var $nodes = $dom.find('.photo_item:not(.reversal)');
+
+			var startAnimate = function( $node ){
+				$node.css({opacity:0}).addClass('reversal').animate({opacity:1}, 1000);
+				setTimeout(function(){
+					nodeActions.setItemReversal( $dom );
+				} , 100);
+			}
+			// if esist node , which is not reversaled , do the animation
+			if( $nodes.length ){
+				startAnimate( $nodes.eq(0) );
+			}
+		}
+	}
 
     // game mgr
     var gameMgr = (function(){
@@ -585,6 +725,14 @@ LP.use(['jquery', 'api', 'easing', 'skrollr', 'flash-detect', 'hammer', 'transit
                     });
 
                 },timeoffset);
+
+				//photowall
+				var pageParam = {page:1,pagenum:12};
+				$('#wall-list').data('param',pageParam);
+				api.ajax('list', pageParam, function( result ){
+					nodeActions.inserNode( $('#wall-list') , result.data );
+				});
+
             }
         });
     }
@@ -593,6 +741,21 @@ LP.use(['jquery', 'api', 'easing', 'skrollr', 'flash-detect', 'hammer', 'transit
     if($('html').hasClass('touch')) {
         gameMgr.start();
     }
+
+	var _scrollTimer = null;
+	$(window).scroll(function(){
+		// if scroll to the botton of the window
+		// ajax the next datas
+		var st = $(window).scrollTop();
+		var docHeight = $(document).height();
+		var winHeight = $(window).height();
+		if( docHeight - winHeight - st < 180 ){
+			clearTimeout( _scrollTimer );
+			_scrollTimer = setTimeout(function(){
+				LP.triggerAction('load_more');
+			} , 200);
+		}
+	});
 
 	$('.header .logo img').ensureLoad(function(){
 		$(this).fadeIn(1000);

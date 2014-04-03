@@ -85,7 +85,7 @@ seajs.config({
     }
   }
   , alias: {
-    api: '../api.js?_201402#'
+    api: '../api.js?_201403#'
     , eve : '../raphael/eve.js'
     , api4sjht: '../api4sjht'
     , imgUtil: '../util/imgHelper'

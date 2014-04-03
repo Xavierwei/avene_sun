@@ -91,7 +91,7 @@ return array(
 	'params'=>array(
 		// this is used in contact page
 		'adminEmail'=>'webmaster@example.com',
-		'adminWeiboUid'=>'3655479508',
+		'adminWeiboUid'=>'3164070184',
 		'proxyServer'=>'http://localhost:8888/avene_photowall/api'
 	),
 );

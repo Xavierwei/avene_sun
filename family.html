@@ -20,6 +20,7 @@
         </div>
         <div class="loading-percentage"></div>
     </div>
+    <div class="turn_device"></div>
 	<div class="header" data-style="margin-top:-90px;" data-animate="margin-top:0px;" data-delay="0" data-time="500" data-easing="easeOutQuart">
         <a href="index.html" class="logo"></a>
         <div class="nav">
@@ -119,6 +120,13 @@
 	        <video autoplay="autoplay" width="640" height="360" controls><source src="video/1.mp4" type="video/mp4" /></video>
 	        {{/if}}
         </div>
+    </script>
+    <script type="text/tpl" id="newsletter-pop-template">
+	    <div class="overlay" data-a="close_pop"></div>
+	    <div class="popup newsletter-popup">
+		    <div class="popup-close" data-a="close_pop"></div>
+		    <div class="newsletter-box newsletter-{{status}}"></div>
+	    </div>
     </script>
 
     <script type="text/javascript" src="./js/plugin/modernizr-2.5.3.min.js"></script>
