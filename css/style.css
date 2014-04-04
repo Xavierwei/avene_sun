@@ -433,6 +433,25 @@ body{background:#efdcc2 url('../img/bg.jpg') no-repeat center top;background-siz
 .game-tip{display:none;top:171px;left:215px;position: absolute;color: #ff7311;font-size: 16px;font-family: microsoft yahei;}
 
 
+/* Page tester Used  0404
+================================================================================================= */
+.tester{width: 950px;margin: 0 auto 0;}	
+	.tester-main{height: 560px;position: relative;width: 950px;}
+		.tester-tit{width: 450px;height: 82px;background: url('../img/tester_tit.png') no-repeat;position: absolute;left:210px;top:30px;}
+		.tester-tit2{width: 300px;height: 46px;background: url('../img/tester_tit2.png') no-repeat;position: absolute;left:365px;top:98px;}
+		.tester-pro{width: 460px;height: 400px;background: url('../img/tester_pro.png') no-repeat;position: absolute;left:530px;top:145px;}
+	.tester-form{width: 475px;height: 232px;position: absolute;left:50px;top:165px;}
+		.testerform-share{width: 475px;height: 232px;background: #ff7311;opacity: 0.3;filter:alpha(opacity=30);position: absolute;left:0;top:0}
+		.testerform-tips{width: 230px;height: 50px;background: url('../img/testerform_tips.png') no-repeat;position: absolute;left:235px;top:172px;}
+		.testerform-con{width: 475px;height: 232px;position: absolute;left:0;top:2px;}
+			.tester-ipt{width: 410px;height: 32px;padding: 0 15px;font-size: 16px;font-family:"Microsoft YaHei",arial,SimHei,sans-serif;color:#333;border:0;display: block;margin:20px auto 0;}
+			.tester-submit{width: 107px;height: 36px;background: url('../img/tester_submit.png') no-repeat;border:0;overflow: hidden;line-height: 500em;margin:20px 18px 0;}
+	.tester-infor{width: 475px;height: 126px;position: absolute;left:50px;top:415px;}
+		.testerinfor-share{width: 475px;height: 126px;background: #ff7311;opacity: 0.3;filter:alpha(opacity=30);position: absolute;left:0;top:0}
+		.testerinfor-tips{width: 155px;height: 55px;background: url('../img/testerinfor_tips.png') no-repeat;position: absolute;left:24px;top:14px;}
+		.testerinfor-gift1{width: 105px;height: 105px;background: url('../img/testerinfor_gift1.png') no-repeat;position: absolute;left:240px;top:12px;}
+		.testerinfor-gift2{width: 105px;height: 105px;background: url('../img/testerinfor_gift2.png') no-repeat;position: absolute;left:346px;top:12px;}
+		.testerinfor-btn{width: 107px;height: 36px;background: url('../img/testerinfor_btn.png') no-repeat;position: absolute;left:24px;top:76px;display: block;}
 
 
 /* Mobile Used
@@ -777,5 +796,35 @@ body{background:#efdcc2 url('../img/bg.jpg') no-repeat center top;background-siz
 
     #newsletter-email {border:2px solid #f60;left:18px;height:35px;top:8px;width:190px;font-size:24px;}
     .ft-submit {background: url('../imgm/ft_item4.png') no-repeat right top;width:36px;height:27px;}
+
+
+
+
+
+
+/* Page tester Used  0404
+================================================================================================= */
+.tester{width: 610px;margin: 0 auto 0}	
+	.tester-main{height:1170px;position: relative;width: 610px;}
+		.tester-tit{width: 592px;height: 110px;background: url('../imgm/tester_tit.png') no-repeat;position: absolute;left:2px;top:30px;}
+		.tester-tit2{width: 300px;height: 60px;background: url('../imgm/tester_tit2.png') no-repeat;position: absolute;left:155px;top:134px;}
+		.tester-pro{width: 542px;height: 450px;background: url('../imgm/tester_pro.png') no-repeat;position: absolute;left:83px;top:192px;}
+	.tester-form{width: 610px;height: 330px;position: absolute;left:0;top:648px;}
+		.testerform-share{width: 610px;height: 330px;background: #ff7311;opacity: 0.3;filter:alpha(opacity=30);position: absolute;left:0;top:0}
+		.testerform-tips{width: 310px;height: 60px;background: url('../imgm/testerform_tips.png') no-repeat;position: absolute;left:240px;top:240px;}
+		.testerform-con{width: 610px;height: 330px;position: absolute;left:0;top:10px;}
+			.tester-ipt{width: 440px;height: 40px;padding: 0 15px;font-size: 18px;font-family:"Microsoft YaHei",arial,SimHei,sans-serif;color:#333;border:0;display: block;margin:26px auto 0;}
+			.tester-submit{width: 147px;height: 48px;background: url('../imgm/tester_submit.png') no-repeat;border:0;overflow: hidden;line-height: 500em;margin:35px 70px 0;}
+	.tester-infor{width: 610px;height: 162px;position: absolute;left:0;top:992px;}
+		.testerinfor-share{width: 610px;height: 162px;background: #ff7311;opacity: 0.3;filter:alpha(opacity=30);position: absolute;left:0;top:0}
+		.testerinfor-tips{width: 252px;height: 84px;background: url('../imgm/testerinfor_tips.png') no-repeat;position: absolute;left:24px;top:14px;}
+		.testerinfor-gift1{width: 144px;height: 144px;background: url('../imgm/testerinfor_gift1.png') no-repeat;position: absolute;left:290px;top:10px;}
+		.testerinfor-gift2{width: 144px;height: 144px;background: url('../imgm/testerinfor_gift2.png') no-repeat;position: absolute;left:450px;top:10px;}
+		.testerinfor-btn{width: 147px;height: 48px;background: url('../imgm/testerinfor_btn.png') no-repeat;position: absolute;left:75px;top:102px;display: block;}
+
+
+
+
+
 
 }
