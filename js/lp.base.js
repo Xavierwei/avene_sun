@@ -313,7 +313,6 @@ LP.use(['jquery' ,'api', 'easing', 'skrollr', 'flash-detect', 'hammer', 'transit
 		},
 
 		inserNode: function( $dom , nodes ){
-			console.log($dom);
 			var aHtml = [];
 			var $aHtml = [];
 			var lastDate = null;
@@ -727,12 +726,13 @@ LP.use(['jquery' ,'api', 'easing', 'skrollr', 'flash-detect', 'hammer', 'transit
                 },timeoffset);
 
 				//photowall
-				var pageParam = {page:1,pagenum:12};
-				$('#wall-list').data('param',pageParam);
-				api.ajax('list', pageParam, function( result ){
-					nodeActions.inserNode( $('#wall-list') , result.data );
-				});
-
+                if($('.page7').length > 0) {
+                    var pageParam = {page:1,pagenum:12};
+                    $('#wall-list').data('param',pageParam);
+                    api.ajax('list', pageParam, function( result ){
+                        nodeActions.inserNode( $('#wall-list') , result.data );
+                    });
+                }
             }
         });
     }
@@ -742,20 +742,24 @@ LP.use(['jquery' ,'api', 'easing', 'skrollr', 'flash-detect', 'hammer', 'transit
         gameMgr.start();
     }
 
-	var _scrollTimer = null;
-	$(window).scroll(function(){
-		// if scroll to the botton of the window
-		// ajax the next datas
-		var st = $(window).scrollTop();
-		var docHeight = $(document).height();
-		var winHeight = $(window).height();
-		if( docHeight - winHeight - st < 180 ){
-			clearTimeout( _scrollTimer );
-			_scrollTimer = setTimeout(function(){
-				LP.triggerAction('load_more');
-			} , 200);
-		}
-	});
+
+    if($('.page7').length > 0) {
+        var _scrollTimer = null;
+        $(window).scroll(function(){
+            // if scroll to the botton of the window
+            // ajax the next datas
+            var st = $(window).scrollTop();
+            var docHeight = $(document).height();
+            var winHeight = $(window).height();
+            if( docHeight - winHeight - st < 180 ){
+                clearTimeout( _scrollTimer );
+                _scrollTimer = setTimeout(function(){
+                    LP.triggerAction('load_more');
+                } , 200);
+            }
+        });
+    }
+
 
 	$('.header .logo img').ensureLoad(function(){
 		$(this).fadeIn(1000);
@@ -779,6 +783,84 @@ LP.use(['jquery' ,'api', 'easing', 'skrollr', 'flash-detect', 'hammer', 'transit
         var r = window.location.search.substr(1).match(reg);
         if (r != null) return unescape(r[2]); return null;
     }
+
+
+    // GA Event Tracking
+    $('.nav1').bind('click',function(){
+        ga('send', 'suncare', 'nav', 'nav1', 'nav1');
+    });
+
+    $('.nav2').bind('click',function(){
+        ga('send', 'suncare', 'nav', 'nav2', 'nav2');
+    });
+
+    $('.nav3').bind('click',function(){
+        ga('send', 'suncare', 'nav', 'nav3', 'nav3');
+    });
+
+    $('.nav4').bind('click',function(){
+        ga('send', 'suncare', 'nav', 'nav4', 'nav4');
+    });
+
+    $('.nav5').bind('click',function(){
+        ga('send', 'suncare', 'nav', 'nav5', 'nav5');
+    });
+
+    $('.nav6').bind('click',function(){
+        ga('send', 'suncare', 'nav', 'nav6', 'nav6');
+    });
+
+    $('.nav7').bind('click',function(){
+        ga('send', 'suncare', 'nav', 'nav7', 'nav7');
+    });
+
+    $('.home-vdbox').bind('click',function(){
+        ga('send', 'suncare', 'home', 'video', 'video');
+    });
+
+    $('.home-vbtn1').bind('click',function(){
+        ga('send', 'suncare', 'home', 'game', 'game');
+    });
+
+    $('.home-vbtn2').bind('click',function(){
+        ga('send', 'suncare', 'home', 'etrial ', 'etrial ');
+    });
+
+    $('.ft-gw').bind('click',function(){
+        ga('send', 'suncare', 'bottom', 'avene', 'avene');
+    });
+
+    $('.ft-btn1').bind('click',function(){
+        ga('send', 'suncare', 'bottom', 'weibo', 'weibo');
+    });
+
+    $('.ft-btn2').bind('click',function(){
+        ga('send', 'suncare', 'bottom', 'doctor', 'doctor');
+    });
+
+    $('.ft-submit').bind('click',function(){
+        ga('send', 'suncare', 'bottom', 'newsletter', 'newsletter');
+    });
+
+    $('.page2video-demo').bind('click',function(){
+        ga('send', 'suncare', 'reflexe', 'video', 'video');
+    });
+
+    $('.page2pro-link').bind('click',function(){
+        ga('send', 'suncare', 'reflexe', 'award', 'award');
+    });
+
+    $('.page3-video').bind('click',function(){
+        ga('send', 'suncare', 'family', 'video', 'video');
+    });
+
+    $('.page3-otherpro1 .page3intro-learnmore').bind('click',function(){
+        ga('send', 'suncare', 'family', 'learnmore1', 'learnmore1');
+    });
+
+    $('.page3-otherpro2 .page3intro-learnmore').bind('click',function(){
+        ga('send', 'suncare', 'family', 'learnmore2', 'learnmore2');
+    });
 
 });
 
