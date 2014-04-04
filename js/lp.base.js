@@ -271,6 +271,12 @@ LP.use(['jquery' ,'api', 'easing', 'skrollr', 'flash-detect', 'hammer', 'transit
 		});
 	});
 
+    LP.action('like', function(data) {
+        api.ajax('like', {pid: data.pid}, function( result ){
+            console.log(result);
+        });
+    });
+
 
 	var nodeActions = {
 		prependNode: function( $dom , nodes ){
@@ -325,6 +331,7 @@ LP.use(['jquery' ,'api', 'easing', 'skrollr', 'flash-detect', 'hammer', 'transit
 
 			$.each( nodes , function( index , node ){
 				node.thumb = node.image.replace('.jpg','_thumb.jpg');
+                node.thumb_height = 225 * node.thumb_ratio;
 				node.sharecontent = encodeURI(node.content).replace(new RegExp('#',"gm"),'%23');
 				node.shortcontent = node.content;
 				if(node.content.length > 100) {
@@ -648,96 +655,106 @@ LP.use(['jquery' ,'api', 'easing', 'skrollr', 'flash-detect', 'hammer', 'transit
         return gameMgr;
     })();
 
+    var complete = function(){
+        $('.loading-wrap').fadeOut();
+
+        /* for animation */
+        var isUglyIe = $.browser.msie && $.browser.version <= 8;
+        if(isUglyIe && $('#scheme').length > 0)
+            return;
+        var ANIMATE_NAME = "data-animate";
+        $('[' + ANIMATE_NAME + ']')
+            .each(function(){
+                var $dom = $(this);
+                var tar = $dom.data('animate');
+                var browser = $dom.data('browser');
+                var style = $dom.data('style');
+                var time = parseInt( $dom.data('time') );
+                var delay = $dom.data('delay') || 0;
+                var easing = $dom.data('easing');
+                var begin = $dom.data('begin');
+                tar = tar.split(';');
+                var tarCss = {} , tmp;
+                if(browser == 'uglyie' && isUglyIe) {
+                    return;
+                }
+                for (var i = tar.length - 1; i >= 0; i--) {
+                    tmp = tar[i].split(':');
+                    if( tmp.length == 2 )
+                        tarCss[ tmp[0] ] = $.trim(tmp[1]);
+                }
+                if( isUglyIe && tarCss.opacity !== undefined ){
+                    delete tarCss.opacity;
+                }
+
+
+                style = style.split(';');
+                var styleCss = {} , tmp;
+                for (var i = style.length - 1; i >= 0; i--) {
+                    tmp = style[i].split(':');
+                    if( tmp.length == 2 )
+                        styleCss[ tmp[0] ] = $.trim(tmp[1]);
+                }
+                if( isUglyIe && styleCss.opacity !== undefined ){
+                    delete styleCss.opacity;
+                }
+                $dom.css(styleCss).delay( delay )
+                    .animate( tarCss , time , easing );
+                if( begin ){
+                    setTimeout(function(){
+                        animation_begins[begin].call( $dom );
+                    } , delay);
+                }
+            });
+
+        var autoplay = getQueryString('autoplay');
+        if(autoplay) {
+            LP.triggerAction('open_home_video');
+        }
+
+        var timeoffset = isUglyIe?0:0;
+        setTimeout(function(){
+            if($('html').hasClass('touch')) {
+                return;
+            }
+            var s = skrollr.init({
+                smoothScrollingDuration:200,
+                smoothScrolling:true,
+                forceHeight: false
+            });
+
+        },timeoffset);
+
+
+        //photowall
+        if($('.page7').length > 0) {
+            var pageParam = {page:1,pagenum:12};
+            $('#wall-list').data('param',pageParam);
+            api.ajax('list', pageParam, function( result ){
+                nodeActions.inserNode( $('#wall-list') , result.data );
+            });
+        }
+    }
+
     var init = function(){
         $(document.body).queryLoader2({
             onLoading : function( percentage ){
                 var per = parseInt(percentage);
                 $('.loading-percentage').html(per+'%');
                 $('.loading-bar').css({'width':per+'%'});
+                if(per == 100) {
+                    complete();
+                }
             },
             onComplete : function(){
-                $('.loading-wrap').fadeOut();
-
-                /* for animation */
-                var isUglyIe = $.browser.msie && $.browser.version <= 8;
-                if(isUglyIe && $('#scheme').length > 0)
-                    return;
-                var ANIMATE_NAME = "data-animate";
-                $('[' + ANIMATE_NAME + ']')
-                    .each(function(){
-                        var $dom = $(this);
-                        var tar = $dom.data('animate');
-                        var browser = $dom.data('browser');
-                        var style = $dom.data('style');
-                        var time = parseInt( $dom.data('time') );
-                        var delay = $dom.data('delay') || 0;
-                        var easing = $dom.data('easing');
-                        var begin = $dom.data('begin');
-                        tar = tar.split(';');
-                        var tarCss = {} , tmp;
-                        if(browser == 'uglyie' && isUglyIe) {
-                            return;
-                        }
-                        for (var i = tar.length - 1; i >= 0; i--) {
-                            tmp = tar[i].split(':');
-                            if( tmp.length == 2 )
-                                tarCss[ tmp[0] ] = $.trim(tmp[1]);
-                        }
-                        if( isUglyIe && tarCss.opacity !== undefined ){
-                            delete tarCss.opacity;
-                        }
-
-
-                        style = style.split(';');
-                        var styleCss = {} , tmp;
-                        for (var i = style.length - 1; i >= 0; i--) {
-                            tmp = style[i].split(':');
-                            if( tmp.length == 2 )
-                                styleCss[ tmp[0] ] = $.trim(tmp[1]);
-                        }
-                        if( isUglyIe && styleCss.opacity !== undefined ){
-                            delete styleCss.opacity;
-                        }
-                        $dom.css(styleCss).delay( delay )
-                            .animate( tarCss , time , easing );
-                        if( begin ){
-                            setTimeout(function(){
-                                animation_begins[begin].call( $dom );
-                            } , delay);
-                        }
-                    });
-
-                var autoplay = getQueryString('autoplay');
-                if(autoplay) {
-                    LP.triggerAction('open_home_video');
-                }
-
-                var timeoffset = isUglyIe?0:0;
-                setTimeout(function(){
-					if($('html').hasClass('touch')) {
-						return;
-					}
-                    var s = skrollr.init({
-                        smoothScrollingDuration:200,
-                        smoothScrolling:true,
-                        forceHeight: false
-                    });
-
-                },timeoffset);
-
-				//photowall
-                if($('.page7').length > 0) {
-                    var pageParam = {page:1,pagenum:12};
-                    $('#wall-list').data('param',pageParam);
-                    api.ajax('list', pageParam, function( result ){
-                        nodeActions.inserNode( $('#wall-list') , result.data );
-                    });
-                }
+                complete();
             }
         });
     }
 
 	init();
+
+
     if($('html').hasClass('touch')) {
         gameMgr.start();
     }

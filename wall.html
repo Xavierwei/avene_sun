@@ -27,9 +27,9 @@
             <a class="nav1" href="index.html" title=""><span>首页</span></a>
             <a class="nav2" href="experts.html" title=""><span>专家建议</span></a>
             <a class="nav3" href="reflexe.html" title=""><span>防晒“小金刚”</span></a>
-            <a class="nav5" href="kol.html" title=""><span class="on">达人分享</span></a>
+            <a class="nav5" href="kol.html" title=""><span>达人分享</span></a>
             <a class="nav4" href="family.html" title=""><span>防晒家族</span></a>
-            <a class="nav6" href="game.html" title=""><span>参与游戏</span></a>
+            <a class="nav6" href="comingsoon.html" title=""><span>参与游戏</span></a>
             <a class="nav7" href="comingsoon.html" title=""><span>申领试用</span></a>
 	        <span class="navicon dis_mobile"></span>
         </div>
@@ -72,9 +72,9 @@
     <script type="text/tpl" id="node-item-template">
 	    <div class="photo_item">
 		    <div class="img">
-			    <img width="225" src="api{{thumb}}" />
+			    <img style="width:225px;height:{{thumb_height}}px;" src="api{{thumb}}" />
 			    <div class="like_wrap">
-				    <div class="like_btn btn"></div>
+				    <div class="like_btn btn" data-a="like" data-d="pid={{pid}}"></div>
 				    <div class="like_text">喜欢</div>
 				    <div class="like_num"></div>
 			    </div>

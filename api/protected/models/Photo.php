@@ -41,7 +41,7 @@ class Photo extends CActiveRecord
 			array('gender', 'length', 'max'=>5),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('pid, weibo_id, url, image, screen_name, gender, location, sns_uid, avatar, content, status, datetime', 'safe', 'on'=>'search'),
+			array('pid, weibo_id, url, image, screen_name, gender, location, sns_uid, avatar, content, status, datetime, like', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -73,6 +73,7 @@ class Photo extends CActiveRecord
 			'content' => 'content',
 			'status' => 'Status',
 			'datetime' => 'Datetime',
+			'like' => 'Like',
 		);
 	}
 
@@ -288,10 +289,10 @@ class Photo extends CActiveRecord
 	public function getAllPhotos() {
 		$criteria=new CDbCriteria;
 		$criteria->select='*';
-    $criteria->limit = 50;
-    $criteria->order = 'datetime DESC';
+		$criteria->limit = 50;
+		$criteria->order = 'datetime DESC';
 		$photos = $this->findAll($criteria);
-    return $photos;
+    	return $photos;
 
 //		foreach($photos as $photo) {
 //			$res = $photo->attributes;

@@ -37,7 +37,7 @@ class PhotoController extends Controller
 	{
 		return array(
 			array('allow',  // allow all users to perform 'index' and 'view' actions
-				'actions'=>array('index','view','list','fetch','post','ChangeStatus','GetStatistics','Search','getcounts','GetProxyData','FetchProxyData'),
+				'actions'=>array('index','view','list','fetch','post','like','ChangeStatus','GetStatistics','Search','getcounts','GetProxyData','FetchProxyData'),
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
@@ -82,10 +82,10 @@ class PhotoController extends Controller
 			$criteria->condition='status=:status';
 			$criteria->params=array(':status'=>$status);
 		}
-    else {
-      $criteria->condition='status=:status';
-      $criteria->params=array(':status'=>1);
-    }
+		else {
+		  $criteria->condition='status=:status';
+		  $criteria->params=array(':status'=>1);
+		}
 		$criteria->limit = $pagenum;
 		$criteria->offset = ($page - 1 ) * $pagenum;
 		$criteria->order = 'datetime DESC';
@@ -94,6 +94,15 @@ class PhotoController extends Controller
 		$retdata = array();
 		foreach($photos as $photo) {
 			$data = $photo->attributes;
+			$img = ROOT_PATH.str_replace('.jpg', '_thumb.jpg', $data['image']);
+			$thumb_size = @getimagesize($img);
+			$size = getimagesize(ROOT_PATH.$data['image']);
+			if($thumb_size) {
+				$data['thumb_ratio'] =  $thumb_size[1]/$thumb_size[0];
+			}
+			if($size) {
+				$data['size'] = $size[3];
+			}
 			$data['link']= $data['sns_uid'].'/'.$data['url'];
 			unset($data['avatar']);
 			unset($data['sns_uid']);
@@ -374,6 +383,20 @@ class PhotoController extends Controller
 			'model'=>$model,
 		));
 	}
+
+
+	public function actionLike() {
+		$request = Yii::app()->getRequest();
+		$pid = $request->getPost('pid');
+		if(!$pid) {
+			return $this->responseError(601);
+		}
+		$photo = Photo::model()->findByPk($pid);
+		$photo->like = $photo->like + 1;
+		$photo->save();
+		$this->responseJSON($photo->like, "success");
+	}
+
 
 	/**
 	 * Deletes a particular model.
