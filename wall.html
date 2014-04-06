@@ -29,14 +29,19 @@
             <a class="nav3" href="reflexe.html" title=""><span>防晒“小金刚”</span></a>
             <a class="nav5" href="kol.html" title=""><span>达人分享</span></a>
             <a class="nav4" href="family.html" title=""><span>防晒家族</span></a>
-            <a class="nav6" href="comingsoon.html" title=""><span>参与游戏</span></a>
-            <a class="nav7" href="comingsoon.html" title=""><span>申领试用</span></a>
+	        <a class="nav6" href="game.html" title=""><span>参与游戏</span></a>
+	        <a class="nav7" href="e-trial.html" title=""><span>申领试用</span></a>
 	        <span class="navicon dis_mobile"></span>
         </div>
 		<a class="navbtn dis_mobile" data-a="toggle_nav"></a>
     </div>
     <!--  -->
 	<div class="content page7 cs-clear" data-style="opacity:0;" data-animate="opacity:1;" data-delay="500" data-time="500">
+		<div class="wall-tit"></div>
+		<div class="wall-banner">
+			<a class="wall-btn1" href="javascript:void(0);" data-a="open_rule"></a>
+			<a class="wall-btn2" href="#"></a>
+		</div>
         <div id="wall-list"></div>
 		<div class="list-loading"></div>
 		<div id="wall-list-prepend"></div>
@@ -72,14 +77,52 @@
     <script type="text/tpl" id="node-item-template">
 	    <div class="photo_item">
 		    <div class="img">
+			    {{#if mobile}}
+			    <img style="width:297px;height:{{m_thumb_height}}px;" src="api{{thumb}}" />
+			    {{else}}
 			    <img style="width:225px;height:{{thumb_height}}px;" src="api{{thumb}}" />
+			    {{/if}}
 			    <div class="like_wrap">
-				    <div class="like_btn btn" data-a="like" data-d="pid={{pid}}"></div>
+				    <div class="like_btn btn {{#if liked}}liked{{/if}}" data-a="like" data-d="pid={{pid}}"></div>
 				    <div class="like_text">喜欢</div>
-				    <div class="like_num"></div>
+				    <div class="like_num">{{like}}</div>
 			    </div>
 		    </div>
-		    <div class="content">{{shortcontent}}</div>
+		    <div class="content">{{{shortcontent}}}</div>
+	    </div>
+    </script>
+
+
+    <script type="text/tpl" id="rule-template">
+	    <div class="overlay btn" data-a="close_pop"></div>
+	    <div class="popup rule-popup">
+		    <div class="popup-close btn" data-a="close_pop"></div>
+		    <div class="popup-body">
+			    <ul>
+				    <li>1. 参与资格: 均可参加本活动。</li>
+				    <li>2. 活动时间: 2014年05月05日-2014年06月08日</li>
+				    <li>3. 中奖名额: 分享奖、人气奖各一名</li>
+				    <li>4. 游戏方式:
+					    <ul>
+						    <li>1. 在微博上发布与防晒“小金刚”（雅漾清爽倍护便携防晒乳）的亲密合影，含有#雅漾尽情晒#并 @雅漾 官方微博。</li>
+						    <li>2. 你的照片将会展示在雅漾防晒专题网站上，并有大众进行评分。</li>
+						    <li>3. 原微博获得最多转发的用户将获得“分享奖”，在雅漾防晒专题网站上获得最多“喜欢”的用户将获得“人气奖”。</li>
+					    </ul>
+				    </li>
+				    <li>5. 领奖方式: 奖品将于中间名单公布的次月内，以快递形式寄出。奖品以实物为准。公布中奖名单，中奖者需7天内联系@雅漾 新浪官方微博领奖，若7天内未联系@雅漾 即视为自动放弃领奖资格。</li>
+				    <li>6. 活动须知:
+					    <ul>
+						    <li>1. 中奖者参加本次活动即视为授权活动主办方与本次活动相关的广告和宣传中无偿使用中奖者的名字、肖像和任何其他由其本人提供的个人信息，而无需再另行征求确认，中奖者提供的个人信息，活动主办方以及运营方承诺将采取合理的步骤进行保护，除非根据法律或政府的强制性规定，在未得到中奖者的许可之前，活动主办方及运营方承诺不将中奖者的个人信息提供给无关的第三方。</li>
+						    <li>2. 中奖者一经确认领取奖品，不得自行撤销、更改或转让，如遇意外，无法提供制定奖品，活动主办方有权以价值相仿的奖品替代，所有奖品不得兑换现金或作价销售。</li>
+						    <li>3. 如因中奖者个人原因不能履行奖项，视为自动放弃，活动主办方将不做任何形式赔偿。</li>
+						    <li>4. 如果发现有参加者在本次活动中使用不正当的手段参加活动，活动主办方有权在不事先通知的前提下取消其参加活动的资格。</li>
+						    <li>5. 活动主办方不对因网络传输原因而导致参加者提交的信息错误或延误担任何责任。</li>
+						    <li>6. 活动主办方、关联公司、广告公司、网络合作伙伴的员工及其家属不可参加此次活动，以示公允。</li>
+						    <li>7. 如遇不可抗力因素，活动主办方有权取消本次活动。</li>
+					    </ul>
+				    <li>7. 本活动最终解释权归雅漾所有。</li>
+			    </ul>
+		    </div>
 	    </div>
     </script>
 

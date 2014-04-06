@@ -9,6 +9,7 @@ LP.use(['jquery' ,'api', 'easing', 'skrollr', 'flash-detect', 'hammer', 'transit
 	var isIpad = navigator.userAgent.toLowerCase().indexOf('ipad') > 0;
 	var windWidth = $(window).width() - 90;
 	var $loading = $('.list-loading');
+	var isMobile;
 
 	if(isIpad) {
 		$('body').addClass('ipad');
@@ -24,6 +25,17 @@ LP.use(['jquery' ,'api', 'easing', 'skrollr', 'flash-detect', 'hammer', 'transit
         document.getElementsByTagName("head")[0].
             appendChild(msViewportStyle);
     }
+
+	$(window).bind('resize', function() {
+		if($(window).width() <= 640) {
+			isMobile = true;
+			$('.photo_item img').width(297).height('auto');
+		}
+		else {
+			$('.photo_item img').width(225).height('auto');
+		}
+	});
+	$(window).trigger('resize');
     
     $(window).bind('orientationchange', function() {
         var o = window.orientation;
@@ -42,7 +54,6 @@ LP.use(['jquery' ,'api', 'easing', 'skrollr', 'flash-detect', 'hammer', 'transit
 			}
 		}
     });
-
 	$(window).trigger('orientationchange');
 
 	$('body').on('click', function(e){
@@ -86,6 +97,14 @@ LP.use(['jquery' ,'api', 'easing', 'skrollr', 'flash-detect', 'hammer', 'transit
 			}
         });
     });
+
+	LP.action('open_rule', function(){
+		LP.compile( 'rule-template' , {}, function( html ){
+			$('body').append(html);
+			$('.overlay').fadeIn();
+			$('.popup').css({top:'-50%'}).fadeIn().dequeue().animate({top:'50%'}, 800, 'easeOutQuart');
+		});
+	});
 
     LP.action('close_pop', function(){
         $('.overlay').fadeOut();
@@ -188,6 +207,12 @@ LP.use(['jquery' ,'api', 'easing', 'skrollr', 'flash-detect', 'hammer', 'transit
         $('.game-box6').fadeIn();
     });
 
+	$('#etrial-form input[name="address"]').on('keyup', function(e){
+		if(e.keyCode == 13) {
+			LP.triggerAction('etrial_submit');
+		}
+	});
+
     LP.action('etrial_submit', function(){
         if($(this).hasClass('submitting')) {
             return;
@@ -196,18 +221,18 @@ LP.use(['jquery' ,'api', 'easing', 'skrollr', 'flash-detect', 'hammer', 'transit
         var address = $('#etrial-form input[name="address"]').val();
         var tel = $('#etrial-form input[name="tel"]').val();
         var validate = true;
-        $('.page6-error').fadeOut();
+        $('.tester-error').fadeOut();
         if(name == '') {
             validate = false;
-            $('.page6-error-name').fadeIn();
+            $('.tester-error-name').fadeIn();
         }
         if(address == '') {
             validate = false;
-            $('.page6-error-address').fadeIn();
+            $('.tester-error-address').fadeIn();
         }
         if(tel == '') {
             validate = false;
-            $('.page6-error-tel').fadeIn();
+            $('.tester-error-tel').fadeIn();
         }
 
         if(!validate) {
@@ -218,7 +243,8 @@ LP.use(['jquery' ,'api', 'easing', 'skrollr', 'flash-detect', 'hammer', 'transit
         api.ajax('trial', {name:name, address:address, tel:tel}, function(res){
             $(this).removeClass('submitting');
             if(res == '1') {
-
+				$('.testerform-step1').fadeOut();
+				$('.testerform-step2').fadeIn();
             }
         });
     });
@@ -272,8 +298,19 @@ LP.use(['jquery' ,'api', 'easing', 'skrollr', 'flash-detect', 'hammer', 'transit
 	});
 
     LP.action('like', function(data) {
+		var $this = $(this);
+		if($this.hasClass('liked')) {
+			return;
+		}
         api.ajax('like', {pid: data.pid}, function( result ){
-            console.log(result);
+			$this.addClass('liked');
+			$this.nextAll('.like_num').html(result.data);
+
+			// add like status to cookie
+			var liked = LP.getCookie('_led') || '';
+			liked = liked ? liked.split(',') : [];
+			liked.push( data.pid );
+			LP.setCookie( '_led' , liked.join(',') , 86400 * 365 );
         });
     });
 
@@ -325,6 +362,17 @@ LP.use(['jquery' ,'api', 'easing', 'skrollr', 'flash-detect', 'hammer', 'transit
 			//var pageParm = $main.data('param'); //TODO:  pageParm.orderby == 'like' || pageParm.orderby == 'random' 此时不显示日历
 			nodes = nodes || [];
 
+			// fix nodes like status
+			var cookieLikeStatus = LP.getCookie('_led');
+			if( cookieLikeStatus && nodes.length ){
+				cookieLikeStatus = cookieLikeStatus.split(',');
+				$.each( nodes , function( i , node ){
+					if( $.inArray( node.pid , cookieLikeStatus ) !== -1 ){
+						node.liked = true;
+					}
+				} );
+			}
+
 			// save nodes to cache
 			var cache = $dom.data('nodes') || [];
 			$dom.data('nodes' , cache.concat( nodes ) );
@@ -332,10 +380,14 @@ LP.use(['jquery' ,'api', 'easing', 'skrollr', 'flash-detect', 'hammer', 'transit
 			$.each( nodes , function( index , node ){
 				node.thumb = node.image.replace('.jpg','_thumb.jpg');
                 node.thumb_height = 225 * node.thumb_ratio;
+				node.m_thumb_height = 297 * node.thumb_ratio;
 				node.sharecontent = encodeURI(node.content).replace(new RegExp('#',"gm"),'%23');
-				node.shortcontent = node.content;
+				node.shortcontent = linkify(node.content);
 				if(node.content.length > 100) {
 					node.shortcontent = node.content.substring(0,100)+'...';
+				}
+				if(isMobile) {
+					node.mobile = true;
 				}
 				LP.compile( 'node-item-template' ,
 					node ,
@@ -458,8 +510,8 @@ LP.use(['jquery' ,'api', 'easing', 'skrollr', 'flash-detect', 'hammer', 'transit
                 var vy = info.vy;
                 var vx = info.vx;
                 var vz = info.vz;//2.5;
-                var zDis = 500;
-                var a = 0.00202 ;
+                var zDis = 400;
+                var a = 0.00102 ;
                 // var a = ( ( tar.top - curr.top ) - vy * time ) * 2 / time / time ;
 
                 var startTime = new Date();
@@ -472,21 +524,21 @@ LP.use(['jquery' ,'api', 'easing', 'skrollr', 'flash-detect', 'hammer', 'transit
                     var d = new Date() - startTime;
 
                     //var p = d / time;
-                    var w = curr.width - ( vz * d / zDis * 150 );
+                    var w = curr.width - ( vz * d / zDis * 80 );
                     var status = {
                         width: w,
                         height: w,
-                        zIndex: curr.zIndex - ( vz * d / zDis * 150 ) ,
+                        zIndex: curr.zIndex - ( vz * d / zDis * 80 ) ,
                         left: curr.cx + vx * d - w / 2 ,
                         top: curr.cy + vy * d - w / 2 + 1 / 2 * a * d * d
                     }
-                    if( vz * d >= zDis + 50 && vz * d <= zDis + 170 ){
+                    if( vz * d >= zDis + 250 && vz * d <= zDis + 770 ){
                         //判断是否相交
                         var isMeet = false;
                         var index;
                         $.each( centers , function( i , pos ){
                             var dis = gameMgr.getDistance( pos , {left: status.left + status.width / 2 , top: status.top + status.width / 2} );
-                            if( dis < 100 ){
+                            if( dis < 150 ){
                                 isMeet = true;
                                 index = i;
                                 return false;
@@ -547,7 +599,7 @@ LP.use(['jquery' ,'api', 'easing', 'skrollr', 'flash-detect', 'hammer', 'transit
                 var vy = - speed * Math.abs( Math.sin( angle ) );
                 return {
                     vx : vx ,
-                    vy : vy ,
+                    vy : vy * 0.5 ,
                     vz : 0.5 ,//+ Math.abs(  3 * vx ),
                     dis: dis
                 }
@@ -617,7 +669,7 @@ LP.use(['jquery' ,'api', 'easing', 'skrollr', 'flash-detect', 'hammer', 'transit
             .on( isTouchSupport ? 'touchend' : 'mouseup' , function( ev ){
                 if( isMouseDown && !throwBall ){
                     var pdata = gameMgr.prepareThrow( gameMgr.getBallCenter() , gameMgr.getEventCenter(ev) );
-                    if( pdata.dis < 150 ){ return ;}
+                    if( pdata.dis < 100 ){ return ;}
                     throwBall = true;
                     gameMgr.stopFlicker();
                     $('.game-dir').stop( true , true )
@@ -800,6 +852,44 @@ LP.use(['jquery' ,'api', 'easing', 'skrollr', 'flash-detect', 'hammer', 'transit
         var r = window.location.search.substr(1).match(reg);
         if (r != null) return unescape(r[2]); return null;
     }
+
+	var linkify = function(inputText) {
+		var replacedText, replacePattern1, replacePattern2, replacePattern3;
+		var originalText = inputText;
+
+		//URLs starting with http://, https://, file:// or ftp://
+		replacePattern1 = /(\b(https?|ftp|file):\/\/[-A-Z0-9+&@#\/%?=~_|!:,.;]*[-A-Z0-9+&@#\/%=~_|])/gim;
+		replacedText = inputText.replace(replacePattern1, '<a href="$1" target="_blank">$1</a>');
+
+		//URLs starting with "www." (without // before it, or it'd re-link the ones done above).
+		replacePattern2 = /(^|[^\/f])(www\.[\S]+(\b|$))/gim;
+
+		replacedText = replacedText.replace(replacePattern2, '$1<a href="http://$2" target="_blank">$2</a>');
+
+		//Change email addresses to mailto:: links.
+		replacePattern3 = /(([a-zA-Z0-9\-\_\.])+@[a-zA-Z\_]+?(\.[a-zA-Z]{2,6})+)/gim;
+		replacedText = replacedText.replace(replacePattern3, '<a href="mailto:$1">$1</a>');
+
+		//If there are hrefs in the original text, let's split
+		// the text up and only work on the parts that don't have urls yet.
+		var count = originalText.match(/<a href/g) || [];
+
+		if(count.length > 0){
+			var combinedReplacedText;
+			//Keep delimiter when splitting
+			var splitInput = originalText.split(/(<\/a>)/g);
+
+			for (i = 0 ; i < splitInput.length ; i++){
+				if(splitInput[i].match(/<a href/g) == null){
+					splitInput[i] = splitInput[i].replace(replacePattern1, '<a href="$1" target="_blank">$1</a>').replace(replacePattern2, '$1<a href="http://$2" target="_blank">$2</a>').replace(replacePattern3, '<a href="mailto:$1">$1</a>');
+				}
+			}
+			combinedReplacedText = splitInput.join('');
+			return combinedReplacedText;
+		} else {
+			return replacedText;
+		}
+	}
 
 
     // GA Event Tracking

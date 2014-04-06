@@ -76,7 +76,7 @@ class PhotoController extends Controller
 			$criteria->select='*';
 		}
 		else {
-			$criteria->select='pid,weibo_id,url,sns_uid,image,content,datetime';
+			$criteria->select='pid,weibo_id,url,sns_uid,image,content,datetime,`like`';
 		}
 		if($status != 'all' && $this->getRole() == 2) {
 			$criteria->condition='status=:status';
