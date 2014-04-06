@@ -510,7 +510,7 @@ LP.use(['jquery' ,'api', 'easing', 'skrollr', 'flash-detect', 'hammer', 'transit
                 var vy = info.vy;
                 var vx = info.vx;
                 var vz = info.vz;//2.5;
-                var zDis = 400;
+                var zDis = 500;
                 var a = 0.00102 ;
                 // var a = ( ( tar.top - curr.top ) - vy * time ) * 2 / time / time ;
 
@@ -532,13 +532,14 @@ LP.use(['jquery' ,'api', 'easing', 'skrollr', 'flash-detect', 'hammer', 'transit
                         left: curr.cx + vx * d - w / 2 ,
                         top: curr.cy + vy * d - w / 2 + 1 / 2 * a * d * d
                     }
-                    if( vz * d >= zDis + 250 && vz * d <= zDis + 770 ){
+                    if( vz * d >= zDis - 100   && vz * d <= zDis + 400 ){
+						//console.log(vz * d);
                         //判断是否相交
                         var isMeet = false;
                         var index;
                         $.each( centers , function( i , pos ){
                             var dis = gameMgr.getDistance( pos , {left: status.left + status.width / 2 , top: status.top + status.width / 2} );
-                            if( dis < 150 ){
+							if( dis < 200 ){
                                 isMeet = true;
                                 index = i;
                                 return false;
@@ -598,7 +599,7 @@ LP.use(['jquery' ,'api', 'easing', 'skrollr', 'flash-detect', 'hammer', 'transit
                 var vx = ( tarPos.left > strPos.left ? 1 : -1 ) * speed * Math.abs( Math.cos( angle ) ) / 3.5;
                 var vy = - speed * Math.abs( Math.sin( angle ) );
                 return {
-                    vx : vx ,
+                    vx : vx * 0.5,
                     vy : vy * 0.5 ,
                     vz : 0.5 ,//+ Math.abs(  3 * vx ),
                     dis: dis
@@ -679,18 +680,22 @@ LP.use(['jquery' ,'api', 'easing', 'skrollr', 'flash-detect', 'hammer', 'transit
                         throwBall = false;
 
                         $('.game-tar'+(index+1)).fadeOut();
+						$('.game-ball').fadeOut();
+						setTimeout(function(){
+							$('.game3-radio').removeClass('game3-radioed');
+							$('.game-box1').fadeOut();
+							$('.game-box3').fadeIn();
+							$('.game3').hide();
+							$('.game3-'+(index+1)).show();
+						},1000);
 
-                        $('.game3-radio').removeClass('game3-radioed');
-                        $('.game-box1').fadeOut();
-                        $('.game-box3').fadeIn();
-                        $('.game3').hide();
-                        $('.game3-'+(index+1)).show();
 
-                        $('.game-ball')
-                            .animate( {
-                                top: 264
-                            } , 500 )
-                            [0].style.cssText = 'top: 370px;';
+
+//                        $('.game-ball')
+//                            .animate( {
+//                                top: 264
+//                            } , 500 )
+//                            [0].style.cssText = 'top: 370px;';
                         // $('.game-inner').fadeOut();
                         // $('.ques-inner').fadeIn();
                     } , function(){
