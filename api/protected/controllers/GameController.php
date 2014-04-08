@@ -12,7 +12,39 @@ class GameController extends Controller
 
 	public function actionIndex()
 	{
-		$this->render('index');
+	}
+
+	public function actionList()
+	{
+		$request = Yii::app()->getRequest();
+		$page = $request->getParam("page");
+		if (!$page) {
+			$page = 1;
+		}
+		$pagenum = $request->getParam("pagenum");
+		if (!$pagenum) {
+			$pagenum = 10;
+		}
+		$game = new Game();
+		$criteria=new CDbCriteria;
+		if($this->getRole() == 2) {
+			$criteria->select='*';
+		}
+
+		$count = $game->count($criteria);
+
+		$criteria->limit = $pagenum;
+		$criteria->offset = ($page - 1 ) * $pagenum;
+		$criteria->order = 'datetime DESC';
+		$games = $game->findAll($criteria);
+
+		$retdata = array();
+		foreach($games as $game) {
+			$data = $game->attributes;
+			$retdata[] = $data;
+		}
+
+		$this->responseJSON($retdata, $count);
 	}
 
 	public function actionPost() {
@@ -24,6 +56,7 @@ class GameController extends Controller
 		$game->name = $name;
 		$game->email = $email;
 		$game->tel = $tel;
+		$game->datetime = time();
 		$game->save();
 		if($game->validate()) {
 			$game->save();

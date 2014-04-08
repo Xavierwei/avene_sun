@@ -1,0 +1,14 @@
+<table class="table">
+	<tr>
+		<th width="20%">Name</th>
+		<th width="20%">Address</th>
+		<th width="20%">Tel</th>
+		<th width="20%">Date</th>
+	</tr>
+	<tr ng-repeat="trial in trials">
+		<td>{{trial.name}}</td>
+		<td>{{trial.address}}</td>
+		<td>{{trial.tel}}</td>
+		<td>{{trial.datetime*1000 | date:'MMM d, y HH:mm a'}}</td>
+	</tr>
+</table>

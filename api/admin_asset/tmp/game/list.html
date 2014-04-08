@@ -1,0 +1,14 @@
+<table class="table">
+    <tr>
+        <th width="20%">Name</th>
+        <th width="20%">Tel</th>
+        <th width="20%">Email</th>
+        <th width="20%">Date</th>
+    </tr>
+    <tr ng-repeat="game in games">
+        <td>{{game.name}}</td>
+        <td>{{game.tel}}</td>
+        <td>{{game.email}}</td>
+	    <td>{{game.datetime*1000 | date:'MMM d, y HH:mm a'}}</td>
+    </tr>
+</table>

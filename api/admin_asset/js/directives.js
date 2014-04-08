@@ -42,8 +42,12 @@ angular.module('AveneAdmin.directives', []).
                         elem.find('li').eq(0).addClass('active');
                         scope.showSubNav = true;
                     }
+					else if(url.originalPath.indexOf('game') != -1) {
+						elem.find('li').eq(1).addClass('active');
+						scope.showSubNav = false;
+					}
                     else {
-                        elem.find('li').eq(1).addClass('active');
+                        elem.find('li').eq(2).addClass('active');
                         scope.showSubNav = false;
                     }
                 });

@@ -6,7 +6,8 @@
   <div class="logout"><a ng-click="logout()" href="javascript:void(0);"><span class="glyphicon glyphicon-log-out"></span>Logout</a></div>
   <ul top-tab class="nav nav-tabs">
     <li><a href="#/photo/list/all">Photos</a></li>
-    <li><a href="#/winner/list">Winners</a></li>
+    <li><a href="#/game/list">Game</a></li>
+	  <li><a href="#/trial/list">Trial</a></li>
   </ul>
 </div>
 
@@ -41,10 +42,14 @@
 <script src="<?php echo Yii::app()->request->baseUrl; ?>/admin_asset/js/services.js?<?php echo time();?>"></script>
 <script src="<?php echo Yii::app()->request->baseUrl; ?>/admin_asset/js/services/photo.js?<?php echo time();?>"></script>
 <script src="<?php echo Yii::app()->request->baseUrl; ?>/admin_asset/js/services/winner.js?<?php echo time();?>"></script>
+<script src="<?php echo Yii::app()->request->baseUrl; ?>/admin_asset/js/services/game.js?<?php echo time();?>"></script>
+<script src="<?php echo Yii::app()->request->baseUrl; ?>/admin_asset/js/services/trial.js?<?php echo time();?>"></script>
 <script src="<?php echo Yii::app()->request->baseUrl; ?>/admin_asset/js/lib.controllers.js?<?php echo time();?>"></script>
 <script src="<?php echo Yii::app()->request->baseUrl; ?>/admin_asset/js/controllers.js?<?php echo time();?>"></script>
 <script src="<?php echo Yii::app()->request->baseUrl; ?>/admin_asset/js/controllers/photo.js?<?php echo time();?>"></script>
 <script src="<?php echo Yii::app()->request->baseUrl; ?>/admin_asset/js/controllers/winner.js?<?php echo time();?>"></script>
+<script src="<?php echo Yii::app()->request->baseUrl; ?>/admin_asset/js/controllers/game.js?<?php echo time();?>"></script>
+<script src="<?php echo Yii::app()->request->baseUrl; ?>/admin_asset/js/controllers/trial.js?<?php echo time();?>"></script>
 <script src="<?php echo Yii::app()->request->baseUrl; ?>/admin_asset/js/filters.js?<?php echo time();?>"></script>
 <script src="<?php echo Yii::app()->request->baseUrl; ?>/admin_asset/js/directives.js?<?php echo time();?>"></script>
 </body>

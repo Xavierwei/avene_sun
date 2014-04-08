@@ -387,10 +387,11 @@ body{background:#efdcc2 url('../img/bg.jpg') no-repeat center top;background-siz
 				.game6-fitit3{background: url('../img/game6_tit3.gif') no-repeat center 0;}
 				.game6-btn{width: 135px;height: 37px;left:451px;top:259px;background: url('../img/game6_btn.gif') no-repeat;position: absolute;cursor: pointer;}
             .game-box7 {width: 689px;height: 370px;position: absolute;left:0;top:0;background: url('../img/game-box7.png') no-repeat center;}
+            .game-box7 .game5-btn {top:222px;left:362px;}
 	.page5-gift{height: 274px;width:910px;margin: 0 auto;position: relative;}
 		.page5gift-tit{width: 195px;height: 20px;background: url('../img/page5_gifttit.png') no-repeat;position: absolute;left:0;top:0;}
-		.page5gift-item{background: #ff7311;width: 290px;height: 186px;top: 52px;position: absolute;opacity: 0.7;filter:alpha(opacity=70);}
-		.page5gift-item:hover{opacity: 1;filter:alpha(opacity=100)}
+		.page5gift-item{background: #ff7311;width: 290px;height: 186px;top: 52px;position: absolute;opacity: 0.7;filter:alpha(opacity=70)}
+        .page5gift-item:hover{opacity: 1;filter:alpha(opacity=100)}
 		.page5gift-item1{left:0}
 			.page5gift1-pho{width: 160px;height: 160px;background: url('../img/page5_giftpho1.png') no-repeat;position: absolute;left:10px;top:15px;}
 			.page5gift1-txt{width: 90px;height: 126px;background: url('../img/page5_gifttxt1.png') no-repeat;position: absolute;left:189px;top:37px;}

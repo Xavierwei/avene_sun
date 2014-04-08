@@ -195,6 +195,7 @@ LP.use(['jquery' ,'api', 'easing', 'skrollr', 'flash-detect', 'hammer', 'transit
     });
 
     LP.action('game_again', function(){
+		$('.game-box7').fadeOut();
         $('.game-box5').fadeOut();
         $('.game-box1').fadeIn();
         if($('html').hasClass('touch')) {
