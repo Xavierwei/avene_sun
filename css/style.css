@@ -417,24 +417,25 @@ body{background:#efdcc2 url('../img/bg.jpg') no-repeat center top;background-siz
 /* Page 7 Used
 ================================================================================================= */
 .page7{width: 950px;margin: 0 auto 0;}
-.photo_item {width:225px;float: left;margin:6px;position: relative;}
-.photo_item .img {position: relative;}
-.photo_item .img img {display: block;}
-.photo_item .like_wrap {position: absolute;bottom:0;width:100%;}
-.photo_item .content {background:#fda740;color:#fff;padding:10px;font-size:14px;}
-.photo_item .content a {color:#fff;text-decoration: none;}
-.photo_item .content a:hover {color:#ffeba5;}
-.photo_item .like_wrap {background: rgba(255,115,17,0.9);}
-.photo_item .like_btn {float:left;background: url('../img/icon_like.png') no-repeat 9px 10px;width:40px;height:37px;border-right:1px solid #fff;}
-.photo_item .liked {background-position: center -47px;cursor:default;}
-.photo_item .like_text {float:left;margin:8px 0 0 9px;color:#fff;font-size:14px;}
-.photo_item .like_num {float:right;border:1px solid #fff;color:#fff;font-size:14px;margin:4px;padding:0 10px;height:26px;line-height:26px;text-align: center;}
-#wall-list {position: relative;}
-.wall-tit {background: url('../img/wall_tit.png') no-repeat;width:444px;height:78px;margin:20px auto;}
-.wall-banner {background: url('../img/wall_banner.png') no-repeat;width:949px;height:198px;margin:0 auto 20px auto;position: relative;}
-.wall-btn1 {background: url('../img/wall_btn_rule.png') no-repeat;width:157px;height:44px;display:block;position: absolute;top:133px;left:100px;}
-.wall-btn2 {background: url('../img/wall_btn_winner.png') no-repeat;width:157px;height:44px;display:block;position: absolute;top:133px;left:300px;}
-.list-loading {background: url('../img/loading2.gif') no-repeat;height:30px;width:30px;margin:20px auto;}
+    .photo_item {width:225px;float: left;margin:6px;position: relative;}
+    .photo_item .photo_item_share_link {background: url('../img/photo_item_share.png') no-repeat;width:27px;height:27px;display: block;top:0;left:0;position: absolute;z-index:2;}
+    .photo_item .img {position: relative;}
+    .photo_item .img img {display: block;}
+    .photo_item .like_wrap {position: absolute;bottom:0;width:100%;}
+    .photo_item .content {background:#fda740;color:#fff;padding:10px;font-size:14px;}
+    .photo_item .content a {color:#fff;text-decoration: none;}
+    .photo_item .content a:hover {color:#ffeba5;}
+    .photo_item .like_wrap {background: rgba(255,115,17,0.9);}
+    .photo_item .like_btn {float:left;background: url('../img/icon_like.png') no-repeat 9px 10px;width:40px;height:37px;border-right:1px solid #fff;}
+    .photo_item .liked {background-position: center -47px;cursor:default;}
+    .photo_item .like_text {float:left;margin:8px 0 0 9px;color:#fff;font-size:14px;}
+    .photo_item .like_num {float:right;border:1px solid #fff;color:#fff;font-size:14px;margin:4px;padding:0 10px;height:26px;line-height:26px;text-align: center;}
+    #wall-list {position: relative;}
+    .wall-tit {background: url('../img/wall_tit.png') no-repeat;width:444px;height:78px;margin:20px auto;}
+    .wall-banner {background: url('../img/wall_banner.png') no-repeat;width:949px;height:198px;margin:0 auto 20px auto;position: relative;}
+    .wall-btn1 {background: url('../img/wall_btn_rule.png') no-repeat;width:157px;height:44px;display:block;position: absolute;top:133px;left:100px;}
+    .wall-btn2 {background: url('../img/wall_btn_winner.png') no-repeat;width:157px;height:44px;display:block;position: absolute;top:133px;left:300px;}
+    .list-loading {background: url('../img/loading2.gif') no-repeat;height:30px;width:30px;margin:20px auto;}
 
 /* Popup Used
 ================================================================================================= */

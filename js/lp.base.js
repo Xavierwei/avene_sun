@@ -7,6 +7,7 @@ LP.use(['jquery' ,'api', 'easing', 'skrollr', 'flash-detect', 'hammer', 'transit
     var isFirefox = navigator.userAgent.toLowerCase().indexOf('firefox') > 0;
 	var isIphone = navigator.userAgent.toLowerCase().indexOf('iphone') > 0;
 	var isIpad = navigator.userAgent.toLowerCase().indexOf('ipad') > 0;
+	var isIe6 = $.browser.msie && $.browser.version < 7;
 	var windWidth = $(window).width() - 90;
 	var $loading = $('.list-loading');
 	var isMobile;
@@ -19,7 +20,7 @@ LP.use(['jquery' ,'api', 'easing', 'skrollr', 'flash-detect', 'hammer', 'transit
         var msViewportStyle = document.createElement("style");
         msViewportStyle.appendChild(
             document.createTextNode(
-                "@-ms-viewport{width:auto!important}"
+                "@-ms-viewport{width:autgo!important}"
             )
         );
         document.getElementsByTagName("head")[0].
@@ -180,9 +181,14 @@ LP.use(['jquery' ,'api', 'easing', 'skrollr', 'flash-detect', 'hammer', 'transit
 
 
     LP.action('game_answer', function(data){
+		if($('.game-box3').hasClass('submitting')) {
+			return;
+		}
+		$('.game-box3').addClass('submitting');
 		$('.game3-radio').removeClass('game3-radioed');
 		$(this).find('.game3-radio').addClass('game3-radioed');
 		api.ajax('answer', {answer:data.answer}, function(res){
+			$('.game-box3').removeClass('submitting');
 			$('.game-box3').fadeOut();
 			if(res == '1') {
 				$('.game-box4').fadeIn();
@@ -191,7 +197,6 @@ LP.use(['jquery' ,'api', 'easing', 'skrollr', 'flash-detect', 'hammer', 'transit
 				$('.game-box5').fadeIn();
 			}
 		});
-
     });
 
     LP.action('game_again', function(){
@@ -315,6 +320,93 @@ LP.use(['jquery' ,'api', 'easing', 'skrollr', 'flash-detect', 'hammer', 'transit
         });
     });
 
+
+	var _currentNodeIndex = 0;
+	LP.action('node', function(){
+		_currentNodeIndex = $(this).prevAll().length;
+		var nodes = $('#wall-list').data('nodes');
+		var node = nodes[ _currentNodeIndex ];
+		node.sharecontent = encodeURI(node.content).replace(new RegExp('#',"gm"),'%23');
+		LP.compile( 'node-zoom-template' , node , function( html ){
+
+			$('body').append(html);
+			var $symj_popup = $('.photo_item_pop').css('opacity',0);
+			var $img = $('.photo_item_pop img');
+			$img.ensureLoad(function(){
+				$(window).trigger('resize');
+				if(isIe6) {
+					var top = $(window).scrollTop() +  $(window).height()/2;
+				}
+				else {
+					top = '50%';
+				}
+				$symj_popup.animate({opacity:1,top:top},800,'easeOutQuart');
+				$('.symj_popup_loading').fadeOut();
+				preLoadImage(nodes);
+			});
+		});
+	});
+
+	//for next action
+	LP.action('next' , function( data ){
+		_currentNodeIndex++;
+		var nodes = $('#symj_list').data('nodes');
+		var node = nodes[ _currentNodeIndex ];
+		if( node ){
+			$('.symj_popup').animate({left:'-50%'},400,'easeInQuart',function(){
+				$(this).remove();
+				node.sharecontent = encodeURI(node.content).replace(new RegExp('#',"gm"),'%23');
+				LP.compile( 'node-zoom-template' , node , function( html ){
+					$('.symj_popup_wrap').append($(html).find('.symj_popup'));
+					$('.symj_popup_loading').fadeIn();
+					var $symj_popup = $('.symj_popup').css({'top':'50%', 'left':'100%', 'opacity':0});
+					var $img = $('.symj_popup .symj_img img');
+					$img.ensureLoad(function(){
+						$(window).trigger('resize');
+						$symj_popup.animate({opacity:1, left:'50%'},300,'easeOutQuart');
+						$('.symj_popup_loading').fadeOut();
+						preLoadImage(nodes);
+					});
+				});
+			});
+		}
+	});
+
+	//for prev action
+	LP.action('prev' , function( data ){
+		_currentNodeIndex--;
+		var nodes = $('#symj_list').data('nodes');
+		var node = nodes[ _currentNodeIndex ];
+		if( node ){
+			$('.symj_popup').animate({left:'150%'},400,'easeInQuart',function(){
+				$(this).remove();
+				node.sharecontent = encodeURI(node.content).replace(new RegExp('#',"gm"),'%23');
+				LP.compile( 'node-zoom-template' , node , function( html ){
+					$('.symj_popup_wrap').append($(html).find('.symj_popup'));
+					$('.symj_popup_loading').fadeOut();
+					var $symj_popup = $('.symj_popup').css({'top':'50%', 'left':'-50%', 'opacity':0});
+					var $img = $('.symj_popup .symj_img img');
+					$img.ensureLoad(function(){
+						$(window).trigger('resize');
+						$symj_popup.animate({opacity:1, left:'50%'},300,'easeOutQuart');
+						$('.symj_popup_loading').fadeOut();
+						preLoadImage(nodes);
+					});
+				});
+			});
+		}
+	});
+
+	var preLoadImage = function(nodes){
+		for( var i = 0 ; i < 4 ; i++ ){
+			if( nodes[ _currentNodeIndex - i ] ){
+				$('<img/>').attr('src' , './api' + nodes[ _currentNodeIndex - i ].image);
+			}
+			if( nodes[ _currentNodeIndex + i ] ){
+				$('<img/>').attr('src' , './api' + nodes[ _currentNodeIndex + i ].image);
+			}
+		}
+	}
 
 	var nodeActions = {
 		prependNode: function( $dom , nodes ){
