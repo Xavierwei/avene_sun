@@ -437,6 +437,24 @@ body{background:#efdcc2 url('../img/bg.jpg') no-repeat center top;background-siz
     .wall-btn2 {background: url('../img/wall_btn_winner.png') no-repeat;width:157px;height:44px;display:block;position: absolute;top:133px;left:300px;}
     .list-loading {background: url('../img/loading2.gif') no-repeat;height:30px;width:30px;margin:20px auto;}
 
+    .photo_item_pop {background:#fff;border:5px solid #fe8027;padding:25px;}
+    .photo_item_pop .popup-close {top:0;z-index:10;}
+    .symj_popup_right {z-index:10;opacity:0;filter:alpha(opacity=0);cursor:pointer;position: absolute;right:20px;height:80%;width:50%;background: url(../img/btn_next.png) no-repeat 90% center;}
+    .symj_popup_left {z-index:10;opacity:0;filter:alpha(opacity=0);cursor:pointer;position: absolute;left:20px;height:80%;width:50%;background: url(../img/btn_prev.png) no-repeat 10% center;}
+    .symj_popup_right:hover,.symj_popup_left:hover {opacity:1;filter:alpha(opacity=100);}
+    .symj_description {color:#fe8027;font-size:14px;margin-top:10px;}
+    .symj_description a {color:#fe8027;}
+    .symj_popup_loading {position:fixed;z-index:888;background:#fff url(../img/loading.gif) no-repeat center;width:60px;height:60px;top:50%;left:50%;margin:-20px 0 0 0;-webkit-border-radius: 5px 5px 5px 5px;border-radius: 5px 5px 5px 5px;}
+    .symj_inner_share_link {background: url('../img/photo_item_share.png') no-repeat;width:27px;height:27px;display: block;top:25px;left:25px;position: absolute;z-index:2;}
+    .photo_item_pop .symj_img {position: relative;}
+    .photo_item_pop .symj_img img {display:block;}
+    .photo_item_pop .like_wrap {z-index:12;background: rgba(255,115,17,0.9);position: absolute;width:100%;bottom:0;}
+    .photo_item_pop .like_btn {float:left;background: url('../img/icon_like.png') no-repeat 9px 10px;width:40px;height:37px;border-right:1px solid #fff;}
+    .photo_item_pop .liked {background-position: center -47px;cursor:default;}
+    .photo_item_pop .like_text {float:left;margin:8px 0 0 9px;color:#fff;font-size:14px;}
+    .photo_item_pop .like_num {float:right;border:1px solid #fff;color:#fff;font-size:14px;margin:4px;padding:0 10px;height:26px;line-height:26px;text-align: center;}
+
+
 /* Popup Used
 ================================================================================================= */
 .overlay {display:none;z-index:10;background:#fff;position:fixed;top:0;left:0;width:100%;height:100%;opacity:0.7;filter:alpha(opacity=70);}
@@ -873,7 +891,7 @@ body{background:#efdcc2 url('../img/bg.jpg') no-repeat center top;background-siz
 
 
     .overlay {z-index:9998;}
-    .video-popup {width:640px;height:360px;margin:-180px 0 0 -320px;}
+    .video-popup {z-index:9999;width:640px;height:360px;margin:-180px 0 0 -320px;}
     .video-popup .popup-body {width:800px;height:360px;background:#fff url('../img/loading.gif') no-repeat center;}
     .rule-popup {z-index:9999;width:640px;height:450px;margin:-225px 0 0 -320px;}
     .rule-popup .popup-body {font-size:20px;line-height:140%;width:580px;height:400px;overflow:scroll;padding:0 30px;border-bottom:40px solid #fff;border-top:40px solid #fff;background:#fff;}
@@ -929,6 +947,12 @@ body{background:#efdcc2 url('../img/bg.jpg') no-repeat center top;background-siz
     .wall-btn1 {background: url('../img/wall_btn_rule.png') no-repeat;width:157px;height:44px;display:block;position: absolute;top:359px;left:122px;}
     .wall-btn2 {background: url('../img/wall_btn_winner.png') no-repeat;width:157px;height:44px;display:block;position: absolute;top:359px;left:319px;}
     .list-loading {background: url('../img/loading.gif') no-repeat;height:30px;width:30px;margin:20px auto;}
+
+    .photo_item_pop {z-index: 9999;}
+    .symj_description {font-size:20px;line-height: 120%;}photo_item .like_btn {float:left;background: url('../img/icon_like.png') no-repeat 20px 10px;width:58px;height:37px;border-right:1px solid #fff;}
+    .photo_item_pop .liked {background-position: center -47px;cursor:default;}
+    .photo_item_pop .like_text {float:left;margin:8px 0 0 9px;color:#fff;font-size:24px;}
+    .photo_item_pop .like_num {float:right;border:1px solid #fff;color:#fff;font-size:24px;margin:4px;padding:0 10px;height:26px;line-height:26px;text-align: center;}
 
 
 }

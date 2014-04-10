@@ -66,6 +66,9 @@
     </div>
     <!--  -->
     <img src="img/space.gif" />
+
+    <img id="imgload" style="display: none;" />
+
     <script type="text/tpl" id="newsletter-pop-template">
 	    <div class="overlay" data-a="close_pop"></div>
 	    <div class="popup newsletter-popup">
@@ -75,7 +78,7 @@
     </script>
 
     <script type="text/tpl" id="node-item-template">
-	    <div data-a="node" data-d="nid={{pid}}" class="photo_item">
+	    <div data-a="node" data-d="nid={{pid}}" class="photo_item" id="photo_item_{{pid}}">
 		    <a href="http://v.t.sina.com.cn/share/share.php?title={{sharecontent}}&pic=http://www.eau-thermale-avene.cn/preview/suncare-reflexe/api{{image}}" target="_blank" class="photo_item_share_link btn"></a>
 		    <div class="img">
 			    {{#if mobile}}
@@ -96,16 +99,23 @@
     <!-- node-item-tpl -->
     <script type="text/tpl" id="node-zoom-template">
 	    <div class="symj_popup_wrap">
-		    <div class="overlay" data-a="close_pop"></div>
+		    <div class="overlay btn" data-a="close_pop"></div>
 		    <div class="symj_popup_loading"></div>
 		    <div class="popup photo_item_pop">
-			    <div class="popup-close" data-a="close_pop"></div>
+			    <div class="popup-close btn" data-a="close_pop"></div>
 			    <div class="symj_popup_left" data-a="prev"></div>
 			    <div class="symj_popup_right" data-a="next"></div>
-			    <div class="symj_img"><img src="./api{{image}}" /></div>
-			    <a href="http://v.t.sina.com.cn/share/share.php?title={{sharecontent}}&pic=http://www.eau-thermale-avene.cn/photowall/test/api{{image}}" target="_blank" class="symj_inner_share_link"></a>
+			    <div class="symj_img">
+                    <img src="./api{{image}}" />
+                    <div class="like_wrap">
+                        <div class="like_btn btn {{#if liked}}liked{{/if}}" data-a="like" data-d="pid={{pid}}"></div>
+                        <div class="like_text">喜欢</div>
+                        <div class="like_num">{{like}}</div>
+                    </div>
+                </div>
+			    <a href="http://v.t.sina.com.cn/share/share.php?title={{sharecontent}}&pic=http://www.eau-thermale-avene.cn/preview/suncare-reflexe/api{{image}}" target="_blank" class="symj_inner_share_link btn"></a>
 			    <div class="symj_description">
-				    {{shortcontent}}
+				    {{{shortcontent}}}
 			    </div>
 		    </div>
 	    </div>
