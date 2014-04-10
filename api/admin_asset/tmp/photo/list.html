@@ -25,7 +25,7 @@
     <li ng-repeat="photo in photos">
         <div class="status-{{photo.status}}">
             <div class="photo">
-                <img src="{{photo.image | thumbnail}}" />
+                <div class="image-wrap"><img src="{{photo.image | thumbnail}}" /></div>
                 <a title="{{photo.content}}" class="black-overlay" href="http://weibo.com/{{photo.link}}" target="_blank"></a>
                 <a href="javascript:void(0)" class="switch switch-{{photo.status}}" ng-click="approve(photo)"></a>
             </div>

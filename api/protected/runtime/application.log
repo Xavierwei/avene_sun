@@ -1941,3 +1941,425 @@ Stack trace:
 REQUEST_URI=/avene_sun/api/photo/list?page=1&pagenum=12&_=1396621173753
 HTTP_REFERER=http://localhost/avene_sun/wall.html
 ---
+2014/04/08 16:02:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "{{photo.image | thumbnail}}".' in /Applications/MAMP/htdocs/avene_sun/api/framework/web/CController.php:483
+Stack trace:
+#0 /Applications/MAMP/htdocs/avene_sun/api/framework/web/CController.php(270): CController->missingAction('{{photo.image |...')
+#1 /Applications/MAMP/htdocs/avene_sun/api/framework/web/CWebApplication.php(282): CController->run('{{photo.image |...')
+#2 /Applications/MAMP/htdocs/avene_sun/api/framework/web/CWebApplication.php(141): CWebApplication->runController('admin/{{photo.i...')
+#3 /Applications/MAMP/htdocs/avene_sun/api/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /Applications/MAMP/htdocs/avene_sun/api/index.php(20): CApplication->run()
+#5 {main}
+REQUEST_URI=/avene_sun/api/index.php/admin/%7B%7Bphoto.image%20|%20thumbnail%7D%7D
+HTTP_REFERER=http://localhost/avene_sun/api/index.php/admin/index
+---
+2014/04/08 16:02:37 [error] [php] getimagesize(/Applications/MAMP/htdocs/avene_sun/api/upload/20140403/3695420960237195.jpg): failed to open stream: No such file or directory (/Applications/MAMP/htdocs/avene_sun/api/protected/controllers/PhotoController.php:99)
+Stack trace:
+#0 /Applications/MAMP/htdocs/avene_sun/api/framework/web/CController.php(308): CInlineAction->runWithParams()
+#1 /Applications/MAMP/htdocs/avene_sun/api/framework/web/filters/CFilterChain.php(133): PhotoController->runAction()
+#2 /Applications/MAMP/htdocs/avene_sun/api/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#3 /Applications/MAMP/htdocs/avene_sun/api/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#4 /Applications/MAMP/htdocs/avene_sun/api/framework/web/filters/CInlineFilter.php(58): PhotoController->filterAccessControl()
+#5 /Applications/MAMP/htdocs/avene_sun/api/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#6 /Applications/MAMP/htdocs/avene_sun/api/framework/web/CController.php(291): CFilterChain->run()
+#7 /Applications/MAMP/htdocs/avene_sun/api/framework/web/CController.php(265): PhotoController->runActionWithFilters()
+#8 /Applications/MAMP/htdocs/avene_sun/api/framework/web/CWebApplication.php(282): PhotoController->run()
+#9 /Applications/MAMP/htdocs/avene_sun/api/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#10 /Applications/MAMP/htdocs/avene_sun/api/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#11 /Applications/MAMP/htdocs/avene_sun/api/index.php(20): CWebApplication->run()
+REQUEST_URI=/avene_sun/api/index.php/photo/list?1396965756882&pagenum=20&status=all
+in /Applications/MAMP/htdocs/avene_sun/api/protected/controllers/PhotoController.php (99)
+in /Applications/MAMP/htdocs/avene_sun/api/index.php (20)
+2014/04/08 16:02:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "{{photo.image | thumbnail}}".' in /Applications/MAMP/htdocs/avene_sun/api/framework/web/CController.php:483
+Stack trace:
+#0 /Applications/MAMP/htdocs/avene_sun/api/framework/web/CController.php(270): CController->missingAction('{{photo.image |...')
+#1 /Applications/MAMP/htdocs/avene_sun/api/framework/web/CWebApplication.php(282): CController->run('{{photo.image |...')
+#2 /Applications/MAMP/htdocs/avene_sun/api/framework/web/CWebApplication.php(141): CWebApplication->runController('admin/{{photo.i...')
+#3 /Applications/MAMP/htdocs/avene_sun/api/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /Applications/MAMP/htdocs/avene_sun/api/index.php(20): CApplication->run()
+#5 {main}
+REQUEST_URI=/avene_sun/api/index.php/admin/%7B%7Bphoto.image%20|%20thumbnail%7D%7D
+HTTP_REFERER=http://localhost/avene_sun/api/index.php/admin/index
+---
+2014/04/08 16:03:02 [error] [php] getimagesize(/Applications/MAMP/htdocs/avene_sun/api/upload/20140403/3695420960237195.jpg): failed to open stream: No such file or directory (/Applications/MAMP/htdocs/avene_sun/api/protected/controllers/PhotoController.php:99)
+Stack trace:
+#0 /Applications/MAMP/htdocs/avene_sun/api/framework/web/CController.php(308): CInlineAction->runWithParams()
+#1 /Applications/MAMP/htdocs/avene_sun/api/framework/web/filters/CFilterChain.php(133): PhotoController->runAction()
+#2 /Applications/MAMP/htdocs/avene_sun/api/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#3 /Applications/MAMP/htdocs/avene_sun/api/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#4 /Applications/MAMP/htdocs/avene_sun/api/framework/web/filters/CInlineFilter.php(58): PhotoController->filterAccessControl()
+#5 /Applications/MAMP/htdocs/avene_sun/api/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#6 /Applications/MAMP/htdocs/avene_sun/api/framework/web/CController.php(291): CFilterChain->run()
+#7 /Applications/MAMP/htdocs/avene_sun/api/framework/web/CController.php(265): PhotoController->runActionWithFilters()
+#8 /Applications/MAMP/htdocs/avene_sun/api/framework/web/CWebApplication.php(282): PhotoController->run()
+#9 /Applications/MAMP/htdocs/avene_sun/api/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#10 /Applications/MAMP/htdocs/avene_sun/api/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#11 /Applications/MAMP/htdocs/avene_sun/api/index.php(20): CWebApplication->run()
+REQUEST_URI=/avene_sun/api/index.php/photo/list
+in /Applications/MAMP/htdocs/avene_sun/api/protected/controllers/PhotoController.php (99)
+in /Applications/MAMP/htdocs/avene_sun/api/index.php (20)
+2014/04/08 16:03:20 [error] [php] getimagesize(/Applications/MAMP/htdocs/avene_sun/api/upload/20140403/3695420960237195.jpg): failed to open stream: No such file or directory (/Applications/MAMP/htdocs/avene_sun/api/protected/controllers/PhotoController.php:99)
+Stack trace:
+#0 /Applications/MAMP/htdocs/avene_sun/api/framework/web/CController.php(308): CInlineAction->runWithParams()
+#1 /Applications/MAMP/htdocs/avene_sun/api/framework/web/filters/CFilterChain.php(133): PhotoController->runAction()
+#2 /Applications/MAMP/htdocs/avene_sun/api/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#3 /Applications/MAMP/htdocs/avene_sun/api/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#4 /Applications/MAMP/htdocs/avene_sun/api/framework/web/filters/CInlineFilter.php(58): PhotoController->filterAccessControl()
+#5 /Applications/MAMP/htdocs/avene_sun/api/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#6 /Applications/MAMP/htdocs/avene_sun/api/framework/web/CController.php(291): CFilterChain->run()
+#7 /Applications/MAMP/htdocs/avene_sun/api/framework/web/CController.php(265): PhotoController->runActionWithFilters()
+#8 /Applications/MAMP/htdocs/avene_sun/api/framework/web/CWebApplication.php(282): PhotoController->run()
+#9 /Applications/MAMP/htdocs/avene_sun/api/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#10 /Applications/MAMP/htdocs/avene_sun/api/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#11 /Applications/MAMP/htdocs/avene_sun/api/index.php(20): CWebApplication->run()
+REQUEST_URI=/avene_sun/api/photo/list?page=1&pagenum=12&_=1396965800928
+in /Applications/MAMP/htdocs/avene_sun/api/protected/controllers/PhotoController.php (99)
+in /Applications/MAMP/htdocs/avene_sun/api/index.php (20)
+2014/04/08 16:03:21 [error] [php] getimagesize(/Applications/MAMP/htdocs/avene_sun/api/upload/20140403/3695420960237195.jpg): failed to open stream: No such file or directory (/Applications/MAMP/htdocs/avene_sun/api/protected/controllers/PhotoController.php:99)
+Stack trace:
+#0 /Applications/MAMP/htdocs/avene_sun/api/framework/web/CController.php(308): CInlineAction->runWithParams()
+#1 /Applications/MAMP/htdocs/avene_sun/api/framework/web/filters/CFilterChain.php(133): PhotoController->runAction()
+#2 /Applications/MAMP/htdocs/avene_sun/api/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#3 /Applications/MAMP/htdocs/avene_sun/api/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#4 /Applications/MAMP/htdocs/avene_sun/api/framework/web/filters/CInlineFilter.php(58): PhotoController->filterAccessControl()
+#5 /Applications/MAMP/htdocs/avene_sun/api/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#6 /Applications/MAMP/htdocs/avene_sun/api/framework/web/CController.php(291): CFilterChain->run()
+#7 /Applications/MAMP/htdocs/avene_sun/api/framework/web/CController.php(265): PhotoController->runActionWithFilters()
+#8 /Applications/MAMP/htdocs/avene_sun/api/framework/web/CWebApplication.php(282): PhotoController->run()
+#9 /Applications/MAMP/htdocs/avene_sun/api/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#10 /Applications/MAMP/htdocs/avene_sun/api/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#11 /Applications/MAMP/htdocs/avene_sun/api/index.php(20): CWebApplication->run()
+REQUEST_URI=/avene_sun/api/photo/list?page=1&pagenum=12&_=1396965801408
+in /Applications/MAMP/htdocs/avene_sun/api/protected/controllers/PhotoController.php (99)
+in /Applications/MAMP/htdocs/avene_sun/api/index.php (20)
+2014/04/08 16:04:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "{{photo.image | thumbnail}}".' in /Applications/MAMP/htdocs/avene_sun/api/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/MAMP/htdocs/avene_sun/api/framework/web/CWebApplication.php(141): CWebApplication->runController('{{photo.image |...')
+#1 /Applications/MAMP/htdocs/avene_sun/api/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/MAMP/htdocs/avene_sun/api/index.php(20): CApplication->run()
+#3 {main}
+REQUEST_URI=/avene_sun/api/%7B%7Bphoto.image%20|%20thumbnail%7D%7D
+HTTP_REFERER=http://localhost/avene_sun/api/admin
+---
+2014/04/08 16:04:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "{{photo.image | thumbnail}}".' in /Applications/MAMP/htdocs/avene_sun/api/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/MAMP/htdocs/avene_sun/api/framework/web/CWebApplication.php(141): CWebApplication->runController('{{photo.image |...')
+#1 /Applications/MAMP/htdocs/avene_sun/api/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/MAMP/htdocs/avene_sun/api/index.php(20): CApplication->run()
+#3 {main}
+REQUEST_URI=/avene_sun/api/%7B%7Bphoto.image%20|%20thumbnail%7D%7D
+HTTP_REFERER=http://localhost/avene_sun/api/admin
+---
+2014/04/08 16:05:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "{{photo.image | thumbnail}}".' in /Applications/MAMP/htdocs/avene_sun/api/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/MAMP/htdocs/avene_sun/api/framework/web/CWebApplication.php(141): CWebApplication->runController('{{photo.image |...')
+#1 /Applications/MAMP/htdocs/avene_sun/api/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/MAMP/htdocs/avene_sun/api/index.php(20): CApplication->run()
+#3 {main}
+REQUEST_URI=/avene_sun/api/%7B%7Bphoto.image%20|%20thumbnail%7D%7D
+HTTP_REFERER=http://localhost/avene_sun/api/admin
+---
+2014/04/08 16:06:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "{{photo.image | thumbnail}}".' in /Applications/MAMP/htdocs/avene_sun/api/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/MAMP/htdocs/avene_sun/api/framework/web/CWebApplication.php(141): CWebApplication->runController('{{photo.image |...')
+#1 /Applications/MAMP/htdocs/avene_sun/api/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/MAMP/htdocs/avene_sun/api/index.php(20): CApplication->run()
+#3 {main}
+REQUEST_URI=/avene_sun/api/%7B%7Bphoto.image%20|%20thumbnail%7D%7D
+HTTP_REFERER=http://localhost/avene_sun/api/admin
+---
+2014/04/08 16:07:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "{{photo.image | thumbnail}}".' in /Applications/MAMP/htdocs/avene_sun/api/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/MAMP/htdocs/avene_sun/api/framework/web/CWebApplication.php(141): CWebApplication->runController('{{photo.image |...')
+#1 /Applications/MAMP/htdocs/avene_sun/api/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/MAMP/htdocs/avene_sun/api/index.php(20): CApplication->run()
+#3 {main}
+REQUEST_URI=/avene_sun/api/%7B%7Bphoto.image%20|%20thumbnail%7D%7D
+HTTP_REFERER=http://localhost/avene_sun/api/admin
+---
+2014/04/08 16:07:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "{{photo.image | thumbnail}}".' in /Applications/MAMP/htdocs/avene_sun/api/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/MAMP/htdocs/avene_sun/api/framework/web/CWebApplication.php(141): CWebApplication->runController('{{photo.image |...')
+#1 /Applications/MAMP/htdocs/avene_sun/api/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/MAMP/htdocs/avene_sun/api/index.php(20): CApplication->run()
+#3 {main}
+REQUEST_URI=/avene_sun/api/%7B%7Bphoto.image%20|%20thumbnail%7D%7D
+HTTP_REFERER=http://localhost/avene_sun/api/admin
+---
+2014/04/08 16:07:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "{{photo.image | thumbnail}}".' in /Applications/MAMP/htdocs/avene_sun/api/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/MAMP/htdocs/avene_sun/api/framework/web/CWebApplication.php(141): CWebApplication->runController('{{photo.image |...')
+#1 /Applications/MAMP/htdocs/avene_sun/api/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/MAMP/htdocs/avene_sun/api/index.php(20): CApplication->run()
+#3 {main}
+REQUEST_URI=/avene_sun/api/%7B%7Bphoto.image%20|%20thumbnail%7D%7D
+HTTP_REFERER=http://localhost/avene_sun/api/admin
+---
+2014/04/08 16:07:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "{{photo.image | thumbnail}}".' in /Applications/MAMP/htdocs/avene_sun/api/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/MAMP/htdocs/avene_sun/api/framework/web/CWebApplication.php(141): CWebApplication->runController('{{photo.image |...')
+#1 /Applications/MAMP/htdocs/avene_sun/api/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/MAMP/htdocs/avene_sun/api/index.php(20): CApplication->run()
+#3 {main}
+REQUEST_URI=/avene_sun/api/%7B%7Bphoto.image%20|%20thumbnail%7D%7D
+HTTP_REFERER=http://localhost/avene_sun/api/admin
+---
+2014/04/08 16:07:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "{{photo.image | thumbnail}}".' in /Applications/MAMP/htdocs/avene_sun/api/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/MAMP/htdocs/avene_sun/api/framework/web/CWebApplication.php(141): CWebApplication->runController('{{photo.image |...')
+#1 /Applications/MAMP/htdocs/avene_sun/api/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/MAMP/htdocs/avene_sun/api/index.php(20): CApplication->run()
+#3 {main}
+REQUEST_URI=/avene_sun/api/%7B%7Bphoto.image%20|%20thumbnail%7D%7D
+HTTP_REFERER=http://localhost/avene_sun/api/admin
+---
+2014/04/08 16:07:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "{{photo.image | thumbnail}}".' in /Applications/MAMP/htdocs/avene_sun/api/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/MAMP/htdocs/avene_sun/api/framework/web/CWebApplication.php(141): CWebApplication->runController('{{photo.image |...')
+#1 /Applications/MAMP/htdocs/avene_sun/api/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/MAMP/htdocs/avene_sun/api/index.php(20): CApplication->run()
+#3 {main}
+REQUEST_URI=/avene_sun/api/%7B%7Bphoto.image%20|%20thumbnail%7D%7D
+HTTP_REFERER=http://localhost/avene_sun/api/admin
+---
+2014/04/08 16:10:59 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'avene_sun.winner' doesn't exist. The SQL statement executed was: SHOW FULL COLUMNS FROM `Winner`.
+in /Applications/MAMP/htdocs/avene_sun/api/protected/controllers/WinnerController.php (53)
+in /Applications/MAMP/htdocs/avene_sun/api/index.php (20)
+2014/04/08 16:10:59 [error] [exception.CDbException] exception 'CDbException' with message 'The table "Winner" for active record class "Winner" cannot be found in the database.' in /Applications/MAMP/htdocs/avene_sun/api/framework/db/ar/CActiveRecord.php:2362
+Stack trace:
+#0 /Applications/MAMP/htdocs/avene_sun/api/framework/db/ar/CActiveRecord.php(411): CActiveRecordMetaData->__construct(Object(Winner))
+#1 /Applications/MAMP/htdocs/avene_sun/api/framework/db/ar/CActiveRecord.php(79): CActiveRecord->getMetaData()
+#2 /Applications/MAMP/htdocs/avene_sun/api/protected/controllers/WinnerController.php(53): CActiveRecord->__construct()
+#3 /Applications/MAMP/htdocs/avene_sun/api/framework/web/actions/CInlineAction.php(49): WinnerController->actionList()
+#4 /Applications/MAMP/htdocs/avene_sun/api/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /Applications/MAMP/htdocs/avene_sun/api/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#6 /Applications/MAMP/htdocs/avene_sun/api/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /Applications/MAMP/htdocs/avene_sun/api/framework/web/CWebApplication.php(282): CController->run('list')
+#8 /Applications/MAMP/htdocs/avene_sun/api/framework/web/CWebApplication.php(141): CWebApplication->runController('winner/list')
+#9 /Applications/MAMP/htdocs/avene_sun/api/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /Applications/MAMP/htdocs/avene_sun/api/index.php(20): CApplication->run()
+#11 {main}
+REQUEST_URI=/avene_sun/api/index.php/winner/list?1396966259481
+HTTP_REFERER=http://localhost/avene_sun/api/admin
+---
+2014/04/08 16:14:23 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'avene_sun.winner' doesn't exist. The SQL statement executed was: SHOW FULL COLUMNS FROM `Winner`.
+in /Applications/MAMP/htdocs/avene_sun/api/protected/controllers/WinnerController.php (53)
+in /Applications/MAMP/htdocs/avene_sun/api/index.php (20)
+2014/04/08 16:14:23 [error] [exception.CDbException] exception 'CDbException' with message 'The table "Winner" for active record class "Winner" cannot be found in the database.' in /Applications/MAMP/htdocs/avene_sun/api/framework/db/ar/CActiveRecord.php:2362
+Stack trace:
+#0 /Applications/MAMP/htdocs/avene_sun/api/framework/db/ar/CActiveRecord.php(411): CActiveRecordMetaData->__construct(Object(Winner))
+#1 /Applications/MAMP/htdocs/avene_sun/api/framework/db/ar/CActiveRecord.php(79): CActiveRecord->getMetaData()
+#2 /Applications/MAMP/htdocs/avene_sun/api/protected/controllers/WinnerController.php(53): CActiveRecord->__construct()
+#3 /Applications/MAMP/htdocs/avene_sun/api/framework/web/actions/CInlineAction.php(49): WinnerController->actionList()
+#4 /Applications/MAMP/htdocs/avene_sun/api/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /Applications/MAMP/htdocs/avene_sun/api/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#6 /Applications/MAMP/htdocs/avene_sun/api/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /Applications/MAMP/htdocs/avene_sun/api/framework/web/CWebApplication.php(282): CController->run('list')
+#8 /Applications/MAMP/htdocs/avene_sun/api/framework/web/CWebApplication.php(141): CWebApplication->runController('winner/list')
+#9 /Applications/MAMP/htdocs/avene_sun/api/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /Applications/MAMP/htdocs/avene_sun/api/index.php(20): CApplication->run()
+#11 {main}
+REQUEST_URI=/avene_sun/api/index.php/winner/list?1396966462976
+HTTP_REFERER=http://localhost/avene_sun/api/admin
+---
+2014/04/08 16:16:19 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'avene_sun.winner' doesn't exist. The SQL statement executed was: SHOW FULL COLUMNS FROM `Winner`.
+in /Applications/MAMP/htdocs/avene_sun/api/protected/controllers/WinnerController.php (53)
+in /Applications/MAMP/htdocs/avene_sun/api/index.php (20)
+2014/04/08 16:16:19 [error] [exception.CDbException] exception 'CDbException' with message 'The table "Winner" for active record class "Winner" cannot be found in the database.' in /Applications/MAMP/htdocs/avene_sun/api/framework/db/ar/CActiveRecord.php:2362
+Stack trace:
+#0 /Applications/MAMP/htdocs/avene_sun/api/framework/db/ar/CActiveRecord.php(411): CActiveRecordMetaData->__construct(Object(Winner))
+#1 /Applications/MAMP/htdocs/avene_sun/api/framework/db/ar/CActiveRecord.php(79): CActiveRecord->getMetaData()
+#2 /Applications/MAMP/htdocs/avene_sun/api/protected/controllers/WinnerController.php(53): CActiveRecord->__construct()
+#3 /Applications/MAMP/htdocs/avene_sun/api/framework/web/actions/CInlineAction.php(49): WinnerController->actionList()
+#4 /Applications/MAMP/htdocs/avene_sun/api/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /Applications/MAMP/htdocs/avene_sun/api/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#6 /Applications/MAMP/htdocs/avene_sun/api/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /Applications/MAMP/htdocs/avene_sun/api/framework/web/CWebApplication.php(282): CController->run('list')
+#8 /Applications/MAMP/htdocs/avene_sun/api/framework/web/CWebApplication.php(141): CWebApplication->runController('winner/list')
+#9 /Applications/MAMP/htdocs/avene_sun/api/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /Applications/MAMP/htdocs/avene_sun/api/index.php(20): CApplication->run()
+#11 {main}
+REQUEST_URI=/avene_sun/api/index.php/winner/list?1396966579047
+HTTP_REFERER=http://localhost/avene_sun/api/admin
+---
+2014/04/08 16:16:32 [error] [exception.CException] exception 'CException' with message 'GameController cannot find the requested view "index".' in /Applications/MAMP/htdocs/avene_sun/api/framework/web/CController.php:878
+Stack trace:
+#0 /Applications/MAMP/htdocs/avene_sun/api/framework/web/CController.php(782): CController->renderPartial('index', NULL, true)
+#1 /Applications/MAMP/htdocs/avene_sun/api/protected/controllers/GameController.php(15): CController->render('index')
+#2 /Applications/MAMP/htdocs/avene_sun/api/framework/web/actions/CInlineAction.php(49): GameController->actionIndex()
+#3 /Applications/MAMP/htdocs/avene_sun/api/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /Applications/MAMP/htdocs/avene_sun/api/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#5 /Applications/MAMP/htdocs/avene_sun/api/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 /Applications/MAMP/htdocs/avene_sun/api/framework/web/CWebApplication.php(282): CController->run('')
+#7 /Applications/MAMP/htdocs/avene_sun/api/framework/web/CWebApplication.php(141): CWebApplication->runController('game')
+#8 /Applications/MAMP/htdocs/avene_sun/api/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#9 /Applications/MAMP/htdocs/avene_sun/api/index.php(20): CApplication->run()
+#10 {main}
+REQUEST_URI=/avene_sun/api/game/
+---
+2014/04/08 16:17:28 [error] [php] include(NodeAR.php): failed to open stream: No such file or directory (/Applications/MAMP/htdocs/avene_sun/api/framework/YiiBase.php:427)
+Stack trace:
+#0 /Applications/MAMP/htdocs/avene_sun/api/protected/controllers/GameController.php(35): spl_autoload_call()
+#1 /Applications/MAMP/htdocs/avene_sun/api/framework/web/actions/CInlineAction.php(49): GameController->actionList()
+#2 /Applications/MAMP/htdocs/avene_sun/api/framework/web/CController.php(308): CInlineAction->runWithParams()
+#3 /Applications/MAMP/htdocs/avene_sun/api/framework/web/CController.php(286): GameController->runAction()
+#4 /Applications/MAMP/htdocs/avene_sun/api/framework/web/CController.php(265): GameController->runActionWithFilters()
+#5 /Applications/MAMP/htdocs/avene_sun/api/framework/web/CWebApplication.php(282): GameController->run()
+#6 /Applications/MAMP/htdocs/avene_sun/api/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#7 /Applications/MAMP/htdocs/avene_sun/api/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#8 /Applications/MAMP/htdocs/avene_sun/api/index.php(20): CWebApplication->run()
+REQUEST_URI=/avene_sun/api/game/list
+in /Applications/MAMP/htdocs/avene_sun/api/protected/controllers/GameController.php (35)
+in /Applications/MAMP/htdocs/avene_sun/api/index.php (20)
+2014/04/08 16:27:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "{{photo.image | thumbnail}}".' in /Applications/MAMP/htdocs/avene_sun/api/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/MAMP/htdocs/avene_sun/api/framework/web/CWebApplication.php(141): CWebApplication->runController('{{photo.image |...')
+#1 /Applications/MAMP/htdocs/avene_sun/api/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/MAMP/htdocs/avene_sun/api/index.php(20): CApplication->run()
+#3 {main}
+REQUEST_URI=/avene_sun/api/%7B%7Bphoto.image%20|%20thumbnail%7D%7D
+HTTP_REFERER=http://localhost/avene_sun/api/admin
+---
+2014/04/08 16:27:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "{{photo.image | thumbnail}}".' in /Applications/MAMP/htdocs/avene_sun/api/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/MAMP/htdocs/avene_sun/api/framework/web/CWebApplication.php(141): CWebApplication->runController('{{photo.image |...')
+#1 /Applications/MAMP/htdocs/avene_sun/api/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/MAMP/htdocs/avene_sun/api/index.php(20): CApplication->run()
+#3 {main}
+REQUEST_URI=/avene_sun/api/%7B%7Bphoto.image%20|%20thumbnail%7D%7D
+HTTP_REFERER=http://localhost/avene_sun/api/admin
+---
+2014/04/08 16:27:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "{{photo.image | thumbnail}}".' in /Applications/MAMP/htdocs/avene_sun/api/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/MAMP/htdocs/avene_sun/api/framework/web/CWebApplication.php(141): CWebApplication->runController('{{photo.image |...')
+#1 /Applications/MAMP/htdocs/avene_sun/api/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/MAMP/htdocs/avene_sun/api/index.php(20): CApplication->run()
+#3 {main}
+REQUEST_URI=/avene_sun/api/%7B%7Bphoto.image%20|%20thumbnail%7D%7D
+HTTP_REFERER=http://localhost/avene_sun/api/admin
+---
+2014/04/08 16:37:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "{{photo.image | thumbnail}}".' in /Applications/MAMP/htdocs/avene_sun/api/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/MAMP/htdocs/avene_sun/api/framework/web/CWebApplication.php(141): CWebApplication->runController('{{photo.image |...')
+#1 /Applications/MAMP/htdocs/avene_sun/api/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/MAMP/htdocs/avene_sun/api/index.php(20): CApplication->run()
+#3 {main}
+REQUEST_URI=/avene_sun/api/%7B%7Bphoto.image%20|%20thumbnail%7D%7D
+HTTP_REFERER=http://localhost/avene_sun/api/admin
+---
+2014/04/08 16:37:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin_asset/js/controllers/trail.js".' in /Applications/MAMP/htdocs/avene_sun/api/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/MAMP/htdocs/avene_sun/api/framework/web/CWebApplication.php(141): CWebApplication->runController('admin_asset/js/...')
+#1 /Applications/MAMP/htdocs/avene_sun/api/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/MAMP/htdocs/avene_sun/api/index.php(20): CApplication->run()
+#3 {main}
+REQUEST_URI=/avene_sun/api/admin_asset/js/controllers/trail.js?1396967832
+HTTP_REFERER=http://localhost/avene_sun/api/admin
+---
+2014/04/08 16:37:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin_asset/js/controllers/trail.js".' in /Applications/MAMP/htdocs/avene_sun/api/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/MAMP/htdocs/avene_sun/api/framework/web/CWebApplication.php(141): CWebApplication->runController('admin_asset/js/...')
+#1 /Applications/MAMP/htdocs/avene_sun/api/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/MAMP/htdocs/avene_sun/api/index.php(20): CApplication->run()
+#3 {main}
+REQUEST_URI=/avene_sun/api/admin_asset/js/controllers/trail.js?1396967832
+HTTP_REFERER=http://localhost/avene_sun/api/admin
+---
+2014/04/08 16:37:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "{{photo.image | thumbnail}}".' in /Applications/MAMP/htdocs/avene_sun/api/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/MAMP/htdocs/avene_sun/api/framework/web/CWebApplication.php(141): CWebApplication->runController('{{photo.image |...')
+#1 /Applications/MAMP/htdocs/avene_sun/api/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/MAMP/htdocs/avene_sun/api/index.php(20): CApplication->run()
+#3 {main}
+REQUEST_URI=/avene_sun/api/%7B%7Bphoto.image%20|%20thumbnail%7D%7D
+HTTP_REFERER=http://localhost/avene_sun/api/admin
+---
+2014/04/08 16:37:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "trail/list".' in /Applications/MAMP/htdocs/avene_sun/api/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/MAMP/htdocs/avene_sun/api/framework/web/CWebApplication.php(141): CWebApplication->runController('trail/list')
+#1 /Applications/MAMP/htdocs/avene_sun/api/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/MAMP/htdocs/avene_sun/api/index.php(20): CApplication->run()
+#3 {main}
+REQUEST_URI=/avene_sun/api/index.php/trail/list?1396967838022
+HTTP_REFERER=http://localhost/avene_sun/api/admin
+---
+2014/04/08 16:42:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin_asset/js/controllers/trail.js".' in /Applications/MAMP/htdocs/avene_sun/api/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/MAMP/htdocs/avene_sun/api/framework/web/CWebApplication.php(141): CWebApplication->runController('admin_asset/js/...')
+#1 /Applications/MAMP/htdocs/avene_sun/api/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/MAMP/htdocs/avene_sun/api/index.php(20): CApplication->run()
+#3 {main}
+REQUEST_URI=/avene_sun/api/admin_asset/js/controllers/trail.js?1396968178
+HTTP_REFERER=http://localhost/avene_sun/api/admin
+---
+2014/04/08 16:42:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin_asset/js/services/trail.js".' in /Applications/MAMP/htdocs/avene_sun/api/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/MAMP/htdocs/avene_sun/api/framework/web/CWebApplication.php(141): CWebApplication->runController('admin_asset/js/...')
+#1 /Applications/MAMP/htdocs/avene_sun/api/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/MAMP/htdocs/avene_sun/api/index.php(20): CApplication->run()
+#3 {main}
+REQUEST_URI=/avene_sun/api/admin_asset/js/services/trail.js?1396968178
+HTTP_REFERER=http://localhost/avene_sun/api/admin
+---
+2014/04/08 16:42:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin_asset/js/services/trail.js".' in /Applications/MAMP/htdocs/avene_sun/api/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/MAMP/htdocs/avene_sun/api/framework/web/CWebApplication.php(141): CWebApplication->runController('admin_asset/js/...')
+#1 /Applications/MAMP/htdocs/avene_sun/api/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/MAMP/htdocs/avene_sun/api/index.php(20): CApplication->run()
+#3 {main}
+REQUEST_URI=/avene_sun/api/admin_asset/js/services/trail.js?1396968178
+HTTP_REFERER=http://localhost/avene_sun/api/admin
+---
+2014/04/08 16:42:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin_asset/js/controllers/trail.js".' in /Applications/MAMP/htdocs/avene_sun/api/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/MAMP/htdocs/avene_sun/api/framework/web/CWebApplication.php(141): CWebApplication->runController('admin_asset/js/...')
+#1 /Applications/MAMP/htdocs/avene_sun/api/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/MAMP/htdocs/avene_sun/api/index.php(20): CApplication->run()
+#3 {main}
+REQUEST_URI=/avene_sun/api/admin_asset/js/controllers/trail.js?1396968178
+HTTP_REFERER=http://localhost/avene_sun/api/admin
+---
+2014/04/08 16:42:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "{{photo.image | thumbnail}}".' in /Applications/MAMP/htdocs/avene_sun/api/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/MAMP/htdocs/avene_sun/api/framework/web/CWebApplication.php(141): CWebApplication->runController('{{photo.image |...')
+#1 /Applications/MAMP/htdocs/avene_sun/api/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/MAMP/htdocs/avene_sun/api/index.php(20): CApplication->run()
+#3 {main}
+REQUEST_URI=/avene_sun/api/%7B%7Bphoto.image%20|%20thumbnail%7D%7D
+HTTP_REFERER=http://localhost/avene_sun/api/admin
+---
+2014/04/08 16:43:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "{{photo.image | thumbnail}}".' in /Applications/MAMP/htdocs/avene_sun/api/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/MAMP/htdocs/avene_sun/api/framework/web/CWebApplication.php(141): CWebApplication->runController('{{photo.image |...')
+#1 /Applications/MAMP/htdocs/avene_sun/api/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/MAMP/htdocs/avene_sun/api/index.php(20): CApplication->run()
+#3 {main}
+REQUEST_URI=/avene_sun/api/%7B%7Bphoto.image%20|%20thumbnail%7D%7D
+HTTP_REFERER=http://localhost/avene_sun/api/admin
+---
+2014/04/08 16:46:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "{{photo.image | thumbnail}}".' in /Applications/MAMP/htdocs/avene_sun/api/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/MAMP/htdocs/avene_sun/api/framework/web/CWebApplication.php(141): CWebApplication->runController('{{photo.image |...')
+#1 /Applications/MAMP/htdocs/avene_sun/api/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/MAMP/htdocs/avene_sun/api/index.php(20): CApplication->run()
+#3 {main}
+REQUEST_URI=/avene_sun/api/%7B%7Bphoto.image%20|%20thumbnail%7D%7D
+HTTP_REFERER=http://localhost/avene_sun/api/admin
+---
+2014/04/08 16:46:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "{{photo.image | thumbnail}}".' in /Applications/MAMP/htdocs/avene_sun/api/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/MAMP/htdocs/avene_sun/api/framework/web/CWebApplication.php(141): CWebApplication->runController('{{photo.image |...')
+#1 /Applications/MAMP/htdocs/avene_sun/api/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/MAMP/htdocs/avene_sun/api/index.php(20): CApplication->run()
+#3 {main}
+REQUEST_URI=/avene_sun/api/%7B%7Bphoto.image%20|%20thumbnail%7D%7D
+HTTP_REFERER=http://localhost/avene_sun/api/admin
+---
+2014/04/08 16:46:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "{{photo.image | thumbnail}}".' in /Applications/MAMP/htdocs/avene_sun/api/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/MAMP/htdocs/avene_sun/api/framework/web/CWebApplication.php(141): CWebApplication->runController('{{photo.image |...')
+#1 /Applications/MAMP/htdocs/avene_sun/api/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/MAMP/htdocs/avene_sun/api/index.php(20): CApplication->run()
+#3 {main}
+REQUEST_URI=/avene_sun/api/%7B%7Bphoto.image%20|%20thumbnail%7D%7D
+HTTP_REFERER=http://localhost/avene_sun/api/admin
+---
