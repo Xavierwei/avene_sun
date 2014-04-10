@@ -1,16 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5df1b99b-6417-4291-85ff-70d2ec065f1e" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/page2_proicon1.gif" afterPath="$PROJECT_DIR$/img/page2_proicon1.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/imgm/page2_proicon1.gif" afterPath="$PROJECT_DIR$/imgm/page2_proicon1.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/reflexe.html" afterPath="$PROJECT_DIR$/reflexe.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/style.css" afterPath="$PROJECT_DIR$/css/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-    </list>
+    <list default="true" id="5df1b99b-6417-4291-85ff-70d2ec065f1e" name="Default" comment="" />
     <ignored path="avene_sun.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="5df1b99b-6417-4291-85ff-70d2ec065f1e" time="1396942059398" ignored="false" />
+    <file path="/Dummy.txt" changelist="5df1b99b-6417-4291-85ff-70d2ec065f1e" time="1397112443378" ignored="false" />
     <file path="/index.html" changelist="5df1b99b-6417-4291-85ff-70d2ec065f1e" time="1396622943245" ignored="false" />
     <file path="/style.css" changelist="5df1b99b-6417-4291-85ff-70d2ec065f1e" time="1396941227623" ignored="false" />
     <file path="/page1.html" changelist="5df1b99b-6417-4291-85ff-70d2ec065f1e" time="1395942867134" ignored="false" />
@@ -148,9 +142,9 @@
       <file leaf-file-name="reflexe.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/reflexe.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="42" column="48" selection-start="2034" selection-end="2034" vertical-scroll-proportion="0.74859285">
+            <state line="56" column="42" selection-start="2808" selection-end="2808" vertical-scroll-proportion="0.2673546">
               <folding>
-                <marker date="1396941294000" expanded="true" signature="9742:9843" placeholder="..." />
+                <marker date="1397112520000" expanded="true" signature="9742:9843" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -226,7 +220,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -293,6 +286,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -346,13 +340,13 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="80" y="77" width="2203" height="1255" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26101068" sideWeight="0.6704846" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2637923" sideWeight="0.6704846" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -450,16 +444,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/comingsoon.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/family.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="78" selection-start="2141" selection-end="2141" vertical-scroll-proportion="-28.5">
-          <folding />
-        </state>
+        <state line="42" column="78" selection-start="2141" selection-end="2141" vertical-scroll-proportion="-28.5" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/lp.base.js">
@@ -471,30 +461,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/game.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="192" column="14" selection-start="11003" selection-end="11003" vertical-scroll-proportion="0.34052533">
-          <folding />
-        </state>
+        <state line="192" column="14" selection-start="11003" selection-end="11003" vertical-scroll-proportion="0.34052533" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/wall.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="133" column="0" selection-start="5794" selection-end="5801" vertical-scroll-proportion="0.6791745">
-          <folding />
-        </state>
+        <state line="133" column="0" selection-start="5794" selection-end="5801" vertical-scroll-proportion="0.6791745" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="87" column="58" selection-start="4521" selection-end="4521" vertical-scroll-proportion="0.01782364">
-          <folding />
-        </state>
+        <state line="87" column="58" selection-start="4521" selection-end="4521" vertical-scroll-proportion="0.01782364" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/experts.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="78" selection-start="2133" selection-end="2133" vertical-scroll-proportion="0.01782364">
-          <folding />
-        </state>
+        <state line="42" column="78" selection-start="2133" selection-end="2133" vertical-scroll-proportion="0.01782364" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/e-trial.html">
@@ -506,16 +488,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/tester.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="78" selection-start="1624" selection-end="1624" vertical-scroll-proportion="0.017608898">
-          <folding />
-        </state>
+        <state line="32" column="78" selection-start="1624" selection-end="1624" vertical-scroll-proportion="0.017608898" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/kol.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="78" selection-start="2137" selection-end="2137" vertical-scroll-proportion="0.017608898">
-          <folding />
-        </state>
+        <state line="42" column="78" selection-start="2137" selection-end="2137" vertical-scroll-proportion="0.017608898" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/css/style.css">
@@ -527,9 +505,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/reflexe.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="48" selection-start="2034" selection-end="2034" vertical-scroll-proportion="0.74859285">
+        <state line="56" column="42" selection-start="2808" selection-end="2808" vertical-scroll-proportion="0.2673546">
           <folding>
-            <marker date="1396941294000" expanded="true" signature="9742:9843" placeholder="..." />
+            <marker date="1397112520000" expanded="true" signature="9742:9843" placeholder="..." />
           </folding>
         </state>
       </provider>
