@@ -1,0 +1,46 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<script language="javascript">
+	function hit(id){
+		alert("id="+id);
+	}
+	function resetFlash(){
+		var flash=document.getElementById("flash");
+		if(flash){
+			if(flash.resetFlash){
+			}else{
+				flash=null;
+			}
+		}
+		if(flash){
+		}else{
+			flash=document.getElementsByName("flash");
+			if(flash){
+				flash=flash[0];
+				if(flash){
+					if(flash.resetFlash){
+					}else{
+						flash=null;
+					}
+				}
+			}
+		}
+		if(flash){
+			flash.resetFlash();
+		}//else{
+		//	alert("找不到flash");
+		//}
+	}
+	
+</script>
+
+<object id="flash" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=10,0,0,0" width="689" height="369">
+  <param name="allowScriptAccess" value="always"/>
+  <param name="movie" value="ball_game.swf"/>
+  <param name="quality" value="high"/>
+  <param name="wmode" value="transparent"/>
+  <param name="flashVars" value="xml=xml/config.xml"/>
+  <embed name="flash" src="ball_game.swf" quality="high" wmode="transparent" flashVars="xml=xml/config.xml" pluginspage="http://www.adobe.com/shockwave/download/download.cgi?P1_Prod_Version=ShockwaveFlash" type="application/x-shockwave-flash" width="689" height="369" allowScriptAccess="always"></embed>
+</object>
+<br/>
+<input type="button" onclick="resetFlash()" value="resetFlash()"/>
