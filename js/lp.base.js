@@ -668,44 +668,51 @@ LP.use(['jquery' ,'api', 'easing', 'skrollr', 'flash-detect', 'hammer', 'transit
                 var vy = info.vy;
                 var vx = info.vx;
                 var vz = info.vz;//2.5;
-                var zDis = 500;
-                var a = 0.00102 ;
+                var zDis = 400;
+                var a = 0.0018 ;
+
+                var wrapOff = $('.game-wrap').offset();
                 // var a = ( ( tar.top - curr.top ) - vy * time ) * 2 / time / time ;
 
                 var startTime = new Date();
                 var $stars = $('.game-tar1,.game-tar2,.game-tar3');
                 var centers = [];
                 $stars.each( function(){
-                    centers.push( $(this).offset() );
+                    var off = $(this).offset();
+                    var width = $(this).width();
+                    centers.push( {top: off.top + width / 2 , left: off.left + width / 2} );
                 });
                 setTimeout(function animate(){
                     var d = new Date() - startTime;
 
                     //var p = d / time;
-                    var w = curr.width - ( vz * d / zDis * 80 );
+                    var w = curr.width - ( vz * d / zDis * 100 );
                     var status = {
                         width: w,
                         height: w,
-                        zIndex: curr.zIndex - ( vz * d / zDis * 80 ) ,
+                        zIndex: curr.zIndex - ( vz * d / zDis * 100 ) ,
                         left: curr.cx + vx * d - w / 2 ,
-                        top: curr.cy + vy * d - w / 2 + 1 / 2 * a * d * d
+                        top: curr.cy - w / 2 +  vy * d + 1 / 2 * a * d * d
                     }
-                    if( vz * d >= zDis - 100   && vz * d <= zDis + 400 ){
-						//console.log(vz * d);
+                    $ball.css( status );
+                    if( vz * d >= zDis - 100 ){
                         //判断是否相交
-                        var isMeet = false;
-                        var index;
+                        var meetIndex = 0;
+                        var meetDis = 0;
                         $.each( centers , function( i , pos ){
-                            var dis = gameMgr.getDistance( pos , {left: status.left + status.width / 2 , top: status.top + status.width / 2} );
-							if( dis < 200 ){
-                                isMeet = true;
-                                index = i;
-                                return false;
+                            var dis = gameMgr.getDistance( pos , {left: wrapOff.left + status.left + status.width / 2 , top: wrapOff.top + status.top + status.height / 2} );
+
+                            if( dis < ( 108 + w ) / 2 ){
+                                meetDis = meetDis || dis;
+                                if( meetDis >= dis ){
+                                    meetDis = dis;
+                                    meetIndex = i + 1;
+                                }
                             }
                         });
-                        if( isMeet ){
+                        if( meetIndex ){
                             $('.game-wrap').css('overflow' , 'hidden');
-                            success && success(index);
+                            success && success( meetIndex );
                             return;
                         }
                     }
@@ -719,7 +726,7 @@ LP.use(['jquery' ,'api', 'easing', 'skrollr', 'flash-detect', 'hammer', 'transit
                         return ;
                     }
 
-                    $ball.css( status );
+
                     if( status.top < $('.game-wrap').offset().top ){
                         $('.game-wrap').css('overflow' , 'visible');
                     } else {
@@ -733,7 +740,68 @@ LP.use(['jquery' ,'api', 'easing', 'skrollr', 'flash-detect', 'hammer', 'transit
                     setTimeout( animate , 1000 / 60 );
                 } , 1000 / 60);
             },
+            // throwBall: function( $tar , cb ){
+            // 	var top = parseInt( $tar.css('top') );
+            //   		var left = parseInt( $tar.css('left') );
+            //   		var center = {top: top + 108 / 2 , left: left + 108/2 };
 
+            //   		// run animate
+            //   		var $ball = $('.game-ball');
+            //   		var tar = {
+            //   			width: 50,
+            //   			height: 50,
+            //   			zIndex: 1,
+            //   			left: center.left - 25,
+            //   			top: center.top - 25,
+            //   			rotate: 140 + ~~( 240 * Math.random() )
+            //   		}
+
+
+            //   		var curr = {
+            //   			width: $ball.width(),
+            //   			height: $ball.height(),
+            //   			zIndex: 100,
+            //   			left: parseInt( $ball.css('left') ),
+            //   			top:  parseInt( $ball.css('top') ),
+            //   			rotate: 0
+            //   		}
+
+            //   		var time = 1000;
+            //   		var vy = -1.2;
+            //   		var a = ( ( tar.top - curr.top ) - vy * time ) * 2 / time / time ;
+            //           console.log( a );
+            //   		var startTime = new Date();
+            //   		setTimeout(function animate(){
+            //   			var d = new Date() - startTime;
+            //   			if( d > time ){
+            //   				$ball.css(tar);
+            //   				cb && cb();
+            //   				return;
+            //   			}
+
+            //   			var p = d / time;
+            //   			var status = {
+            //   				width: curr.width + ( - curr.width + tar.width ) * p,
+            //   				height: curr.height + ( - curr.height + tar.height ) * p,
+            //   				zIndex: curr.zIndex + ( - curr.zIndex + tar.zIndex ) * p,
+            //   				left: curr.left + ( tar.left - curr.left ) * p,
+            //   				top: curr.top + vy * d + 1 / 2 * a * d * d
+            //   			}
+
+            //   			// fix overflow
+            //   			if( d / time > 0.3 ){
+            //   				$wrap.css('overflow' , 'visible');
+            //   			}
+
+            //   			$ball.css( status );
+            //   			var r = "rotate(" + parseInt( curr.rotate + ( tar.rotate - curr.rotate ) * p ) + 'deg)';
+            //   			$ball[0].style['-webkit-transform'] = r;
+            //   			$ball[0].style['-ms-transform'] = r;
+            //   			$ball[0].style['-moz-transform'] = r;
+            //   			$ball[0].style['-o-transform'] = r;
+            //   			setTimeout( animate , 1000 / 60 );
+            //   		} , 1000/60);
+            // },
 
             getDistance: function( pos1 , pos2 ){
                 return Math.sqrt( Math.pow( pos1.left - pos2.left , 2 ) + Math.pow( pos1.top - pos2.top , 2 ) );
@@ -751,15 +819,15 @@ LP.use(['jquery' ,'api', 'easing', 'skrollr', 'flash-detect', 'hammer', 'transit
             prepareThrow: function( strPos , tarPos ){
                 var dis = gameMgr.getDistance( strPos , tarPos );
                 // 距离与速度的关系
-                var speed = 1.2 * dis / 300;
+                var speed = 1.2 * dis / 330;
                 var angle = Math.atan( ( tarPos.top - strPos.top ) / ( tarPos.left - strPos.left ) );
                 //var vy =
-                var vx = ( tarPos.left > strPos.left ? 1 : -1 ) * speed * Math.abs( Math.cos( angle ) ) / 3.5;
+                var vx = ( tarPos.left > strPos.left ? 1 : -1 ) * speed * Math.abs( Math.cos( angle ) ) / 2.8;
                 var vy = - speed * Math.abs( Math.sin( angle ) );
                 return {
-                    vx : vx * 0.5,
-                    vy : vy * 0.5 ,
-                    vz : 0.5 ,//+ Math.abs(  3 * vx ),
+                    vx : vx ,
+                    vy : vy ,
+                    vz : 0.54 / Math.max( Math.pow( vy * vy , 2 / 3 ) , 1 ),
                     dis: dis
                 }
             }
@@ -828,32 +896,35 @@ LP.use(['jquery' ,'api', 'easing', 'skrollr', 'flash-detect', 'hammer', 'transit
             .on( isTouchSupport ? 'touchend' : 'mouseup' , function( ev ){
                 if( isMouseDown && !throwBall ){
                     var pdata = gameMgr.prepareThrow( gameMgr.getBallCenter() , gameMgr.getEventCenter(ev) );
-                    if( pdata.dis < 100 ){ return ;}
+                    if( pdata.dis < 150 ){ return ;}
                     throwBall = true;
                     gameMgr.stopFlicker();
                     $('.game-dir').stop( true , true )
                         .fadeOut();
 
-                    gameMgr.throwBall( gameMgr.prepareThrow( gameMgr.getBallCenter() , gameMgr.getEventCenter(ev) ) , function(index){
+                    gameMgr.throwBall( gameMgr.prepareThrow( gameMgr.getBallCenter() , gameMgr.getEventCenter(ev) ) , function( index ){
                         throwBall = false;
 
-                        $('.game-tar'+(index+1)).fadeOut();
-						$('.game-ball').fadeOut();
-						setTimeout(function(){
-							$('.game3-radio').removeClass('game3-radioed');
-							$('.game-box1').fadeOut();
-							$('.game-box3').fadeIn();
-							$('.game3').hide();
-							$('.game3-'+(index+1)).show();
-						},1000);
+                        // change code here
+                        //====================================================
 
+                        $('.game-tar'+(index)).fadeOut();
+                        $('.game-ball').fadeOut();
+                        setTimeout(function(){
+                            $('.game3-radio').removeClass('game3-radioed');
+                            $('.game-box1').fadeOut();
+                            $('.game-box3').fadeIn();
+                            $('.game3').hide();
+                            $('.game3-'+(index)).show();
+                        },1000);
 
+                        $('.game-ball')
+                            .animate( {
+                                top: 264
+                            } , 500 )
+                            [0].style.cssText = 'top: 370px;';
 
-//                        $('.game-ball')
-//                            .animate( {
-//                                top: 264
-//                            } , 500 )
-//                            [0].style.cssText = 'top: 370px;';
+                        //====================================================
                         // $('.game-inner').fadeOut();
                         // $('.ques-inner').fadeIn();
                     } , function(){
