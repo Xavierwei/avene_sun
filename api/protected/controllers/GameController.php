@@ -3,7 +3,7 @@
 class GameController extends Controller
 {
 	private $_answer = array(
-		'1_3', '2_1', '3_2'
+		'1_3', '2_2', '3_2'
 	);
 
 	public function getRole() {
