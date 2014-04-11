@@ -124,6 +124,7 @@ class Photo extends CActiveRecord
 	}
 
 	public function fetchContents($contents){
+		ini_set('date.timezone','Asia/Shanghai');
 		foreach($contents as $weibo) {
 			if(isset($weibo['original_pic'])) {
 				$oldPhoto = Photo::model()->findByAttributes(array('weibo_id'=>$weibo['id']));

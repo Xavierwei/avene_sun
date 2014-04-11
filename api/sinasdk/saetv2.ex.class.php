@@ -590,8 +590,7 @@ class SaeTClientV2
 
     $params['count'] = intval($count);
     $params['page'] = intval($page);
-    $params['q'] = urlencode($q);
-
+    $params['q'] = $q;
     return $this->oauth->get('search/topics', $params);
   }
 

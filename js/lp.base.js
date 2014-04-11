@@ -11,6 +11,7 @@ LP.use(['jquery' ,'api', 'easing', 'skrollr', 'flash-detect', 'hammer', 'transit
 	var windWidth = $(window).width() - 90;
 	var $loading = $('.list-loading');
 	var isMobile;
+    var isComplete = false;
 
 	if(isIpad) {
 		$('body').addClass('ipad');
@@ -942,6 +943,7 @@ LP.use(['jquery' ,'api', 'easing', 'skrollr', 'flash-detect', 'hammer', 'transit
     })();
 
     var complete = function(){
+        if(isComplete) return;
         $('.loading-wrap').fadeOut();
 
         /* for animation */
@@ -1030,6 +1032,7 @@ LP.use(['jquery' ,'api', 'easing', 'skrollr', 'flash-detect', 'hammer', 'transit
                 $('.loading-bar').css({'width':per+'%'});
                 if(per == 100) {
                     complete();
+                    isComplete = true;
                 }
             },
             onComplete : function(){
