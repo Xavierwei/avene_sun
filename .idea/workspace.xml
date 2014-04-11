@@ -2,13 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5df1b99b-6417-4291-85ff-70d2ec065f1e" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flash/ball_game/src/ball_game.fla" afterPath="$PROJECT_DIR$/flash/ball_game/src/ball_game.fla" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flash/ball_game.swf" afterPath="$PROJECT_DIR$/flash/ball_game.swf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flash/ball_game/web/ball_game.swf" afterPath="$PROJECT_DIR$/flash/ball_game/web/ball_game.swf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/game6_tit.gif" afterPath="$PROJECT_DIR$/img/game6_tit.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/style.css" afterPath="$PROJECT_DIR$/css/style.css" />
     </list>
     <ignored path="avene_sun.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/Dummy.txt" changelist="5df1b99b-6417-4291-85ff-70d2ec065f1e" time="1397137854041" ignored="false" />
     <file path="/index.html" changelist="5df1b99b-6417-4291-85ff-70d2ec065f1e" time="1396622943245" ignored="false" />
-    <file path="/style.css" changelist="5df1b99b-6417-4291-85ff-70d2ec065f1e" time="1397052110134" ignored="false" />
+    <file path="/style.css" changelist="5df1b99b-6417-4291-85ff-70d2ec065f1e" time="1397139350510" ignored="false" />
     <file path="/page1.html" changelist="5df1b99b-6417-4291-85ff-70d2ec065f1e" time="1395942867134" ignored="false" />
     <file path="/page2.html" changelist="5df1b99b-6417-4291-85ff-70d2ec065f1e" time="1395943648168" ignored="false" />
     <file path="/page3.html" changelist="5df1b99b-6417-4291-85ff-70d2ec065f1e" time="1395943778053" ignored="false" />
@@ -152,9 +156,9 @@
       <file leaf-file-name="wall.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/wall.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="100" column="44" selection-start="4517" selection-end="4531" vertical-scroll-proportion="0.0">
+            <state line="110" column="44" selection-start="4956" selection-end="4956" vertical-scroll-proportion="0.0">
               <folding>
-                <marker date="1397052676000" expanded="true" signature="7043:7144" placeholder="..." />
+                <marker date="1397137980000" expanded="true" signature="7484:7585" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -163,7 +167,7 @@
       <file leaf-file-name="style.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/css/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="420" column="177" selection-start="37250" selection-end="37250" vertical-scroll-proportion="0.0">
+            <state line="851" column="49" selection-start="71975" selection-end="71975" vertical-scroll-proportion="-6.3846154">
               <folding />
             </state>
           </provider>
@@ -172,7 +176,7 @@
       <file leaf-file-name="lp.base.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/lp.base.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="336" column="27" selection-start="9637" selection-end="9637" vertical-scroll-proportion="0.017367458">
+            <state line="283" column="0" selection-start="8057" selection-end="8057" vertical-scroll-proportion="0.79588014">
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
@@ -211,9 +215,9 @@
         <option value="$PROJECT_DIR$/api/protected/views/admin/index.php" />
         <option value="$PROJECT_DIR$/api/admin_asset/js/directives.js" />
         <option value="$PROJECT_DIR$/game.html" />
-        <option value="$PROJECT_DIR$/css/style.css" />
         <option value="$PROJECT_DIR$/wall.html" />
         <option value="$PROJECT_DIR$/js/lp.base.js" />
+        <option value="$PROJECT_DIR$/css/style.css" />
       </list>
     </option>
   </component>
@@ -366,13 +370,13 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="80" y="77" width="2203" height="1255" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27213722" sideWeight="0.6704846" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27213722" sideWeight="0.6704846" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -519,23 +523,23 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/wall.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="100" column="44" selection-start="4517" selection-end="4531" vertical-scroll-proportion="0.0">
+        <state line="110" column="44" selection-start="4956" selection-end="4956" vertical-scroll-proportion="0.0">
           <folding>
-            <marker date="1397052676000" expanded="true" signature="7043:7144" placeholder="..." />
+            <marker date="1397137980000" expanded="true" signature="7484:7585" placeholder="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="420" column="177" selection-start="37250" selection-end="37250" vertical-scroll-proportion="0.0">
+        <state line="851" column="49" selection-start="71975" selection-end="71975" vertical-scroll-proportion="-6.3846154">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/lp.base.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="336" column="27" selection-start="9637" selection-end="9637" vertical-scroll-proportion="0.017367458">
+        <state line="283" column="0" selection-start="8057" selection-end="8057" vertical-scroll-proportion="0.79588014">
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>
