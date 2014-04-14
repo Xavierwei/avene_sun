@@ -100,6 +100,14 @@ LP.use(['jquery' ,'api', 'easing', 'skrollr', 'flash-detect', 'hammer', 'transit
         });
     });
 
+    LP.action('open_gamerule', function(){
+        LP.compile( 'gamerule-template' , {}, function( html ){
+            $('body').append(html);
+            $('.overlay').fadeIn();
+            $('.popup').css({top:'-50%'}).fadeIn().dequeue().animate({top:'50%'}, 800, 'easeOutQuart');
+        });
+    });
+
 	LP.action('open_rule', function(){
 		LP.compile( 'rule-template' , {}, function( html ){
 			$('body').append(html);
