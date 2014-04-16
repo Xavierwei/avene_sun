@@ -245,7 +245,9 @@ LP.use(['jquery' ,'api', 'easing', 'skrollr', 'flash-detect', 'hammer', 'transit
             validate = false;
             $('.tester-error-address').fadeIn();
         }
-        if(tel == '') {
+		var tel_exp = /^1\d{10}$/;
+		var tel2_exp = /^0\d{2,3}-?\d{7,8}$/;
+		if(!tel_exp.test(tel) && !tel2_exp.test(tel)) {
             validate = false;
             $('.tester-error-tel').fadeIn();
         }
@@ -282,7 +284,8 @@ LP.use(['jquery' ,'api', 'easing', 'skrollr', 'flash-detect', 'hammer', 'transit
             validate = false;
             $('.game6-error-email').fadeIn();
         }
-        if(tel == '') {
+		var tel_exp = /^1\d{10}$/;
+        if(!tel_exp.test(tel)) {
             validate = false;
             $('.game6-error-tel').fadeIn();
         }
@@ -924,7 +927,9 @@ LP.use(['jquery' ,'api', 'easing', 'skrollr', 'flash-detect', 'hammer', 'transit
                             $('.game-box1').fadeOut();
                             $('.game-box3').fadeIn();
                             $('.game3').hide();
-                            $('.game3-'+(index)).show();
+
+							var rid = parseInt(Math.random()*3+1);
+                            $('.game3-'+(rid)).show();
                         },1000);
 
                         $('.game-ball')
@@ -1230,9 +1235,10 @@ function playComplete(){
 
 
 function hit(id){
+	var rid = parseInt(Math.random()*3+1);
 	$('.game3-radio').removeClass('game3-radioed');
     $('.game-box1').fadeOut();
     $('.game-box3').fadeIn();
 	$('.game3').hide();
-	$('.game3-'+(id+1)).show();
+	$('.game3-'+(rid)).show();
 }

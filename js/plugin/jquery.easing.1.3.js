@@ -43,8 +43,8 @@ jQuery.extend( jQuery.easing,
 	def: 'easeOutQuad',
 	swing: function (x, t, b, c, d) {
 		//alert(jQuery.easing.default);
-		return jQuery.easing[jQuery.easing.def](x, t, b, c, d);
-		// return ((-Math.cos(x*Math.PI)/2) + 0.5) * c + b;
+		//return jQuery.easing[jQuery.easing.def](x, t, b, c, d);
+		 return ((-Math.cos(x*Math.PI)/2) + 0.5) * c + b;
 	},
 	easeInQuad: function (x, t, b, c, d) {
 		return c*(t/=d)*t + b;
