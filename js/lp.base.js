@@ -7,7 +7,7 @@ LP.use(['jquery' ,'api', 'easing', 'skrollr', 'flash-detect', 'hammer', 'transit
     var isFirefox = navigator.userAgent.toLowerCase().indexOf('firefox') > 0;
 	var isIphone = navigator.userAgent.toLowerCase().indexOf('iphone') > 0;
 	var isIpad = navigator.userAgent.toLowerCase().indexOf('ipad') > 0;
-	var isIe6 = $.browser.msie && $.browser.version < 7;
+	var isIe6 = navigator.userAgent.toLowerCase().indexOf('msie 6') > 0;
 	var windWidth = $(window).width() - 90;
 	var $loading = $('.list-loading');
 	var isMobile;
@@ -70,6 +70,14 @@ LP.use(['jquery' ,'api', 'easing', 'skrollr', 'flash-detect', 'hammer', 'transit
 			$('.nav').fadeOut();
 		}
 	});
+
+    $('.ft-item3').on('mouseenter',function(){
+        $('.ft-weixin-pop').fadeIn();
+    });
+
+    $('.ft-item3').on('mouseleave',function(){
+        $('.ft-weixin-pop').fadeOut();
+    });
 
 	LP.action('toggle_nav', function(){
 		if(!$('.nav').is(':visible')) {
@@ -220,6 +228,8 @@ LP.use(['jquery' ,'api', 'easing', 'skrollr', 'flash-detect', 'hammer', 'transit
     LP.action('game_share', function(){
         $('.game-box4').fadeOut();
         $('.game-box6').fadeIn();
+
+        ga('send', 'suncare', 'game', 'share', 'share');
     });
 
 	$('#etrial-form input[name="address"]').on('keyup', function(e){
@@ -256,6 +266,7 @@ LP.use(['jquery' ,'api', 'easing', 'skrollr', 'flash-detect', 'hammer', 'transit
             return;
         }
 
+        ga('send', 'suncare', 'etrial', 'submit', 'submit');
         $(this).addClass('submitting');
         api.ajax('trial', {name:name, address:address, tel:tel}, function(res){
             $(this).removeClass('submitting');
@@ -294,6 +305,7 @@ LP.use(['jquery' ,'api', 'easing', 'skrollr', 'flash-detect', 'hammer', 'transit
             return;
         }
 
+        ga('send', 'suncare', 'game', 'submit', 'submit');
 		$(this).addClass('submitting');
         api.ajax('game', {name:name, email:email, tel:tel}, function(res){
 			$(this).removeClass('submitting');
@@ -927,9 +939,9 @@ LP.use(['jquery' ,'api', 'easing', 'skrollr', 'flash-detect', 'hammer', 'transit
                             $('.game-box1').fadeOut();
                             $('.game-box3').fadeIn();
                             $('.game3').hide();
-
 							var rid = parseInt(Math.random()*3+1);
                             $('.game3-'+(rid)).show();
+                            ga('send', 'suncare', 'game', 'played', 'played');
                         },1000);
 
                         $('.game-ball')
@@ -1054,7 +1066,6 @@ LP.use(['jquery' ,'api', 'easing', 'skrollr', 'flash-detect', 'hammer', 'transit
         });
     }
 
-	init();
 
 
     if($('html').hasClass('touch')) {
@@ -1219,6 +1230,8 @@ LP.use(['jquery' ,'api', 'easing', 'skrollr', 'flash-detect', 'hammer', 'transit
         ga('send', 'suncare', 'family', 'learnmore2', 'learnmore2');
     });
 
+
+    init();
 });
 
 function play(){
@@ -1241,4 +1254,5 @@ function hit(id){
     $('.game-box3').fadeIn();
 	$('.game3').hide();
 	$('.game3-'+(rid)).show();
+    ga('send', 'suncare', 'game', 'played', 'played');
 }
