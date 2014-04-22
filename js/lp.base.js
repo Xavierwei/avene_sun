@@ -124,6 +124,22 @@ LP.use(['jquery' ,'api', 'easing', 'skrollr', 'flash-detect', 'hammer', 'transit
 		});
 	});
 
+	LP.action('pop-tester-list' , function(){
+		LP.compile( 'tester-list-template' , {}, function( html ){
+			$('body').append(html);
+			$('.overlay').fadeIn();
+			$('.popup').css({top:'-50%'}).fadeIn().dequeue().animate({top:'50%'}, 800, 'easeOutQuart');
+		});
+	});
+
+	LP.action('show-award' , function(){
+		LP.compile( 'award-list-template' , {}, function( html ){
+			$('body').append(html);
+			$('.overlay').fadeIn();
+			$('.popup').css({top:'-50%'}).fadeIn().dequeue().animate({top:'50%'}, 800, 'easeOutQuart');
+		});
+	});
+
     LP.action('close_pop', function(){
         $('.overlay').fadeOut();
         $('.popup').fadeOut(

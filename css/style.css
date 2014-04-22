@@ -325,9 +325,9 @@ body{background:#efdcc2 url('../img/bg.jpg') no-repeat center top;background-siz
 ================================================================================================= */
 .page5{width: 950px;margin: 0 auto 0;}	
 	.page5-main{height: 590px;position: relative;width: 950px;}
-		.page5main-tit{width: 440px;height: 82px;background: url('../img/page5_maintit.png') no-repeat;position: absolute;left:168px;top:28px;}
-		.page5main-tit2{width: 300px;height: 46px;background: url('../img/page5_maintit2.png') no-repeat;position: absolute;left:258px;top:110px;}
-		.page5main-rule {cursor:pointer;font-size:16px;color:#ff7311;position: absolute; top:134px;left:570px;}
+		.page5main-tit{width: 440px;height: 82px;background: url('../img/page5_maintit.png') no-repeat;position: absolute;left:168px;top:20px;}
+		.page5main-tit2{width: 300px;height: 46px;background: url('../img/page5_maintit2.png') no-repeat;position: absolute;left:258px;top:90px;}
+		.page5main-rule {cursor:pointer;font-size:16px;color:#ff7311;position: absolute; top:145px;left:323px;}
         .page5main-rule:hover {color:#f9944a;}
         .page5main-pro{width: 450px;height: 420px;background: url('../img/page5_mainpro.png') no-repeat;position: absolute;left:675px;top:127px;}
 		.page5main-btn{width: 197px;height: 50px;background: url('../img/page5_mainbtn.gif') no-repeat;position: absolute;left:734px;top:497px;}
@@ -393,7 +393,7 @@ body{background:#efdcc2 url('../img/bg.jpg') no-repeat center top;background-siz
             .game-box7 .game5-btn {top:222px;left:362px;}
 	.page5-gift{height: 274px;width:910px;margin: 0 auto;position: relative;}
 		.page5gift-tit{width: 195px;height: 20px;background: url('../img/page5_gifttit.png') no-repeat;position: absolute;left:0;top:0;}
-		.page5gift-item{background: #ff7311;width: 290px;height: 186px;top: 52px;position: absolute;opacity: 0.7;filter:alpha(opacity=70)}
+		.page5gift-item{ cursor: pointer; background: #ff7311;width: 290px;height: 186px;top: 52px;position: absolute;opacity: 0.7;filter:alpha(opacity=70)}
         .page5gift-item:hover{opacity: 1;filter:alpha(opacity=100)}
 		.page5gift-item1{left:0}
 			.page5gift1-pho{width: 160px;height: 160px;background: url('../img/page5_giftpho1.png') no-repeat;position: absolute;left:10px;top:15px;}
@@ -408,7 +408,16 @@ body{background:#efdcc2 url('../img/bg.jpg') no-repeat center top;background-siz
 		.page5rule-tit{width: 195px;height: 20px;background: url('../img/page5_ruletit.png') no-repeat;position: absolute;left:0;top:0;}
 		.page5rule-con{font-size:15px;color:#7f7f7f;border:1px dashed #ff7311;padding:20px;width: 869px;position: absolute;left:0;top:52px;}
 
-
+	.award-popup{width: 950px;background: white;margin: -220px 0 0 -475px;}
+		.award-popup .popup-inner{margin:35px auto; text-align: center;text-align: center;}
+		.award-popup .popup-inner table{width: 495px;margin: 10px auto 5px;font-size: 14px;}
+		.award-tables {height: 300px;overflow: scroll;}
+		.award-tit{height: 34px;background: url('../img/award-bg.png') no-repeat center 0;}
+		.award-bar{width: 495px; margin: 0 auto; background: #f6964a;color:white;font-size: 18px;line-height: 35px;margin-top: 15px;margin-bottom: 15px;}
+		.awardtable-tit{background: url('../img/award-bg.png') no-repeat center -50px; height: 20px;}
+		.awardtable-tit2{background-position: center -75px;}
+		.awardtable-tit3{background-position: center -100px;}
+		.awardtable-sep{width: 495px; margin: 0 auto; height: 10px;background: url('../img/award-bg.png') repeat-x bottom;}
 
 /* PAGE 6 Used
 ================================================================================================= */
@@ -522,16 +531,24 @@ body{background:#efdcc2 url('../img/bg.jpg') no-repeat center top;background-siz
 		.tester-pro{width: 460px;height: 400px;background: url('../img/tester_pro.png') no-repeat;position: absolute;left:530px;top:145px;}
 	.tester-form{width: 475px;height: 232px;position: absolute;left:50px;top:165px;}
 		.testerform-share{width: 475px;height: 232px;background: #ff7311;opacity: 0.3;filter:alpha(opacity=30);position: absolute;left:0;top:0}
+		.testerform-end{position: relative;padding-top: 73px;text-align: center;z-index: 1;}
+		.testerform-end>img{margin-bottom: 40px;}
 		.testerform-tips{width: 230px;height: 50px;background: url('../img/testerform_tips.png') no-repeat;position: absolute;left:235px;top:172px;}
 		.testerform-con{width: 475px;height: 232px;position: absolute;left:0;top:2px;}
 			.tester-ipt{width: 410px;height: 32px;padding: 0 15px;font-size: 16px;font-family:"Microsoft YaHei",arial,SimHei,sans-serif;color:#333;border:0;display: block;margin:20px auto 0;}
 			.tester-submit{width: 107px;height: 36px;background: url('../img/tester_submit.png') no-repeat;border:0;overflow: hidden;line-height: 500em;margin:0;}
+	.tester-list-popup{width: 950px;margin: -220px 0 0 -475px;background: white;}
+		.tester-list-popup .testerpop-tablelist{margin-bottom:50px;height: 300px;overflow: scroll;}
+		.testerpop-tit{background: url('../img/tester-pop.png') no-repeat center 0; height: 30px; margin: 34px 0;}
+		.tester-list-popup table{ font-size: 14px; margin-left: 70px;float: left;line-height: 26px;text-align: center;}
+		.testerpop-name{background: url('../img/tester-pop.png') no-repeat center -50px; height: 26px; min-width: 100px;}
+		.testerpop-phone{background: url('../img/tester-pop.png') no-repeat center -100px; height: 26px; min-width: 100px; }
 	.tester-infor{width: 475px;height: 126px;position: absolute;left:50px;top:415px;}
 		.testerinfor-share{width: 475px;height: 126px;background: #ff7311;opacity: 0.3;filter:alpha(opacity=30);position: absolute;left:0;top:0}
 		.testerinfor-tips{width: 155px;height: 55px;background: url('../img/testerinfor_tips.png') no-repeat;position: absolute;left:24px;top:14px;}
 		.testerinfor-gift1{width: 105px;height: 105px;background: url('../img/testerinfor_gift1.png') no-repeat;position: absolute;left:240px;top:12px;}
 		.testerinfor-gift2{width: 105px;height: 105px;background: url('../img/testerinfor_gift2.png') no-repeat;position: absolute;left:346px;top:12px;}
-		.testerinfor-btn{color:#ff6511;font-size:16px;position: absolute;left:24px;top:86px;display: block;}
+		.testerinfor-btn{color:#ff6511;font-size:16px;position: absolute;left:24px;top:75px;display: block;background: url('../img/tester-rule-btn.png') no-repeat;width: 107px;height: 36px;text-indent: -999px;overflow: hidden;}
         .testerinfor-btn:hover {color:#ff7311;}
 #etrial-form {position: absolute;z-index:10;top:20px;left:20px;}
     #etrial-form input {width:420px;height:31px;font-size:14px;padding:0 5px;color:#555;border:none;}
