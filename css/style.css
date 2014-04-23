@@ -850,7 +850,8 @@ body{background:#efdcc2 url('../img/bg.jpg') no-repeat center top;background-siz
     .page5-main {width:640px;height:1000px;}
     .page5main-tit {background: url('../imgm/page5_maintit.png') no-repeat;width:589px;height:104px;left:26px;}
     .page5main-tit2 {background: url('../imgm/page5_maintit2.png') no-repeat;width:437px;height:56px;top:151px;left:93px;}
-    .page5main-rule {left:275px;top:224px;font-size:22px;}
+    .page5main-rule {left:180px;top:224px;font-size:22px;}
+    .page5main-rule[data-a="show-award"]{left:320px !important;}
     .page5-game {top:263px;left:15px;width:610px;}
     .game-box1 {width:610px;}
     .game-box3 {width:610px;}
@@ -942,6 +943,10 @@ body{background:#efdcc2 url('../img/bg.jpg') no-repeat center top;background-siz
     .trialrule-popup {z-index:9999;width:640px;height:450px;margin:-225px 0 0 -320px;}
     .trialrule-popup .popup-body {font-size:20px;line-height:140%;width:580px;height:400px;overflow:scroll;padding:0 30px;border-bottom:40px solid #fff;border-top:40px solid #fff;background:#fff;}
     .trialrule-popup h3 {font-size:24px;}
+
+    .tester-list-popup {z-index:9999;width:640px;height:450px;margin:-225px 0 0 -320px;}
+    .tester-list-popup .popup-body {font-size:20px;line-height:140%;width:580px;height:400px;overflow:scroll;padding:0 30px;border-bottom:40px solid #fff;border-top:40px solid #fff;background:#fff;}
+    .tester-list-popup table {margin-left: 40px;}
 
     #newsletter-email {border:2px solid #f60;left:18px;height:35px;top:8px;width:190px;font-size:24px;}
     .ft-submit {background: url('../imgm/ft_item4.png') no-repeat right top;width:36px;height:27px;}
