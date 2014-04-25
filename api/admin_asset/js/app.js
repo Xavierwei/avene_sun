@@ -1,6 +1,5 @@
 'use strict';
 
-
 // Declare app level module which depends on filters, and services
 var SGWallAdmin = angular.module('AveneAdmin', [
   'ui.bootstrap',
@@ -12,7 +11,7 @@ var SGWallAdmin = angular.module('AveneAdmin', [
   'AveneAdmin.controllers'
 ]).
 config(function($routeProvider,$httpProvider) {
-    var ROOT = '/avene_sun/api/';
+    var ROOT = '/fwork/avene_sun/api/';
     $routeProvider.when('/photo/list/:status', {templateUrl: ROOT+'/admin_asset/tmp/photo/list.html?2', controller: 'PhotoCtrList'});
     $routeProvider.when('/winner/post', {templateUrl: ROOT+'/admin_asset/tmp/winner/post.html', controller: 'WinnerPostCtrList'});
     $routeProvider.when('/winner/edit/:wid', {templateUrl: ROOT+'/admin_asset/tmp/winner/post.html', controller: 'WinnerEditCtrList'});
@@ -74,4 +73,5 @@ config(function($routeProvider,$httpProvider) {
         return angular.isObject(data) && String(data) !== '[object File]' ? param(data) : data;
     }];
 });
+
 
