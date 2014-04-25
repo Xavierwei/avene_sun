@@ -21,7 +21,6 @@ AveneAdminController
         });
 
         $scope.refreshPage = function(){
-            console.log( $modal.start_date );return;
             window.location.reload();
         }
 

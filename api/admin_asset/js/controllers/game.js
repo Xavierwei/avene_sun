@@ -1,6 +1,7 @@
 AveneAdminController
     .controller('GameListCtrList', function($scope,$upload, $http, $modal, $log, $routeParams, GameService, ROOT_FOLDER) {
-        GameService.list(function(res){
+    	var param = {};
+        GameService.list( param ,  function(res){
             $scope.games = res.data;
         });
 

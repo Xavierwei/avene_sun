@@ -11,7 +11,7 @@ var SGWallAdmin = angular.module('AveneAdmin', [
   'AveneAdmin.controllers'
 ]).
 config(function($routeProvider,$httpProvider) {
-    var ROOT = '/fwork/avene_sun/api/';
+    var ROOT = '/avene_sun/api/';
     $routeProvider.when('/photo/list/:status', {templateUrl: ROOT+'/admin_asset/tmp/photo/list.html?2', controller: 'PhotoCtrList'});
     $routeProvider.when('/winner/post', {templateUrl: ROOT+'/admin_asset/tmp/winner/post.html', controller: 'WinnerPostCtrList'});
     $routeProvider.when('/winner/edit/:wid', {templateUrl: ROOT+'/admin_asset/tmp/winner/post.html', controller: 'WinnerEditCtrList'});
