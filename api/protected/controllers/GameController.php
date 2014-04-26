@@ -2,6 +2,16 @@
 
 class GameController extends Controller
 {
+
+    public function behaviors()
+    {
+        return array(
+            'eexcelview'=>array(
+                'class'=>'ext.eexcelview.EExcelBehavior',
+            ),
+        );
+    }
+
 	private $_answer = array(
 		'1_3', '2_2', '3_2'
 	);
@@ -77,4 +87,80 @@ class GameController extends Controller
 			echo '-1';
 		}
 	}
+
+    /**
+     * 导出export。验证管理员权限
+     */
+    public function actionExport($start_date,$end_date,$page=1,$pagenum=NULL)
+    {
+        if($this->getRole() != 2) {
+            return;
+        }
+
+        if (!$page) {
+            $page = 1;
+        }
+        if (!$pagenum) {
+            $pagenum = 10;
+        }
+
+        $game = new Game();
+        $criteria=new CDbCriteria;
+
+        $count = $game->count($criteria);
+        $criteria->addCondition('(datetime > :start_date OR datetime = :start_date) AND (datetime < :end_date OR datetime = :end_date)');
+        $criteria->params=array(':start_date'=>$start_date,':end_date'=>$end_date);
+        $criteria->limit = $pagenum;
+        $criteria->offset = ($page - 1 ) * $pagenum;
+        $criteria->order = 'datetime DESC';
+        $model = $game->findAll($criteria);
+
+        if($model)
+        {
+            foreach($model as $key => $value)
+            {
+                $model[$key]->datetime=date('Y/m/d H:i:s',$value->datetime);
+            }
+            $title='Export :'.date('Y/m/d H:i:s');
+            $this->toExcel($model,array(),$title);
+        }
+    }
+
+    /**
+     * 根据时间筛选参加游戏的人,验证管理员权限
+     */
+    public function actionSetList($start_date,$end_date,$page=1,$pagenum=NULL)
+    {
+        if($this->getRole() != 2) {
+            return;
+        }
+
+        if (!$page) {
+            $page = 1;
+        }
+        if (!$pagenum) {
+            $pagenum = 10;
+        }
+
+        $game = new Game();
+        $criteria=new CDbCriteria;
+
+        $count = $game->count($criteria);
+        $criteria->addCondition('(datetime > :start_date OR datetime = :start_date) AND (datetime < :end_date OR datetime = :end_date)');
+        $criteria->params=array(':start_date'=>$start_date,':end_date'=>$end_date);
+        $criteria->limit = $pagenum;
+        $criteria->offset = ($page - 1 ) * $pagenum;
+        $criteria->order = 'datetime DESC';
+        $games = $game->findAll($criteria);
+
+        $retdata = array();
+        foreach($games as $game) {
+            $data = $game->attributes;
+            $retdata[] = $data;
+        }
+
+        $this->responseJSON($retdata, $count);
+
+    }
+
 }

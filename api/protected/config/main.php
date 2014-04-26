@@ -61,7 +61,7 @@ return array(
 			'connectionString' => 'mysql:host=127.0.0.1;dbname=avene_sun',
 			'emulatePrepare' => true,
 			'username' => 'root',
-			'password' => 'hdg',
+			'password' => 'root',
 			'charset' => 'utf8',
 		),
 
