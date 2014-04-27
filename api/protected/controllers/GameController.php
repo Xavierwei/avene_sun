@@ -107,12 +107,17 @@ class GameController extends Controller
         $game = new Game();
         $criteria=new CDbCriteria;
 
-        $count = $game->count($criteria);
+        //$count = $game->count($criteria);
+        //select *, count(tel) from game group by tel having count(tel) < 2
+
+        $criteria->select='*, count(tel)';
         $criteria->addCondition('(datetime > :start_date OR datetime = :start_date) AND (datetime < :end_date OR datetime = :end_date)');
         $criteria->params=array(':start_date'=>$start_date,':end_date'=>$end_date);
+        $criteria->group= 'tel';
+        $criteria->order = 'datetime DESC';
+        $criteria->having='count(tel) < 2';
         $criteria->limit = $pagenum;
         $criteria->offset = ($page - 1 ) * $pagenum;
-        $criteria->order = 'datetime DESC';
         $model = $game->findAll($criteria);
 
         if($model)
