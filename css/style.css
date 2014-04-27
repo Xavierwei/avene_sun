@@ -445,9 +445,25 @@ body{background:#efdcc2 url('../img/bg.jpg') no-repeat center top;background-siz
     #wall-list {position: relative;}
     .wall-tit {background: url('../img/wall_tit.png') no-repeat;width:444px;height:78px;margin:20px auto;}
     .wall-banner {background: url('../img/wall_banner.png') no-repeat;width:949px;height:198px;margin:0 auto 20px auto;position: relative;}
-    .wall-btn1 {background: url('../img/wall_btn_rule.png') no-repeat;width:157px;height:44px;display:block;position: absolute;top:133px;left:100px;}
-    .wall-btn2 {background: url('../img/wall_btn_winner.png') no-repeat;width:157px;height:44px;display:block;position: absolute;top:133px;left:300px;}
+    .wall-rule{text-indent: -999px;position: absolute;width: 100px;top: 104px;left: 271px;overflow: hidden;}
+    .wall-btn1 {background: url('../img/wall_btn_rule.png') no-repeat;width: 160px;height: 40px;display: block;position: absolute;top: 140px;left: 83px;}
+    .wall-btn2 {background: url('../img/wall_btn_winner.png') no-repeat;width: 160px;height: 40px;display: block;position: absolute;top: 140px;left: 290px;}
     .list-loading {background: url('../img/loading2.gif') no-repeat;height:30px;width:30px;margin:20px auto;}
+
+    #winner-list{margin: 0 -10px;}
+    #winner-list .photo_item{width: 463px;margin: 6px 10px ;}
+    #winner-list .photo_item .img img{width: 100% !important;}
+    #winner-list .photo_item .content{background: none;position: absolute;bottom: 37px;padding: 40px;width: 384px;}
+    #winner-list .photo_item .content-bg{background: #fda740;opacity: 0.6; filter:alpha(opacity=60); position: absolute;width: 100%; height:100%;z-index: 1; left: 0 ; top: 0;}
+    #winner-list .photo_item .content-inner{position: relative;z-index: 2;}
+    #winner-list .share-list{position: relative; width: 100%;height: 268px;background:url(../img/share_award.png) no-repeat; border-top: 1px solid white; }
+    #winner-list .hot-list{position: relative; width: 100%;height: 268px;background:url(../img/hot_award.png) no-repeat; border-top: 1px solid white; }
+    #winner-list .weibo1,#winner-list .weibo2{position: absolute;top: 65px;color: white;left: 60px;font-size: 14px;width: 126px;text-align: center;}
+    #winner-list .weibo2{left: 285px;}
+
+    .tester-list{ padding-bottom: 30px; margin-bottom: 30px; background: #fdf2e4;overflow: hidden;margin-top: 20px; font-size: 14px;color: #7f7f7f;}
+    .tester-list table{margin-left: 75px;float: left;text-align: center;}
+    .tester-list .testerpop-tablelist{height: 288px;overflow: scroll;}
 
     .photo_item_pop {background:#fff;border:5px solid #fe8027;padding:25px;}
     .photo_item_pop .popup-close {top:0;z-index:10;}
@@ -537,7 +553,7 @@ body{background:#efdcc2 url('../img/bg.jpg') no-repeat center top;background-siz
 		.testerform-con{width: 475px;height: 232px;position: absolute;left:0;top:2px;}
 			.tester-ipt{width: 410px;height: 32px;padding: 0 15px;font-size: 16px;font-family:"Microsoft YaHei",arial,SimHei,sans-serif;color:#333;border:0;display: block;margin:20px auto 0;}
 			.tester-submit{width: 107px;height: 36px;background: url('../img/tester_submit.png') no-repeat;border:0;overflow: hidden;line-height: 500em;margin:0;}
-	.tester-list-popup{width: 950px;margin: -220px 0 0 -475px;background: white;}
+	.tester-list-popup {width: 950px;margin: -220px 0 0 -475px;background: white;}
 		.tester-list-popup .testerpop-tablelist{margin-bottom:50px;height: 300px;overflow: scroll;}
 		.testerpop-tit{background: url('../img/tester-pop.png') no-repeat center 0; height: 30px; margin: 34px 0;}
 		.tester-list-popup table{ font-size: 14px; margin-left: 70px;float: left;line-height: 26px;text-align: center;}
@@ -996,9 +1012,21 @@ body{background:#efdcc2 url('../img/bg.jpg') no-repeat center top;background-siz
     #wall-list {position: relative;}
     .wall-tit {background: url('../imgm/wall_tit.png') no-repeat;width:590px;height:104px;margin:20px auto;}
     .wall-banner {background: url('../imgm/wall_banner.png') no-repeat;width:611px;height:422px;margin:0 auto 20px auto;position: relative;}
+    .wall-rule{top: 326px;left: 350px;}
     .wall-btn1 {background: url('../img/wall_btn_rule.png') no-repeat;width:157px;height:44px;display:block;position: absolute;top:359px;left:122px;}
     .wall-btn2 {background: url('../img/wall_btn_winner.png') no-repeat;width:157px;height:44px;display:block;position: absolute;top:359px;left:319px;}
     .list-loading {background: url('../img/loading.gif') no-repeat;height:30px;width:30px;margin:20px auto;}
+
+
+    #winner-list,.tester-list{width: 611px;margin:0 auto 20px auto;}
+    #winner-list .photo_item{width: 100%;margin:0 0 20px;}
+    #winner-list .photo_item .content{width: 531px;}
+    #winner-list .share-list{ height: 353px; background: url(../imgm/share_award.png) no-repeat;}
+    #winner-list .hot-list{ height: 353px; background: url(../imgm/hot_award.png) no-repeat;}
+    #winner-list .weibo1, #winner-list .weibo2{top: 94px;width: 200px;}
+    #winner-list .weibo2 {left: 360px;}
+
+    .tester-list table{margin-left: 45px;}
 
     .photo_item_pop {z-index: 9999;}
     .symj_description {font-size:20px;line-height: 120%;}
@@ -1008,4 +1036,108 @@ body{background:#efdcc2 url('../img/bg.jpg') no-repeat center top;background-siz
     .photo_item_pop .like_num {float:right;border:1px solid #fff;color:#fff;font-size:24px;margin:4px;padding:0 10px;height:26px;line-height:26px;text-align: center;}
 
 
+}
+
+/*
+ * CSS Styles that are needed by jScrollPane for it to operate correctly.
+ *
+ * Include this stylesheet in your site or copy and paste the styles below into your stylesheet - jScrollPane
+ * may not operate correctly without them.
+ */
+
+.jspContainer{
+	overflow: hidden;
+	position: relative;
+}
+
+.jspPane
+{
+	position: absolute;
+}
+
+.jspVerticalBar
+{
+	position: absolute;
+	top: 0;
+	right: 6px;
+	width: 6px;
+	height: 100%;
+}
+
+.jspCap
+{
+	display: none;
+}
+
+.jspHorizontalBar .jspCap
+{
+	float: left;
+}
+
+.jspTrack
+{
+	position: relative;
+}
+
+.jspDrag
+{
+	background: #ff7311;
+	border-radius: 100px;
+	position: relative;
+	top: 0;
+	left: 0;
+	cursor: pointer;
+}
+
+.jspHorizontalBar .jspTrack,
+.jspHorizontalBar .jspDrag
+{
+	float: left;
+	height: 100%;
+}
+
+.jspArrow
+{
+	background: #50506d;
+	text-indent: -20000px;
+	display: block;
+	cursor: pointer;
+	padding: 0;
+	margin: 0;
+}
+
+.jspArrow.jspDisabled
+{
+	cursor: default;
+	background: #80808d;
+}
+
+.jspVerticalBar .jspArrow
+{
+	height: 16px;
+}
+
+.jspHorizontalBar .jspArrow
+{
+	width: 16px;
+	float: left;
+	height: 100%;
+}
+
+.jspVerticalBar .jspArrow:focus
+{
+	outline: none;
+}
+
+.jspCorner
+{
+	background: #eeeef4;
+	float: left;
+	height: 100%;
+}
+
+/* Yuk! CSS Hack for IE6 3 pixel bug :( */
+* html .jspCorner
+{
+	margin: 0 -3px 0 0;
 }
