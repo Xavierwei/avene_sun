@@ -7,7 +7,6 @@ var AveneAdminController = angular.module('AveneAdmin.controllers', []);
 AveneAdminController
     .controller('MainCtrl', function($scope, $http, $modal, $log,$location, $routeParams, PhotoService) {
 
-
         PhotoService.getStatistics(function(res){
             $scope.counts = res;
         });

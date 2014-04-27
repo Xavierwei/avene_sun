@@ -525,3 +525,12 @@ Stack trace:
 #3 {main}
 REQUEST_URI=/fwork/avene_sun/api/upload/20140403/3695420868388024_middle.jpg
 ---
+2014/04/27 09:59:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "{{photo.image | thumbnail}}".' in /works/fwork/avene_sun/api/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /works/fwork/avene_sun/api/framework/web/CWebApplication.php(141): CWebApplication->runController('{{photo.image |...')
+#1 /works/fwork/avene_sun/api/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /works/fwork/avene_sun/api/index.php(20): CApplication->run()
+#3 {main}
+REQUEST_URI=/fwork/avene_sun/api/index.php/%7B%7Bphoto.image%20%7C%20thumbnail%7D%7D
+HTTP_REFERER=http://localhost:81/fwork/avene_sun/api/index.php/admin
+---
