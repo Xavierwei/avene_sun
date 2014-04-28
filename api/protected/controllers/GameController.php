@@ -62,10 +62,12 @@ class GameController extends Controller
 		$name = $request->getPost('name');
 		$email = $request->getPost('email');
 		$tel = $request->getPost('tel');
+        $address=$request->getPost('address');
 		$game = new Game();
 		$game->name = $name;
 		$game->email = $email;
 		$game->tel = $tel;
+        $game->address=$address;
 		$game->datetime = time();
 		$game->save();
 		if($game->validate()) {

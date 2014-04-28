@@ -8,6 +8,7 @@
  * @property string $name
  * @property string $email
  * @property string $tel
+ * @property string $address
  */
 class Game extends CActiveRecord
 {
@@ -32,9 +33,10 @@ class Game extends CActiveRecord
 		return array(
 			array('name, email, tel', 'required'),
 			array('name, email, tel', 'length', 'max'=>255),
+			array('address','length','max'=>512),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('gid, name, email, tel', 'safe', 'on'=>'search'),
+			array('gid, name, email, tel, address', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -59,6 +61,7 @@ class Game extends CActiveRecord
 			'name' => 'name',
 			'email' => 'email',
 			'tel' => 'tel',
+			'address'=>'address',
 		);
 	}
 

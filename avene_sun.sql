@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50535
 File Encoding         : 65001
 
-Date: 2014-04-26 00:24:15
+Date: 2014-04-28 13:19:19
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -25,16 +25,17 @@ CREATE TABLE `game` (
   `email` varchar(255) CHARACTER SET utf8 NOT NULL,
   `tel` int(20) NOT NULL,
   `datetime` int(11) unsigned NOT NULL COMMENT '创建时间',
+  `address` varchar(512) CHARACTER SET utf8 NOT NULL COMMENT '地址',
   PRIMARY KEY (`gid`)
 ) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
 
 -- ----------------------------
 -- Records of game
 -- ----------------------------
-INSERT INTO `game` VALUES ('1', 'sdfjk', 'jfdk@Fd.com', '323333', '0');
-INSERT INTO `game` VALUES ('2', 'fdsf', 'fdfds@Fdf.df', '3232323', '0');
-INSERT INTO `game` VALUES ('3', 'newsletter', '3jffj@fd.com', '1111', '0');
-INSERT INTO `game` VALUES ('4', 'jdfk', 'fjdkf@d.com', '8848', '0');
+INSERT INTO `game` VALUES ('1', 'sdfjk', 'jfdk@Fd.com', '323333', '1398533864', '');
+INSERT INTO `game` VALUES ('2', 'fdsf', 'fdfds@Fdf.df', '323333', '1398533864', '');
+INSERT INTO `game` VALUES ('3', 'newsletter', '3jffj@fd.com', '1111', '1398533864', '');
+INSERT INTO `game` VALUES ('4', 'jdfk', 'fjdkf@d.com', '8848', '1398533864', '');
 
 -- ----------------------------
 -- Table structure for photo
