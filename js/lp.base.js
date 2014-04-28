@@ -963,7 +963,7 @@ LP.use(['jquery' ,'api', 'easing', 'skrollr', 'flash-detect', 'hammer', 'transit
                             $('.game3').hide();
 							var rid = parseInt(Math.random()*3+1);
                             $('.game3-'+(rid)).show();
-                            ga('send', 'suncare', 'game', 'played', 'played');
+                            ga('send', 'event', 'game', 'played', 'played');
                         },1000);
 
                         $('.game-ball')
@@ -1187,79 +1187,79 @@ LP.use(['jquery' ,'api', 'easing', 'skrollr', 'flash-detect', 'hammer', 'transit
 
     // GA Event Tracking
     $('.nav1').bind('click',function(){
-        ga('send', 'suncare', 'nav', 'nav1', 'nav1');
+        ga('send', 'event', 'nav', 'nav1', 'nav1');
     });
 
     $('.nav2').bind('click',function(){
-        ga('send', 'suncare', 'nav', 'nav2', 'nav2');
+        ga('send', 'event', 'nav', 'nav2', 'nav2');
     });
 
     $('.nav3').bind('click',function(){
-        ga('send', 'suncare', 'nav', 'nav3', 'nav3');
+        ga('send', 'event', 'nav', 'nav3', 'nav3');
     });
 
     $('.nav4').bind('click',function(){
-        ga('send', 'suncare', 'nav', 'nav4', 'nav4');
+        ga('send', 'event', 'nav', 'nav4', 'nav4');
     });
 
     $('.nav5').bind('click',function(){
-        ga('send', 'suncare', 'nav', 'nav5', 'nav5');
+        ga('send', 'event', 'nav', 'nav5', 'nav5');
     });
 
     $('.nav6').bind('click',function(){
-        ga('send', 'suncare', 'nav', 'nav6', 'nav6');
+        ga('send', 'event', 'nav', 'nav6', 'nav6');
     });
 
     $('.nav7').bind('click',function(){
-        ga('send', 'suncare', 'nav', 'nav7', 'nav7');
+        ga('send', 'event', 'nav', 'nav7', 'nav7');
     });
 
     $('.home-vdbox').bind('click',function(){
-        ga('send', 'suncare', 'home', 'video', 'video');
+        ga('send', 'event', 'home', 'video', 'video');
     });
 
     $('.home-vbtn1').bind('click',function(){
-        ga('send', 'suncare', 'home', 'game', 'game');
+        ga('send', 'event', 'home', 'game', 'game');
     });
 
     $('.home-vbtn2').bind('click',function(){
-        ga('send', 'suncare', 'home', 'etrial ', 'etrial ');
+        ga('send', 'event', 'home', 'etrial ', 'etrial ');
     });
 
     $('.ft-gw').bind('click',function(){
-        ga('send', 'suncare', 'bottom', 'avene', 'avene');
+        ga('send', 'event', 'bottom', 'avene', 'avene');
     });
 
     $('.ft-btn1').bind('click',function(){
-        ga('send', 'suncare', 'bottom', 'weibo', 'weibo');
+        ga('send', 'event', 'bottom', 'weibo', 'weibo');
     });
 
     $('.ft-btn2').bind('click',function(){
-        ga('send', 'suncare', 'bottom', 'doctor', 'doctor');
+        ga('send', 'event', 'bottom', 'doctor', 'doctor');
     });
 
     $('.ft-submit').bind('click',function(){
-        ga('send', 'suncare', 'bottom', 'newsletter', 'newsletter');
+        ga('send', 'event', 'bottom', 'newsletter', 'newsletter');
     });
 
     $('.page2video-demo').bind('click',function(){
-        ga('send', 'suncare', 'reflexe', 'video', 'video');
+        ga('send', 'event', 'reflexe', 'video', 'video');
     });
 
     $('.page2pro-link').bind('click',function(){
-        ga('send', 'suncare', 'reflexe', 'award', 'award');
+        ga('send', 'event', 'reflexe', 'award', 'award');
     });
 
     $('.page3-video').bind('click',function(){
-        ga('send', 'suncare', 'family', 'video', 'video');
+        ga('send', 'event', 'family', 'video', 'video');
     });
 
     $('.page3-otherpro1 .page3intro-learnmore').bind('click',function(){
-        ga('send', 'suncare', 'family', 'learnmore1', 'learnmore1');
+        ga('send', 'event', 'family', 'learnmore1', 'learnmore1');
     });
 
     $('.page3-otherpro2 .page3intro-learnmore').bind('click',function(){
-        ga('send', 'suncare', 'family', 'learnmore2', 'learnmore2');
+        ga('send', 'event', 'family', 'learnmore2', 'learnmore2');
     });
 
 
@@ -1314,5 +1314,5 @@ function hit(id){
     $('.game-box3').fadeIn();
 	$('.game3').hide();
 	$('.game3-'+(rid)).show();
-    ga('send', 'suncare', 'game', 'played', 'played');
+    ga('send', 'event', 'game', 'played', 'played');
 }
