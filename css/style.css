@@ -380,7 +380,7 @@ body{background:#efdcc2 url('../img/bg.jpg') no-repeat center top;background-siz
 				.game5-btn{width: 134px;height: 35px;left:331px;top:181px;background: url('../img/game5_btn.gif') no-repeat;position: absolute;}
 			.game-box6{width: 653px;height: 334px;position: absolute;left:18px;top:18px;background: #ff7311}
 				.game6-tit{text-align: center;padding:22px;height:46px;background: url('../img/game6_tit.gif') no-repeat center;}
-				.game6-fi{height: 60px;padding:0 0 0 56px;}
+				.game6-fi{height: 52px;padding:0 0 0 56px;}
 				.game6-ipt{float:left}
 				.game6-ipt input{background: #fff;width:380px;height: 28px;padding: 0;border: 0;padding:0 10px}
                 .game6-error {display:none;clear:both;margin:8px 0 0 130px;color:#fff;}
@@ -388,7 +388,8 @@ body{background:#efdcc2 url('../img/bg.jpg') no-repeat center top;background-siz
 				.game6-fitit1{background: url('../img/game6_tit1.gif') no-repeat center 0;}
 				.game6-fitit2{background: url('../img/game6_tit2.gif') no-repeat center 0;}
 				.game6-fitit3{background: url('../img/game6_tit3.gif') no-repeat center 0;}
-				.game6-btn{width: 135px;height: 37px;left:451px;top:265px;background: url('../img/game6_btn.gif') no-repeat;position: absolute;cursor: pointer;}
+                .game6-fitit4{background: url('../img/game6_tit4.gif') no-repeat center 0;}
+				.game6-btn{width: 135px;height: 37px;left:451px;top:286px;background: url('../img/game6_btn.gif') no-repeat;position: absolute;cursor: pointer;}
             .game-box7 {width: 689px;height: 370px;position: absolute;left:0;top:0;background: url('../img/game-box7.png') no-repeat center;}
             .game-box7 .game5-btn {top:222px;left:362px;}
 	.page5-gift{height: 274px;width:910px;margin: 0 auto;position: relative;}

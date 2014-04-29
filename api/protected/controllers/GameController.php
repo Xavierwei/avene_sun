@@ -3,14 +3,14 @@
 class GameController extends Controller
 {
 
-    public function behaviors()
-    {
-        return array(
-            'eexcelview'=>array(
-                'class'=>'ext.eexcelview.EExcelBehavior',
-            ),
-        );
-    }
+//    public function behaviors()
+//    {
+//        return array(
+//            'eexcelview'=>array(
+//                'class'=>'ext.eexcelview.EExcelBehavior',
+//            ),
+//        );
+//    }
 
 	private $_answer = array(
 		'1_3', '2_2', '3_2'

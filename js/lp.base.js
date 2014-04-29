@@ -306,6 +306,7 @@ LP.use(['jquery' ,'api', 'easing', 'skrollr', 'flash-detect', 'hammer', 'transit
         var name = $('#game-form input[name="name"]').val();
         var email = $('#game-form input[name="email"]').val();
         var tel = $('#game-form input[name="tel"]').val();
+        var address = $('#game-form input[name="address"]').val();
         var validate = true;
         $('.game6-error').fadeOut();
         if(name == '') {
@@ -322,14 +323,17 @@ LP.use(['jquery' ,'api', 'easing', 'skrollr', 'flash-detect', 'hammer', 'transit
             validate = false;
             $('.game6-error-tel').fadeIn();
         }
-
+        if(address == '') {
+            validate = false;
+            $('.game6-error-address').fadeIn();
+        }
         if(!validate) {
             return;
         }
 
         ga('send', 'suncare', 'game', 'submit', 'submit');
 		$(this).addClass('submitting');
-        api.ajax('game', {name:name, email:email, tel:tel}, function(res){
+        api.ajax('game', {name:name, email:email, tel:tel, address:address}, function(res){
 			$(this).removeClass('submitting');
             if(res == '1') {
 				$('.game-box6').fadeOut();
