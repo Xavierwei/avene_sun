@@ -27,7 +27,8 @@ define(function( require , exports , model ){
         game: {path: './api/game/post', method:'post'},
         trial: {path: './api/trial/post', method:'post'},
 		list: {path: 'api/photo/list', method:'get'},
-        like: {path: 'api/photo/like', method:'post'}
+        like: {path: 'api/photo/like', method:'post'},
+        awardList: {path: './api/photo/list' , data: {pid:''} , method: 'get' }
     };
 
     // 内部API

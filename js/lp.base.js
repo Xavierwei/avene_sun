@@ -124,12 +124,6 @@ LP.use(['jquery' ,'api', 'easing', 'skrollr', 'flash-detect', 'hammer', 'transit
 		});
 	});
 
-	LP.action('winner_list' , function(){
-		$('.wall-wrap').hide();
-		$('#winner-list').show();
-		$('.tester-list').show();
-	});
-
 	LP.action('pop-tester-list' , function(){
 		LP.compile( 'tester-list-template' , {}, function( html ){
 			$('body').append(html);
@@ -1270,32 +1264,32 @@ LP.use(['jquery' ,'api', 'easing', 'skrollr', 'flash-detect', 'hammer', 'transit
     init();
 
 
+
     // test demo
-    !(function(){
-    	var _test_node = [{"pid":"17","weibo_id":"3695420868388024","image":"\/upload\/20140403\/3695420868388024.jpg","screen_name":"YOOYEE\u6743","gender":"f","location":"\u5409\u6797 \u957f\u6625","content":"sW1UI\u6708\u9500\u91cf139\u4ef6\u7537\u5f0f\u76ae\u8863 \u6625\u88c5\u65b0\u6b3e\u7537\u58eb\u4fee\u8eab\u5916\u5957 \u7537\u88c5\u673a\u8f66PU\u76ae\u5939\u514b\u5916\u5957\u7537http:\/\/t.cn\/8sZIgqw","status":"1","datetime":"1396540493","thumb_ratio":1.004,"size":"width=\"436\" height=\"437\"","link":"3762713017\/AE2kCzc6I"},{"pid":"18","weibo_id":"3695420868387899","image":"\/upload\/20140403\/3695420868387899.jpg","screen_name":"\u5728\u8fd9\u91cc\u8bfb\u61c2\u6210\u90fd","gender":"f","location":"\u56db\u5ddd \u6210\u90fd","content":"\u7b80\u5355\u4e2d\u7f8e\u4e3d~~~>>>http:\/\/t.cn\/8FEImum[\u732a\u5934]","status":"1","datetime":"1396540493","thumb_ratio":0.96,"size":"width=\"485\" height=\"466\"","link":"2821789325\/AE2kCzc4H"}];
-    	$.each( _test_node ,  function( i , node ){
-    		node.thumb = node.image.replace('.jpg','_thumb.jpg');
-            node.thumb_height = 225 * node.thumb_ratio;
-			node.m_thumb_height = 297 * node.thumb_ratio;
-			node.sharecontent = encodeURI(node.content).replace(new RegExp('#',"gm"),'%23');
-			node.shortcontent = linkify(node.content);
-			if(node.content.length > 100) {
-				node.shortcontent = node.content.substring(0,100)+'...';
-			}
-			if(isMobile) {
-				node.mobile = true;
-			}
+    // if page 8 , need to get award users
+    if( $('#winner-list').length ){
+    	api.ajax('awardList', {pid: $('#winner-list').data('pid')}, function( result ){
+    		$.each( result.data ,  function( i , node ){
+	    		node.thumb = node.image.replace('.jpg','_thumb.jpg');
+	            node.thumb_height = 225 * node.thumb_ratio;
+				node.m_thumb_height = 297 * node.thumb_ratio;
+				node.sharecontent = encodeURI(node.content).replace(new RegExp('#',"gm"),'%23');
+				node.shortcontent = linkify(node.content);
+				if(node.content.length > 100) {
+					node.shortcontent = node.content.substring(0,100)+'...';
+				}
+				if(isMobile) {
+					node.mobile = true;
+				}
 
-			//
-			node.is_share = true;
-    		LP.compile( "node-winner-template" , node , function( html ){
-    			$('#winner-list').append( html );
-    		} );	
-    	});
-    	
-    })();
-    
-
+				//
+				node.is_share = true;
+	    		LP.compile( "node-winner-template" , node , function( html ){
+	    			$('#winner-list').append( html );
+	    		} );	
+	    	});
+        });
+    }
 });
 
 function play(){
