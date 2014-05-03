@@ -781,3 +781,14 @@ Stack trace:
 REQUEST_URI=/avene_sun/api/photo/list?page=4&pagenum=12&_=1398734460161
 HTTP_REFERER=http://localhost:8888/avene_sun/wall.html
 ---
+2014/05/03 14:53:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "{{photo.image | thumbnail}}".' in /Applications/MAMP/htdocs/avene_sun/api/framework/web/CController.php:483
+Stack trace:
+#0 /Applications/MAMP/htdocs/avene_sun/api/framework/web/CController.php(270): CController->missingAction('{{photo.image |...')
+#1 /Applications/MAMP/htdocs/avene_sun/api/framework/web/CWebApplication.php(282): CController->run('{{photo.image |...')
+#2 /Applications/MAMP/htdocs/avene_sun/api/framework/web/CWebApplication.php(141): CWebApplication->runController('admin/{{photo.i...')
+#3 /Applications/MAMP/htdocs/avene_sun/api/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /Applications/MAMP/htdocs/avene_sun/api/index.php(20): CApplication->run()
+#5 {main}
+REQUEST_URI=/avene_sun/api/index.php/admin/%7B%7Bphoto.image%20|%20thumbnail%7D%7D
+HTTP_REFERER=http://localhost/avene_sun/api/index.php/admin/index
+---

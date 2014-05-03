@@ -40,10 +40,12 @@
 		<div class="wall-tit" ></div>
 		<div class="wall-banner">
 			<a href="javascript:void(0);" data-a="open_rule" class="wall-rule">游戏规则 &gt;</a>
-			<a class="wall-btn1" href="./game.html"></a>
-			<a class="wall-btn2" href="./award.html"></a>
+			<a class="wall-btn1" href="http://weibo.com/p/100808e3ea7024c6d4b3e75fed271f31f10289?k=%E7%BA%A6%E8%B5%B7%E6%9D%A5%E5%B0%BD%E6%83%85%E6%99%92&from=huati_topic" target="_blank"></a>
+			<a class="wall-btn3" href="wall.html"></a>
 		</div>
-		<div id="winner-list" data-pid="1,2" class="cs-clear">
+		<div id="winner-list" class="cs-clear">
+			<div id="winner-list1" class="winner-list" data-pid="20" data-type="share"></div>
+			<div id="winner-list2" class="winner-list" data-pid="25" data-type="hot"></div>
 		</div>
 		<div class="tester-list">
             <div class="testerpop-tit"></div>
@@ -504,13 +506,13 @@
     </script>
 
     <script type="text/tpl" id="node-winner-template">
-    	<div data-a="node" data-d="nid={{pid}}" class="photo_item" id="photo_item_{{pid}}">
+    	<div class="photo_item" id="photo_item_{{pid}}">
 		    <a href="http://v.t.sina.com.cn/share/share.php?title={{sharecontent}}&pic=http://www.eau-thermale-avene.cn/preview/suncare-reflexe/api{{image}}" target="_blank" class="photo_item_share_link btn"></a>
-		    <div class="img">
+		    <div class="img" data-a="winner_node" data-d="nid={{pid}}">
 			    {{#if mobile}}
-			    <img style="width:100%;height:{{m_thumb_height}}px;" src="api{{thumb}}" />
+			    <img src="api{{thumb}}" />
 			    {{else}}
-			    <img style="width:100%;height:{{thumb_height}}px;" src="api{{thumb}}" />
+			    <img src="api{{thumb}}" />
 			    {{/if}}
 			    <div class="like_wrap">
 				    <div class="like_btn btn {{#if liked}}liked{{/if}}" data-a="like" data-d="pid={{pid}}"></div>
@@ -525,13 +527,13 @@
 		    
 		    {{#if is_share}}
 		    <div class="share-list">
-		    	<a class="weibo1" href="#">@xxxx</a>
-		    	<a class="weibo2" href="#">@xxxx</a>
+		    	<span class="weibo1">@获奖人姓名</span>
+		    	<span class="weibo2">@获奖人姓名</span>
 		    </div>
 		    {{else}}
 		    <div class="hot-list">
-		    	<a class="weibo1" href="#">@xxxx</a>
-		    	<a class="weibo2" href="#">@xxxx</a>
+			    <span class="weibo1">@获奖人姓名</span>
+			    <span class="weibo2">@获奖人姓名</span>
 		    </div>
 		    {{/if}}
 	    </div>
@@ -587,30 +589,39 @@
 	    <div class="popup rule-popup">
 		    <div class="popup-close btn" data-a="close_pop"></div>
 		    <div class="popup-body">
-			    <ul>
-				    <li>1. 参与资格: 均可参加本活动。</li>
-				    <li>2. 活动时间: 2014年05月05日-2014年06月08日</li>
-				    <li>3. 中奖名额: 分享奖、人气奖各一名</li>
-				    <li>4. 游戏方式:
-					    <ul>
-						    <li>1. 在微博上发布与防晒“小金刚”（雅漾清爽倍护便携防晒乳）的亲密合影，含有#雅漾尽情晒#并 @雅漾 官方微博。</li>
-						    <li>2. 你的照片将会展示在雅漾防晒专题网站上，并有大众进行评分。</li>
-						    <li>3. 原微博获得最多转发的用户将获得“分享奖”，在雅漾防晒专题网站上获得最多“喜欢”的用户将获得“人气奖”。</li>
-					    </ul>
-				    </li>
-				    <li>5. 领奖方式: 奖品将于中间名单公布的次月内，以快递形式寄出。奖品以实物为准。公布中奖名单，中奖者需7天内联系@雅漾 新浪官方微博领奖，若7天内未联系@雅漾 即视为自动放弃领奖资格。</li>
-				    <li>6. 活动须知:
-					    <ul>
-						    <li>1. 中奖者参加本次活动即视为授权活动主办方与本次活动相关的广告和宣传中无偿使用中奖者的名字、肖像和任何其他由其本人提供的个人信息，而无需再另行征求确认，中奖者提供的个人信息，活动主办方以及运营方承诺将采取合理的步骤进行保护，除非根据法律或政府的强制性规定，在未得到中奖者的许可之前，活动主办方及运营方承诺不将中奖者的个人信息提供给无关的第三方。</li>
-						    <li>2. 中奖者一经确认领取奖品，不得自行撤销、更改或转让，如遇意外，无法提供制定奖品，活动主办方有权以价值相仿的奖品替代，所有奖品不得兑换现金或作价销售。</li>
-						    <li>3. 如因中奖者个人原因不能履行奖项，视为自动放弃，活动主办方将不做任何形式赔偿。</li>
-						    <li>4. 如果发现有参加者在本次活动中使用不正当的手段参加活动，活动主办方有权在不事先通知的前提下取消其参加活动的资格。</li>
-						    <li>5. 活动主办方不对因网络传输原因而导致参加者提交的信息错误或延误担任何责任。</li>
-						    <li>6. 活动主办方、关联公司、广告公司、网络合作伙伴的员工及其家属不可参加此次活动，以示公允。</li>
-						    <li>7. 如遇不可抗力因素，活动主办方有权取消本次活动。</li>
-					    </ul>
-				    <li>7. 本活动最终解释权归雅漾所有。</li>
-			    </ul>
+			    <div class="popup-inner">
+				    <h3>活动时间：</h3>
+				    <p>2014年05月05日-2014年06月08日</p>
+
+				    <h3>中奖名额：</h3>
+				    <p>由雅漾在参加的用户中抽取幸运者。</p>
+				    <p>分享奖、人气奖各一组</p>
+
+				    <h3>游戏方式：</h3>
+				    <p>1. 在微博上发布与雅漾防晒“小金刚”（雅漾清爽倍护便携防晒乳）的合影及使用感受</p>
+				    <p>2. 并在发布的微博中含有 #约起来尽情晒# 微话题</p>
+				    <p>3. @雅漾 并 @ 一位好友</p>
+				    <p>* 删除相关活动微博，则视为自动放弃获奖资格。</p>
+
+				    <h3>活动奖品：</h3>
+				    <p>分享奖 (1组)：获得SONY NEX-5T微单套机1台，被@的好友获得雅漾防晒小金刚正装一支</p>
+				    <p>人气奖 (1组)：获得FENDI女士多色链条手提包1只，被@的好友获得雅漾防晒小金刚正装一支</p>
+
+				    <h3>领奖方式：</h3>
+				    <p>中奖名单将于2014年6月9日公布在活动网站及雅漾官方微博上。</p>
+				    <p>奖品将于中奖名单公布的次月内，以快递形式寄出。奖品以实物为准。</p>
+				    <p>公布中奖名单，中奖者需7天内联系@雅漾 新浪官方微博领奖，若7天内未联系@雅漾 即视为自动放弃领奖资格。</p>
+
+				    <h3>活动须知：</h3>
+				    <p>1. 中奖者参加本次活动即视为授权活动主办方与本次活动相关的广告和宣传中无偿使用中奖者的名字、肖像和任何其他由其本人提供的个人信息，而无需再另行征求确认，中奖者提供的个人信息，活动主办方以及运营方承诺将采取合理的步骤进行保护，除非根据法律或政府的强制性规定，在未得到中奖者的许可之前，活动主办方及运营方承诺不将中奖者的个人信<p>息提供给无关的第三方。</p>
+				    2. 中奖者一经确认领取奖品，不得自行撤销、更改或转让，如遇意外，无法提供制定奖品，活动主办方有权以价值相仿的奖品替代，所有奖品不得兑换现金或作价销售。</p>
+				    <p>3. 如因中奖者个人原因不能履行奖项，视为自动放弃，活动主办方将不做任何形式赔偿。</p>
+				    <p>4. 如果发现有参加者在本次活动中使用不正当的手段参加活动，活动主办方有权在不事先通知的前提下取消其参加活动的资格。</p>
+				    <p>5. 活动主办方不对因网络传输原因而导致参加者提交的信息错误或延误担任何责任。</p>
+				    <p>6. 活动主办方、关联公司、广告公司、网络合作伙伴的员工及其家属不可参加此次活动，以示公允。</p>
+				    <p>7. 如遇不可抗力因素，活动主办方有权取消本次活动。</p>
+				    <p>本活动最终解释权归雅漾所有。</p>
+			    </div>
 		    </div>
 	    </div>
     </script>

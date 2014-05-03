@@ -456,6 +456,31 @@ LP.use(['jquery' ,'api', 'easing', 'skrollr', 'flash-detect', 'hammer', 'transit
 		});
 	});
 
+	LP.action('winner_node', function(){
+
+		var node = $(this).parents('.winner-list').data('node')[0];
+		node.sharecontent = encodeURI(node.content).replace(new RegExp('#',"gm"),'%23');
+		LP.compile( 'node-zoom-template' , node , function( html ){
+
+			$('body').append(html);
+			$('.overlay').fadeIn();
+			var $symj_popup = $('.photo_item_pop').css('opacity',0);
+			var $img = $('.photo_item_pop img');
+			$img.ensureLoad(function(){
+				$(window).trigger('resize');
+				if(isIe6) {
+					var top = $(window).scrollTop() +  $(window).height()/2;
+				}
+				else {
+					top = '50%';
+				}
+				$symj_popup.fadeIn().animate({opacity:1,top:top},800,'easeOutQuart');
+				$('.symj_popup_loading').fadeOut();
+				preLoadImage(nodes);
+			});
+		});
+	});
+
 	//for next action
 	LP.action('next' , function( data ){
 		_currentNodeIndex++;
@@ -1268,7 +1293,9 @@ LP.use(['jquery' ,'api', 'easing', 'skrollr', 'flash-detect', 'hammer', 'transit
     // test demo
     // if page 8 , need to get award users
     if( $('#winner-list').length ){
-    	api.ajax('awardList', {pid: $('#winner-list').data('pid')}, function( result ){
+		// share winner
+    	api.ajax('awardList', {pid: $('#winner-list1').data('pid')}, function( result ){
+			$('#winner-list1').data('node', result.data);
     		$.each( result.data ,  function( i , node ){
 	    		node.thumb = node.image.replace('.jpg','_thumb.jpg');
 	            node.thumb_height = 225 * node.thumb_ratio;
@@ -1285,10 +1312,34 @@ LP.use(['jquery' ,'api', 'easing', 'skrollr', 'flash-detect', 'hammer', 'transit
 				//
 				node.is_share = true;
 	    		LP.compile( "node-winner-template" , node , function( html ){
-	    			$('#winner-list').append( html );
+	    			$('#winner-list1').append( html );
 	    		} );	
 	    	});
         });
+
+		// hot winner
+		api.ajax('awardList', {pid: $('#winner-list2').data('pid')}, function( result ){
+			$('#winner-list2').data('node', result.data);
+			$.each( result.data ,  function( i , node ){
+				node.thumb = node.image.replace('.jpg','_thumb.jpg');
+				node.thumb_height = 225 * node.thumb_ratio;
+				node.m_thumb_height = 297 * node.thumb_ratio;
+				node.sharecontent = encodeURI(node.content).replace(new RegExp('#',"gm"),'%23');
+				node.shortcontent = linkify(node.content);
+				if(node.content.length > 100) {
+					node.shortcontent = node.content.substring(0,100)+'...';
+				}
+				if(isMobile) {
+					node.mobile = true;
+				}
+
+				//
+				node.is_share = false;
+				LP.compile( "node-winner-template" , node , function( html ){
+					$('#winner-list2').append( html );
+				} );
+			});
+		});
     }
 });
 
