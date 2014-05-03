@@ -35,6 +35,11 @@ class GameController extends Controller
 		if (!$pagenum) {
 			$pagenum = 10;
 		}
+
+        $start_date = $request->getParam("start_date");
+        $end_date = $request->getParam("end_date");
+
+
 		$game = new Game();
 		$criteria=new CDbCriteria;
 		if($this->getRole() == 2) {
@@ -42,6 +47,17 @@ class GameController extends Controller
 		}
 
 		$count = $game->count($criteria);
+
+        if(intval($start_date))
+        {
+            $criteria->addCondition('datetime > :start_date OR datetime = :start_date');
+            $criteria->params=array(':start_date'=>$start_date);
+        }
+        if(intval($end_date))
+        {
+            $criteria->addCondition('datetime < :end_date OR datetime = :end_date');
+            $criteria->params=array(':end_date'=>$end_date);
+        }
 
 		$criteria->limit = $pagenum;
 		$criteria->offset = ($page - 1 ) * $pagenum;
@@ -93,7 +109,7 @@ class GameController extends Controller
     /**
      * 导出export。验证管理员权限
      */
-    public function actionExport($start_date,$end_date,$page=1,$pagenum=NULL)
+    public function actionExport($start_date,$end_date,$page=NULL,$pagenum=NULL)
     {
         if($this->getRole() != 2) {
             return;
@@ -102,9 +118,7 @@ class GameController extends Controller
         if (!$page) {
             $page = 1;
         }
-        if (!$pagenum) {
-            $pagenum = 10;
-        }
+
 
         $game = new Game();
         $criteria=new CDbCriteria;
@@ -118,8 +132,12 @@ class GameController extends Controller
         $criteria->group= 'tel';
         $criteria->order = 'datetime DESC';
         $criteria->having='count(tel) < 2';
-        $criteria->limit = $pagenum;
-        $criteria->offset = ($page - 1 ) * $pagenum;
+
+        if (!$pagenum) {
+            $criteria->limit = $pagenum;
+            $criteria->offset = ($page - 1 ) * $pagenum;
+        }
+
         $model = $game->findAll($criteria);
 
         if($model)
