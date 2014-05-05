@@ -48,15 +48,15 @@ class GameController extends Controller
 
 		$count = $game->count($criteria);
 
-        if(intval($start_date))
+        if(intval(strtotime($start_date)))
         {
             $criteria->addCondition('datetime > :start_date OR datetime = :start_date');
-            $criteria->params=array(':start_date'=>$start_date);
+            $criteria->params=array(':start_date'=>intval(strtotime($start_date)));
         }
-        if(intval($end_date))
+        if(intval(strtotime($end_date)))
         {
             $criteria->addCondition('datetime < :end_date OR datetime = :end_date');
-            $criteria->params=array(':end_date'=>$end_date);
+            $criteria->params=array(':end_date'=>intval(strtotime($end_date)));
         }
 
 		$criteria->limit = $pagenum;
@@ -128,7 +128,7 @@ class GameController extends Controller
 
         $criteria->select='*, count(tel)';
         $criteria->addCondition('(datetime > :start_date OR datetime = :start_date) AND (datetime < :end_date OR datetime = :end_date)');
-        $criteria->params=array(':start_date'=>$start_date,':end_date'=>$end_date);
+        $criteria->params=array(':start_date'=>intval(strtotime($start_date)),':end_date'=>intval(strtotime($end_date)));
         $criteria->group= 'tel';
         $criteria->order = 'datetime DESC';
         $criteria->having='count(tel) < 2';
@@ -172,7 +172,7 @@ class GameController extends Controller
 
         $count = $game->count($criteria);
         $criteria->addCondition('(datetime > :start_date OR datetime = :start_date) AND (datetime < :end_date OR datetime = :end_date)');
-        $criteria->params=array(':start_date'=>$start_date,':end_date'=>$end_date);
+        $criteria->params=array(':start_date'=>intval(strtotime($start_date)),':end_date'=>intval(strtotime($end_date)));
         $criteria->limit = $pagenum;
         $criteria->offset = ($page - 1 ) * $pagenum;
         $criteria->order = 'datetime DESC';
