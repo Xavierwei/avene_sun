@@ -410,9 +410,8 @@ body{background:#efdcc2 url('../img/bg.jpg') no-repeat center top;background-siz
 		.page5rule-con{font-size:15px;color:#7f7f7f;border:1px dashed #ff7311;padding:20px;width: 869px;position: absolute;left:0;top:52px;}
 
 	.award-popup{width: 950px;background: white;margin: -220px 0 0 -475px;}
-		.award-popup .popup-inner{margin:35px auto; text-align: center;text-align: center;}
+		.award-popup .popup-inner{margin:35px auto; text-align: center;text-align: center;height:400px;overflow:scroll;}
 		.award-popup .popup-inner table{width: 495px;margin: 10px auto 5px;font-size: 14px;}
-		.award-tables {height: 300px;overflow: scroll;}
 		.award-tit{height: 34px;background: url('../img/award-bg.png') no-repeat center 0;}
 		.award-bar{width: 495px; margin: 0 auto; background: #f6964a;color:white;font-size: 18px;line-height: 35px;margin-top: 15px;margin-bottom: 15px;}
 		.awardtable-tit{background: url('../img/award-bg.png') no-repeat center -50px; height: 20px;}
