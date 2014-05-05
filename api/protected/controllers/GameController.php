@@ -3,14 +3,14 @@
 class GameController extends Controller
 {
 
-//    public function behaviors()
-//    {
-//        return array(
-//            'eexcelview'=>array(
-//                'class'=>'ext.eexcelview.EExcelBehavior',
-//            ),
-//        );
-//    }
+    public function behaviors()
+    {
+        return array(
+            'eexcelview'=>array(
+                'class'=>'ext.eexcelview.EExcelBehavior',
+            ),
+        );
+    }
 
 	private $_answer = array(
 		'1_3', '2_2', '3_2'
@@ -141,12 +141,13 @@ class GameController extends Controller
         $criteria->order = 'datetime DESC';
         $criteria->having='count(tel) < 2';
 
-        if (!$pagenum) {
+        if ($pagenum) {
             $criteria->limit = $pagenum;
             $criteria->offset = ($page - 1 ) * $pagenum;
         }
 
         $model = $game->findAll($criteria);
+        var_dump($model);
 
         if($model)
         {
