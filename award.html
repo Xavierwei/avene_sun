@@ -43,12 +43,14 @@
 			<a class="wall-btn1" href="http://weibo.com/p/100808e3ea7024c6d4b3e75fed271f31f10289?k=%E7%BA%A6%E8%B5%B7%E6%9D%A5%E5%B0%BD%E6%83%85%E6%99%92&from=huati_topic" target="_blank"></a>
 			<a class="wall-btn3" href="wall.html"></a>
 		</div>
+		<!--<div class="winner-list-coming"></div>-->
 		<div id="winner-list" class="cs-clear">
 			<div id="winner-list1" class="winner-list" data-pid="20" data-type="share"></div>
 			<div id="winner-list2" class="winner-list" data-pid="25" data-type="hot"></div>
 		</div>
 		<div class="tester-list">
             <div class="testerpop-tit"></div>
+            <div class="award-testerpop-tit">(2014.4.18 – 2014.4.27)</div>
             <div class="testerpop-tablelist cs-clear">
                 <table border="0">
                     <tbody><tr>
@@ -508,6 +510,19 @@
     <script type="text/tpl" id="node-winner-template">
     	<div class="photo_item" id="photo_item_{{pid}}">
 		    <a href="http://v.t.sina.com.cn/share/share.php?title={{sharecontent}}&pic=http://www.eau-thermale-avene.cn/preview/suncare-reflexe/api{{image}}" target="_blank" class="photo_item_share_link btn"></a>
+
+		    {{#if is_share}}
+		    <div class="share-list">
+			    <span class="weibo1">@获奖人姓名</span>
+			    <span class="weibo2">@获奖人姓名</span>
+		    </div>
+		    {{else}}
+		    <div class="hot-list">
+			    <span class="weibo1">@获奖人姓名</span>
+			    <span class="weibo2">@获奖人姓名</span>
+		    </div>
+		    {{/if}}
+
 		    <div class="img" data-a="winner_node" data-d="nid={{pid}}">
 			    {{#if mobile}}
 			    <img src="api{{thumb}}" />
@@ -524,18 +539,7 @@
 			    	<div class="content-inner">{{{shortcontent}}}</div>
 			    </div>
 		    </div>
-		    
-		    {{#if is_share}}
-		    <div class="share-list">
-		    	<span class="weibo1">@获奖人姓名</span>
-		    	<span class="weibo2">@获奖人姓名</span>
-		    </div>
-		    {{else}}
-		    <div class="hot-list">
-			    <span class="weibo1">@获奖人姓名</span>
-			    <span class="weibo2">@获奖人姓名</span>
-		    </div>
-		    {{/if}}
+
 	    </div>
     </script>
 
