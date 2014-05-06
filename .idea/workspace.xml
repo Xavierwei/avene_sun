@@ -2,17 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5df1b99b-6417-4291-85ff-70d2ec065f1e" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/api/protected/runtime/application.log" afterPath="$PROJECT_DIR$/api/protected/runtime/application.log" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/award.html" afterPath="$PROJECT_DIR$/award.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/lp.base.js" afterPath="$PROJECT_DIR$/js/lp.base.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/style.css" afterPath="$PROJECT_DIR$/css/style.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/e-trial.html" afterPath="$PROJECT_DIR$/e-trial.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/experts.html" afterPath="$PROJECT_DIR$/experts.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/family.html" afterPath="$PROJECT_DIR$/family.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/game.html" afterPath="$PROJECT_DIR$/game.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kol.html" afterPath="$PROJECT_DIR$/kol.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/reflexe.html" afterPath="$PROJECT_DIR$/reflexe.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tester.html" afterPath="$PROJECT_DIR$/tester.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wall.html" afterPath="$PROJECT_DIR$/wall.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="avene_sun.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="5df1b99b-6417-4291-85ff-70d2ec065f1e" time="1399102696936" ignored="false" />
-    <file path="/index.html" changelist="5df1b99b-6417-4291-85ff-70d2ec065f1e" time="1396622943245" ignored="false" />
-    <file path="/style.css" changelist="5df1b99b-6417-4291-85ff-70d2ec065f1e" time="1399121322924" ignored="false" />
+    <file path="/Dummy.txt" changelist="5df1b99b-6417-4291-85ff-70d2ec065f1e" time="1399186119089" ignored="false" />
+    <file path="/index.html" changelist="5df1b99b-6417-4291-85ff-70d2ec065f1e" time="1399361804058" ignored="false" />
+    <file path="/style.css" changelist="5df1b99b-6417-4291-85ff-70d2ec065f1e" time="1399290502050" ignored="false" />
     <file path="/page1.html" changelist="5df1b99b-6417-4291-85ff-70d2ec065f1e" time="1395942867134" ignored="false" />
     <file path="/page2.html" changelist="5df1b99b-6417-4291-85ff-70d2ec065f1e" time="1395943648168" ignored="false" />
     <file path="/page3.html" changelist="5df1b99b-6417-4291-85ff-70d2ec065f1e" time="1395943778053" ignored="false" />
@@ -28,7 +34,7 @@
     <file path="$PROJECT_DIR$/../superboomi/themes/bartik/templates/page--video_page.tpl.php" changelist="5df1b99b-6417-4291-85ff-70d2ec065f1e" time="1396024544088" ignored="false" />
     <file path="$PROJECT_DIR$/../superboomi/themes/bartik/photowall/views-view-fields--video-page--page.tpl.php" changelist="5df1b99b-6417-4291-85ff-70d2ec065f1e" time="1396025383261" ignored="false" />
     <file path="/views-view-fields--video-page--page.tpl.php" changelist="5df1b99b-6417-4291-85ff-70d2ec065f1e" time="1396025376390" ignored="false" />
-    <file path="/lp.base.js" changelist="5df1b99b-6417-4291-85ff-70d2ec065f1e" time="1399123636954" ignored="false" />
+    <file path="/lp.base.js" changelist="5df1b99b-6417-4291-85ff-70d2ec065f1e" time="1399210151856" ignored="false" />
     <file path="/family.html" changelist="5df1b99b-6417-4291-85ff-70d2ec065f1e" time="1396500135231" ignored="false" />
     <file path="/reflexe.html" changelist="5df1b99b-6417-4291-85ff-70d2ec065f1e" time="1397574614214" ignored="false" />
     <file path="$PROJECT_DIR$/../pritchardgallery/sites/default/settings.php" changelist="5df1b99b-6417-4291-85ff-70d2ec065f1e" time="1396100898002" ignored="false" />
@@ -46,7 +52,7 @@
     <file path="$PROJECT_DIR$/../pritchardgallery/comment.php" changelist="5df1b99b-6417-4291-85ff-70d2ec065f1e" time="1396147486200" ignored="false" />
     <file path="/comment.php" changelist="5df1b99b-6417-4291-85ff-70d2ec065f1e" time="1396147485037" ignored="false" />
     <file path="/page-news.tpl.php" changelist="5df1b99b-6417-4291-85ff-70d2ec065f1e" time="1396147555118" ignored="false" />
-    <file path="/game.html" changelist="5df1b99b-6417-4291-85ff-70d2ec065f1e" time="1398687459033" ignored="false" />
+    <file path="/game.html" changelist="5df1b99b-6417-4291-85ff-70d2ec065f1e" time="1399178344672" ignored="false" />
     <file path="/GameController.php" changelist="5df1b99b-6417-4291-85ff-70d2ec065f1e" time="1396358814125" ignored="false" />
     <file path="/api.js" changelist="5df1b99b-6417-4291-85ff-70d2ec065f1e" time="1397190555918" ignored="false" />
     <file path="$PROJECT_DIR$/../../../XAMPP/xamppfiles/htdocs/tianzifang/sites/all/modules/swfupload/swfupload.module" changelist="5df1b99b-6417-4291-85ff-70d2ec065f1e" time="1396409570597" ignored="false" />
@@ -86,31 +92,30 @@
     <file path="/PhotoController.php" changelist="5df1b99b-6417-4291-85ff-70d2ec065f1e" time="1397202739736" ignored="false" />
     <file path="/wall.html" changelist="5df1b99b-6417-4291-85ff-70d2ec065f1e" time="1399103503551" ignored="false" />
     <file path="$PROJECT_DIR$/../ave_photowall/js/lp.base.js" changelist="5df1b99b-6417-4291-85ff-70d2ec065f1e" time="1396542219113" ignored="false" />
-    <file path="$PROJECT_DIR$/../bank_wall/js/lp.base.js" changelist="5df1b99b-6417-4291-85ff-70d2ec065f1e" time="1398691637506" ignored="false" />
-    <file path="$PROJECT_DIR$/../bank_wall/api/protected/controllers/NodeController.php" changelist="5df1b99b-6417-4291-85ff-70d2ec065f1e" time="1397205500911" ignored="false" />
-    <file path="$PROJECT_DIR$/../bank_wall/js/lp.base-m.js" changelist="5df1b99b-6417-4291-85ff-70d2ec065f1e" time="1398691851228" ignored="false" />
-    <file path="$PROJECT_DIR$/../bank_wall/api/protected/models/UserAR.live.php" changelist="5df1b99b-6417-4291-85ff-70d2ec065f1e" time="1396545927309" ignored="false" />
+    <file path="$PROJECT_DIR$/../bank_wall/js/lp.base.js" changelist="5df1b99b-6417-4291-85ff-70d2ec065f1e" time="1399257938063" ignored="false" />
+    <file path="$PROJECT_DIR$/../bank_wall/api/protected/controllers/NodeController.php" changelist="5df1b99b-6417-4291-85ff-70d2ec065f1e" time="1399295483048" ignored="false" />
+    <file path="$PROJECT_DIR$/../bank_wall/js/lp.base-m.js" changelist="5df1b99b-6417-4291-85ff-70d2ec065f1e" time="1399210173738" ignored="false" />
     <file path="$PROJECT_DIR$/../carambar/protected/controllers/SettingController.php" changelist="5df1b99b-6417-4291-85ff-70d2ec065f1e" time="1396784799934" ignored="false" />
     <file path="$PROJECT_DIR$/../bank_wall/api/simplesamlphp/config/authsources.php" changelist="5df1b99b-6417-4291-85ff-70d2ec065f1e" time="1396763483294" ignored="false" />
-    <file path="$PROJECT_DIR$/../bank_wall/lang/fr.po" changelist="5df1b99b-6417-4291-85ff-70d2ec065f1e" time="1396770546401" ignored="false" />
-    <file path="$PROJECT_DIR$/../bank_wall/include/tpl.php" changelist="5df1b99b-6417-4291-85ff-70d2ec065f1e" time="1396774299517" ignored="false" />
-    <file path="/tpl.php" changelist="5df1b99b-6417-4291-85ff-70d2ec065f1e" time="1396774270879" ignored="false" />
-    <file path="$PROJECT_DIR$/../bank_wall/css/layout.css" changelist="5df1b99b-6417-4291-85ff-70d2ec065f1e" time="1397192035902" ignored="false" />
-    <file path="/layout.css" changelist="5df1b99b-6417-4291-85ff-70d2ec065f1e" time="1397192022680" ignored="false" />
+    <file path="$PROJECT_DIR$/../bank_wall/lang/fr.po" changelist="5df1b99b-6417-4291-85ff-70d2ec065f1e" time="1399210097820" ignored="false" />
+    <file path="$PROJECT_DIR$/../bank_wall/include/tpl.php" changelist="5df1b99b-6417-4291-85ff-70d2ec065f1e" time="1399257704514" ignored="false" />
+    <file path="/tpl.php" changelist="5df1b99b-6417-4291-85ff-70d2ec065f1e" time="1399257704214" ignored="false" />
+    <file path="$PROJECT_DIR$/../bank_wall/css/layout.css" changelist="5df1b99b-6417-4291-85ff-70d2ec065f1e" time="1399359919135" ignored="false" />
+    <file path="/layout.css" changelist="5df1b99b-6417-4291-85ff-70d2ec065f1e" time="1399359917804" ignored="false" />
     <file path="$PROJECT_DIR$/../bank_wall/css/fonts.css" changelist="5df1b99b-6417-4291-85ff-70d2ec065f1e" time="1396763483294" ignored="false" />
     <file path="/fonts.css" changelist="5df1b99b-6417-4291-85ff-70d2ec065f1e" time="1396757477825" ignored="false" />
     <file path="/fr.po" changelist="5df1b99b-6417-4291-85ff-70d2ec065f1e" time="1396758093370" ignored="false" />
-    <file path="$PROJECT_DIR$/../bank_wall/lang/en.po" changelist="5df1b99b-6417-4291-85ff-70d2ec065f1e" time="1396770546401" ignored="false" />
-    <file path="/en.po" changelist="5df1b99b-6417-4291-85ff-70d2ec065f1e" time="1396764910160" ignored="false" />
+    <file path="$PROJECT_DIR$/../bank_wall/lang/en.po" changelist="5df1b99b-6417-4291-85ff-70d2ec065f1e" time="1399287855932" ignored="false" />
+    <file path="/en.po" changelist="5df1b99b-6417-4291-85ff-70d2ec065f1e" time="1399287855932" ignored="false" />
     <file path="/en.json" changelist="5df1b99b-6417-4291-85ff-70d2ec065f1e" time="1396759241373" ignored="false" />
-    <file path="$PROJECT_DIR$/../bank_wall/lang/en.json" changelist="5df1b99b-6417-4291-85ff-70d2ec065f1e" time="1396770546401" ignored="false" />
-    <file path="$PROJECT_DIR$/../bank_wall/lang/fr.json" changelist="5df1b99b-6417-4291-85ff-70d2ec065f1e" time="1396770546401" ignored="false" />
-    <file path="$PROJECT_DIR$/../bank_wall/m/css/layout.css" changelist="5df1b99b-6417-4291-85ff-70d2ec065f1e" time="1396770546401" ignored="false" />
-    <file path="$PROJECT_DIR$/../bank_wall/include/tpl_mobile.php" changelist="5df1b99b-6417-4291-85ff-70d2ec065f1e" time="1396765476919" ignored="false" />
+    <file path="$PROJECT_DIR$/../bank_wall/lang/en.json" changelist="5df1b99b-6417-4291-85ff-70d2ec065f1e" time="1399288403948" ignored="false" />
+    <file path="$PROJECT_DIR$/../bank_wall/lang/fr.json" changelist="5df1b99b-6417-4291-85ff-70d2ec065f1e" time="1399210366534" ignored="false" />
+    <file path="$PROJECT_DIR$/../bank_wall/m/css/layout.css" changelist="5df1b99b-6417-4291-85ff-70d2ec065f1e" time="1399186122156" ignored="false" />
+    <file path="$PROJECT_DIR$/../bank_wall/include/tpl_mobile.php" changelist="5df1b99b-6417-4291-85ff-70d2ec065f1e" time="1399263439473" ignored="false" />
     <file path="$PROJECT_DIR$/../bank_wall/api/css/ie.css" changelist="5df1b99b-6417-4291-85ff-70d2ec065f1e" time="1396767760222" ignored="false" />
     <file path="/ie.css" changelist="5df1b99b-6417-4291-85ff-70d2ec065f1e" time="1396767736482" ignored="false" />
     <file path="$PROJECT_DIR$/../bank_wall/css/ie8.css" changelist="5df1b99b-6417-4291-85ff-70d2ec065f1e" time="1396783198642" ignored="false" />
-    <file path="$PROJECT_DIR$/../bank_wall/js/ie8.js" changelist="5df1b99b-6417-4291-85ff-70d2ec065f1e" time="1396770546401" ignored="false" />
+    <file path="$PROJECT_DIR$/../bank_wall/js/ie8.js" changelist="5df1b99b-6417-4291-85ff-70d2ec065f1e" time="1399186122156" ignored="false" />
     <file path="/ie8.js" changelist="5df1b99b-6417-4291-85ff-70d2ec065f1e" time="1396769081990" ignored="false" />
     <file path="$PROJECT_DIR$/../carambar/protected/controllers/SettingController2.php" changelist="5df1b99b-6417-4291-85ff-70d2ec065f1e" time="1396780646222" ignored="false" />
     <file path="/ie8.css" changelist="5df1b99b-6417-4291-85ff-70d2ec065f1e" time="1396783198215" ignored="false" />
@@ -122,18 +127,32 @@
     <file path="$PROJECT_DIR$/../bank_wall/lang/country.po" changelist="5df1b99b-6417-4291-85ff-70d2ec065f1e" time="1397187575717" ignored="false" />
     <file path="/NodeAR.php" changelist="5df1b99b-6417-4291-85ff-70d2ec065f1e" time="1397189436541" ignored="false" />
     <file path="$PROJECT_DIR$/../bank_wall/api/protected/models/CountryAR.php" changelist="5df1b99b-6417-4291-85ff-70d2ec065f1e" time="1397188841748" ignored="false" />
-    <file path="/NodeController.php" changelist="5df1b99b-6417-4291-85ff-70d2ec065f1e" time="1397189902929" ignored="false" />
+    <file path="/NodeController.php" changelist="5df1b99b-6417-4291-85ff-70d2ec065f1e" time="1399294567326" ignored="false" />
     <file path="$PROJECT_DIR$/../bank_wall/api/protected/controllers/CountryController.php" changelist="5df1b99b-6417-4291-85ff-70d2ec065f1e" time="1397190515273" ignored="false" />
     <file path="/CountryController.php" changelist="5df1b99b-6417-4291-85ff-70d2ec065f1e" time="1397190486693" ignored="false" />
-    <file path="$PROJECT_DIR$/../bank_wall/js/api.js" changelist="5df1b99b-6417-4291-85ff-70d2ec065f1e" time="1397190579500" ignored="false" />
+    <file path="$PROJECT_DIR$/../bank_wall/js/api.js" changelist="5df1b99b-6417-4291-85ff-70d2ec065f1e" time="1399257491193" ignored="false" />
     <file path="$PROJECT_DIR$/../bank_wall/js/api-m.js" changelist="5df1b99b-6417-4291-85ff-70d2ec065f1e" time="1397190874586" ignored="false" />
     <file path="/lp.base-m.js" changelist="5df1b99b-6417-4291-85ff-70d2ec065f1e" time="1397190919975" ignored="false" />
     <file path="$PROJECT_DIR$/../bank_wall/api/protected/components/Controller.php" changelist="5df1b99b-6417-4291-85ff-70d2ec065f1e" time="1397191129932" ignored="false" />
     <file path="/Controller.php" changelist="5df1b99b-6417-4291-85ff-70d2ec065f1e" time="1397191119075" ignored="false" />
     <file path="/saetv2.ex.class.php" changelist="5df1b99b-6417-4291-85ff-70d2ec065f1e" time="1397202554847" ignored="false" />
     <file path="/a.php" changelist="5df1b99b-6417-4291-85ff-70d2ec065f1e" time="1398675345082" ignored="false" />
-    <file path="$PROJECT_DIR$/../bank_wall/api/protected/models/LikeAR.php" changelist="5df1b99b-6417-4291-85ff-70d2ec065f1e" time="1398682750315" ignored="false" />
-    <file path="/award.html" changelist="5df1b99b-6417-4291-85ff-70d2ec065f1e" time="1399123520217" ignored="false" />
+    <file path="$PROJECT_DIR$/../bank_wall/api/protected/models/LikeAR.php" changelist="5df1b99b-6417-4291-85ff-70d2ec065f1e" time="1399342539675" ignored="false" />
+    <file path="/award.html" changelist="5df1b99b-6417-4291-85ff-70d2ec065f1e" time="1399361817567" ignored="false" />
+    <file path="$PROJECT_DIR$/../bank_wall/api/protected/models/UserAR.php" changelist="5df1b99b-6417-4291-85ff-70d2ec065f1e" time="1399193224085" ignored="false" />
+    <file path="$PROJECT_DIR$/../bank_wall/api/protected/controllers/UserController.php" changelist="5df1b99b-6417-4291-85ff-70d2ec065f1e" time="1399193584104" ignored="false" />
+    <file path="/UserController.php" changelist="5df1b99b-6417-4291-85ff-70d2ec065f1e" time="1399193415051" ignored="false" />
+    <file path="$PROJECT_DIR$/../bank_wall/api/protected/controllers/UserController.live.php" changelist="5df1b99b-6417-4291-85ff-70d2ec065f1e" time="1399193594063" ignored="false" />
+    <file path="/login.php" changelist="5df1b99b-6417-4291-85ff-70d2ec065f1e" time="1399359949485" ignored="false" />
+    <file path="$PROJECT_DIR$/../bank_wall/login.php" changelist="5df1b99b-6417-4291-85ff-70d2ec065f1e" time="1399359949485" ignored="false" />
+    <file path="$PROJECT_DIR$/../bank_wall/js/lp.login.js" changelist="5df1b99b-6417-4291-85ff-70d2ec065f1e" time="1399207272816" ignored="false" />
+    <file path="/lp.login.js" changelist="5df1b99b-6417-4291-85ff-70d2ec065f1e" time="1399207272816" ignored="false" />
+    <file path="$PROJECT_DIR$/../bank_wall/PyGmail/gmailclean.py" changelist="5df1b99b-6417-4291-85ff-70d2ec065f1e" time="1399257491193" ignored="false" />
+    <file path="$PROJECT_DIR$/../bank_wall/api/protected/config/main.php" changelist="5df1b99b-6417-4291-85ff-70d2ec065f1e" time="1399259224525" ignored="false" />
+    <file path="/tpl_mobile.php" changelist="5df1b99b-6417-4291-85ff-70d2ec065f1e" time="1399263439027" ignored="false" />
+    <file path="$PROJECT_DIR$/../sgwall_production_0505/main.php" changelist="5df1b99b-6417-4291-85ff-70d2ec065f1e" time="1399266974091" ignored="false" />
+    <file path="$PROJECT_DIR$/../sgwall_production_0505_8_new/main.php" changelist="5df1b99b-6417-4291-85ff-70d2ec065f1e" time="1399295997152" ignored="false" />
+    <file path="$PROJECT_DIR$/../bank_wall/api/protected/controllers/LikeController.php" changelist="5df1b99b-6417-4291-85ff-70d2ec065f1e" time="1399351180314" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -153,12 +172,54 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="lp.base.js" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/js/lp.base.js">
+      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="460" column="67" selection-start="13899" selection-end="13899" vertical-scroll-proportion="0.3875124">
+            <state line="68" column="37" selection-start="3612" selection-end="3612" vertical-scroll-proportion="-24.857143">
               <folding>
-                <element signature="n#!!doc" expanded="true" />
+                <marker date="1399361907000" expanded="true" signature="7013:7114" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="experts.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/experts.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="42" column="38" selection-start="2093" selection-end="2093" vertical-scroll-proportion="-12.892858">
+              <folding>
+                <marker date="1399361829000" expanded="true" signature="7153:7254" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="e-trial.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/e-trial.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="42" column="38" selection-start="2047" selection-end="2047" vertical-scroll-proportion="-28.5">
+              <folding>
+                <marker date="1399361879000" expanded="true" signature="26086:26187" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="demo.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/demo.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="comingsoon.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/comingsoon.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
+              <folding>
+                <marker date="1396619322000" expanded="true" signature="4115:4216" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -167,9 +228,56 @@
       <file leaf-file-name="award.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/award.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="46" column="53" selection-start="2346" selection-end="2357" vertical-scroll-proportion="-16.714285">
+            <state line="32" column="38" selection-start="1576" selection-end="1580" vertical-scroll-proportion="-21.714285">
               <folding>
-                <marker date="1399123523000" expanded="true" signature="23414:23515" placeholder="..." />
+                <element signature="n#style#0;n#img#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#script#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#1;n#div#0;n#div#0;n#script#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="family.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/family.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="42" column="38" selection-start="2101" selection-end="2101" vertical-scroll-proportion="-28.5">
+              <folding>
+                <marker date="1399361836000" expanded="true" signature="8390:8491" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="game.html" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/game.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="56" column="41" selection-start="2852" selection-end="2852" vertical-scroll-proportion="0.6024465">
+              <folding>
+                <element signature="n#style#0;n#div#3;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <marker date="1399361944000" expanded="true" signature="20622:20723" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="kol.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/kol.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="42" column="38" selection-start="2097" selection-end="2097" vertical-scroll-proportion="-28.5">
+              <folding>
+                <marker date="1399361846000" expanded="true" signature="8431:8532" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="reflexe.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/reflexe.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="43" column="38" selection-start="2103" selection-end="2103" vertical-scroll-proportion="-27.142857">
+              <folding>
+                <marker date="1399361852000" expanded="true" signature="9827:9928" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -193,22 +301,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/family.html" />
-        <option value="$PROJECT_DIR$/experts.html" />
-        <option value="$PROJECT_DIR$/kol.html" />
-        <option value="$PROJECT_DIR$/tester.html" />
-        <option value="$PROJECT_DIR$/api/protected/models/Photo.php" />
         <option value="$PROJECT_DIR$/api/sinasdk/saetv2.ex.class.php" />
         <option value="$PROJECT_DIR$/api/protected/controllers/PhotoController.php" />
-        <option value="$PROJECT_DIR$/e-trial.html" />
-        <option value="$PROJECT_DIR$/reflexe.html" />
         <option value="$PROJECT_DIR$/js/plugin/jquery.easing.1.3.js" />
-        <option value="$PROJECT_DIR$/api/protected/controllers/GameController.php" />
-        <option value="$PROJECT_DIR$/game.html" />
-        <option value="$PROJECT_DIR$/wall.html" />
-        <option value="$PROJECT_DIR$/css/style.css" />
-        <option value="$PROJECT_DIR$/award.html" />
         <option value="$PROJECT_DIR$/js/lp.base.js" />
+        <option value="$PROJECT_DIR$/css/style.css" />
+        <option value="$PROJECT_DIR$/api/protected/controllers/GameController.php" />
+        <option value="$PROJECT_DIR$/award.html" />
+        <option value="$PROJECT_DIR$/experts.html" />
+        <option value="$PROJECT_DIR$/family.html" />
+        <option value="$PROJECT_DIR$/kol.html" />
+        <option value="$PROJECT_DIR$/reflexe.html" />
+        <option value="$PROJECT_DIR$/tester.html" />
+        <option value="$PROJECT_DIR$/wall.html" />
+        <option value="$PROJECT_DIR$/e-trial.html" />
+        <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/game.html" />
       </list>
     </option>
   </component>
@@ -261,7 +369,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -364,6 +471,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -371,8 +479,8 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="options.lastSelected" value="editor.preferences.appearance" />
     <property name="FullScreen" value="false" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -430,7 +538,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.204005" sideWeight="0.6704846" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20650813" sideWeight="0.6704846" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -506,118 +614,141 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/api/protected/models/Photo.php">
+    <entry file="file://$PROJECT_DIR$/js/lp.base.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="131" column="29" selection-start="4058" selection-end="4058" vertical-scroll-proportion="0.46341464" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/sinasdk/config.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="31" selection-start="27" selection-end="37" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="92" column="0" selection-start="4614" selection-end="4646" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/e-trial.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="155" column="33" selection-start="7321" selection-end="7321" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/sinasdk/saetv2.ex.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="592" column="22" selection-start="15204" selection-end="15204" vertical-scroll-proportion="0.019367991">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/plugin/jquery.easing.1.3.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="46" column="8" selection-start="2097" selection-end="2097" vertical-scroll-proportion="0.018590998">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/reflexe.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="165" column="0" selection-start="9353" selection-end="9353" vertical-scroll-proportion="0.55453616">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/config.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="22" selection-start="383" selection-end="389" vertical-scroll-proportion="0.018590998">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/api.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="0" selection-start="16" selection-end="16" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1027" column="0" selection-start="86314" selection-end="86314" vertical-scroll-proportion="0.14271556">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wall.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="199" column="22" selection-start="8748" selection-end="8748" vertical-scroll-proportion="-31.642857">
+        <state line="472" column="17" selection-start="14347" selection-end="14347" vertical-scroll-proportion="0.24479683">
           <folding>
-            <marker date="1399104216000" expanded="true" signature="-1:-1" placeholder="..." />
+            <element signature="n#!!doc" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/api/protected/controllers/PhotoController.php">
+    <entry file="file://$PROJECT_DIR$/../bank_wall/api/protected/models/UserAR.live.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="246" column="26" selection-start="6741" selection-end="6741" vertical-scroll-proportion="4.764526">
+        <state line="88" column="9" selection-start="1930" selection-end="1930" vertical-scroll-proportion="0.03160041">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/api/protected/controllers/GameController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="84" column="25" selection-start="1728" selection-end="1728" vertical-scroll-proportion="0.08970439">
+        <state line="151" column="18" selection-start="3652" selection-end="3652" vertical-scroll-proportion="0.16717635">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/game.html">
+    <entry file="file://$PROJECT_DIR$/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="288" column="41" selection-start="16178" selection-end="16203" vertical-scroll-proportion="0.8715596">
+        <state line="460" column="121" selection-start="41207" selection-end="41207" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wall.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="31" column="41" selection-start="1510" selection-end="1510" vertical-scroll-proportion="-21.035715">
           <folding>
-            <element signature="n#style#0;n#div#3;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <marker date="1399361862000" expanded="true" signature="-1:-1" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tester.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="32" column="38" selection-start="1584" selection-end="1584" vertical-scroll-proportion="-21.714285">
+          <folding>
+            <marker date="1399361857000" expanded="true" signature="-1:-1" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/reflexe.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="43" column="38" selection-start="2103" selection-end="2103" vertical-scroll-proportion="-27.142857">
+          <folding>
+            <marker date="1399361852000" expanded="true" signature="9827:9928" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kol.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="42" column="38" selection-start="2097" selection-end="2097" vertical-scroll-proportion="-28.5">
+          <folding>
+            <marker date="1399361846000" expanded="true" signature="8431:8532" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/family.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="42" column="38" selection-start="2101" selection-end="2101" vertical-scroll-proportion="-28.5">
+          <folding>
+            <marker date="1399361836000" expanded="true" signature="8390:8491" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/experts.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="42" column="38" selection-start="2093" selection-end="2093" vertical-scroll-proportion="-12.892858">
+          <folding>
+            <marker date="1399361829000" expanded="true" signature="7153:7254" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/e-trial.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="42" column="38" selection-start="2047" selection-end="2047" vertical-scroll-proportion="-28.5">
+          <folding>
+            <marker date="1399361879000" expanded="true" signature="26086:26187" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/demo.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/comingsoon.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding>
+            <marker date="1396619322000" expanded="true" signature="4115:4216" placeholder="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/award.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="46" column="53" selection-start="2346" selection-end="2357" vertical-scroll-proportion="-16.714285">
+        <state line="32" column="38" selection-start="1576" selection-end="1580" vertical-scroll-proportion="-21.714285">
           <folding>
-            <marker date="1399123523000" expanded="true" signature="23414:23515" placeholder="..." />
+            <element signature="n#style#0;n#img#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#script#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#1;n#div#0;n#div#0;n#script#2;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/lp.base.js">
+    <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="460" column="67" selection-start="13899" selection-end="13899" vertical-scroll-proportion="0.3875124">
+        <state line="68" column="37" selection-start="3612" selection-end="3612" vertical-scroll-proportion="-24.857143">
           <folding>
-            <element signature="n#!!doc" expanded="true" />
+            <marker date="1399361907000" expanded="true" signature="7013:7114" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/game.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="56" column="41" selection-start="2852" selection-end="2852" vertical-scroll-proportion="0.6024465">
+          <folding>
+            <element signature="n#style#0;n#div#3;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <marker date="1399361944000" expanded="true" signature="20622:20723" placeholder="..." />
           </folding>
         </state>
       </provider>
