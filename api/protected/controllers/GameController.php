@@ -26,9 +26,9 @@ class GameController extends Controller
 
 	public function actionList()
 	{
-        // if($this->getRole() != 2) {
-        //     return;
-        // }
+         if($this->getRole() != 2) {
+             return;
+         }
 		$request = Yii::app()->getRequest();
 		$page = $request->getParam("page");
 		if (!$page) {
@@ -128,9 +128,9 @@ class GameController extends Controller
      */
     public function actionExport($start_date=NULL,$end_date=NULL,$page=NULL,$pagenum=NULL)
     {
-        // if($this->getRole() != 2) {
-        //     return;
-        // }
+         if($this->getRole() != 2) {
+             return;
+         }
 
         if (!$page) {
             $page = 1;
