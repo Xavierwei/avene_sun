@@ -57,6 +57,7 @@ class GameController extends Controller
 
 		$count = $game->count($criteria);
 
+		ini_set('date.timezone','Asia/Chongqing');
         $start_date=intval(strtotime($start_date));
         $end_date=intval(strtotime($end_date));
 
@@ -96,6 +97,9 @@ class GameController extends Controller
 		$email = $request->getPost('email');
 		$tel = $request->getPost('tel');
         $address=$request->getPost('address');
+		if(!$address || empty($address)) {
+			exit();
+		}
 		$game = new Game();
 		$game->name = $name;
 		$game->email = $email;
@@ -144,7 +148,8 @@ class GameController extends Controller
         //select *, count(tel) from game group by tel having count(tel) < 2
 
         $criteria->select='*, count(tel)';
-        
+
+	    ini_set('date.timezone','Asia/Chongqing');
         $start_date=intval(strtotime($start_date));
         $end_date=intval(strtotime($end_date));
         // echo $start_date."<br>";
