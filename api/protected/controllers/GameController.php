@@ -26,6 +26,9 @@ class GameController extends Controller
 
 	public function actionList()
 	{
+        if($this->getRole() != 2) {
+            return;
+        }
 		$request = Yii::app()->getRequest();
 		$page = $request->getParam("page");
 		if (!$page) {
