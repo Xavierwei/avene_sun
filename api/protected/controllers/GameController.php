@@ -39,29 +39,42 @@ class GameController extends Controller
         $start_date = $request->getParam("start_date");
         $end_date = $request->getParam("end_date");
 
+//        echo $start_date."<br>";
+//        echo $end_date."<br>";
+//        echo intval(strtotime($start_date))."<br>";
+//        echo intval(strtotime($end_date))."<br>";
+//        die;
+
 
 		$game = new Game();
 		$criteria=new CDbCriteria;
-		if($this->getRole() == 2) {
-			$criteria->select='*';
-		}
+//		if($this->getRole() == 2) {
+//		$criteria->select='*,count(tel)';
+//		}
 
 		$count = $game->count($criteria);
 
-        if(intval(strtotime($start_date)))
+        $start_date=intval(strtotime($start_date));
+        $end_date=intval(strtotime($end_date));
+
+        if($start_date)
         {
             $criteria->addCondition('datetime > :start_date OR datetime = :start_date');
-            $criteria->params=array(':start_date'=>intval(strtotime($start_date)));
+            $criteria->params=array(':start_date'=>$start_date);
         }
         if(intval(strtotime($end_date)))
         {
             $criteria->addCondition('datetime < :end_date OR datetime = :end_date');
-            $criteria->params=array(':end_date'=>intval(strtotime($end_date)));
+            echo strtotime($end_date);
+            $criteria->params=array(':end_date'=>$end_date);
         }
 
+        $criteria->select='*,count(tel)';
 		$criteria->limit = $pagenum;
 		$criteria->offset = ($page - 1 ) * $pagenum;
-		$criteria->order = 'datetime DESC';
+        $criteria->group= 'tel';
+        $criteria->order = 'datetime DESC';
+        $criteria->having='count(tel) < 2';
 		$games = $game->findAll($criteria);
 
 		$retdata = array();
@@ -147,7 +160,7 @@ class GameController extends Controller
         }
 
         $model = $game->findAll($criteria);
-        var_dump($model);
+//        var_dump($model);
 
         if($model)
         {
