@@ -462,7 +462,7 @@ body{background:#efdcc2 url('../img/bg.jpg') no-repeat center top;background-siz
     #winner-list .weibo1,#winner-list .weibo2{position: absolute;top: 65px;color: white;left: 60px;font-size: 14px;width: 126px;text-align: center;}
     #winner-list .weibo2{left: 285px;}
 
-    .tester-list{ padding-bottom: 30px; margin-bottom: 30px; background: #fdf2e4;overflow: hidden;margin-top: 20px; font-size: 14px;color: #7f7f7f;}
+    .tester-list{display:none; padding-bottom: 30px; margin-bottom: 30px; background: #fdf2e4;overflow: hidden;margin-top: 20px; font-size: 14px;color: #7f7f7f;}
     .tester-list table{margin-left: 75px;float: left;text-align: center;}
     .tester-list .testerpop-tablelist{height: 288px;overflow: scroll;}
 
