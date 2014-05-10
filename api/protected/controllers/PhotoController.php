@@ -70,6 +70,8 @@ class PhotoController extends Controller
 		if (!isset($status)) {
 			$status = 1;
 		}
+		$pid = $request->getParam("pid");
+
 		$photo = new Photo();
 		$criteria=new CDbCriteria;
 		if($this->getRole() == 2) {
@@ -83,8 +85,12 @@ class PhotoController extends Controller
 			$criteria->params=array(':status'=>$status);
 		}
 		else {
-		  $criteria->condition='status=:status';
-		  $criteria->params=array(':status'=>1);
+			$criteria->condition='status=:status';
+			$criteria->params=array(':status'=>1);
+		}
+		if(isset($pid)) {
+			$criteria->condition='pid=:pid';
+			$criteria->params=array(':pid'=>$pid);
 		}
 		$criteria->limit = $pagenum;
 		$criteria->offset = ($page - 1 ) * $pagenum;
