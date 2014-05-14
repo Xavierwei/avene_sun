@@ -7,13 +7,27 @@ AveneAdminController
             param = {start_date: $scope.start_date , end_date: $scope.end_date};
             GameService.list( param ,  function(res){
 	            $scope.games = res.data;
+                $scope.bigTotalItems = res.message;
 	        });
         }
 
     	var param = {start_date: $scope.start_date , end_date: $scope.end_date};
         GameService.list( param ,  function(res){
             $scope.games = res.data;
+            $scope.bigTotalItems = res.message;
+            $scope.noOfPages = 0;
+            $scope.currentPage = 1;
+            $scope.itemsPerPage = 10;
+            $scope.maxSize = 5;
+            $scope.numPages = 10;
         });
+
+        $scope.pageChanged = function (page) {
+            param.page = page;
+            GameService.list(param, function(data){
+                $scope.games = data.data;
+            });
+        };
 
 //        $scope.delete = function(winner) {
 //            var modalInstance = $modal.open({

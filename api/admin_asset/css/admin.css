@@ -46,7 +46,7 @@ a:hover {color:#888;}
 
 .page {width:90%;margin:0 auto;color:#666;}
 
-.refresh {font-size:22px;float:right;margin:24px 0 0 0;cursor: pointer;}
+.refresh {font-size:22px;float:right;margin:24px 0 20px 0;cursor: pointer;}
 .refresh:hover {opacity:0.6;}
 
 .production h3 {font-size:24px;margin:40px 0 5px 0;}

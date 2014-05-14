@@ -39,3 +39,5 @@
 	    <td>{{game.datetime*1000 | date:'MMM d, y HH:mm a'}}</td>
     </tr>
 </table>
+<div class="clear"></div>
+<pagination on-select-page="pageChanged(page)" total-items="bigTotalItems" items-per-page="itemsPerPage" page="bigCurrentPage" max-size="maxSize" class="pagination-sm" boundary-links="true" rotate="false" num-pages="numPages"></pagination>

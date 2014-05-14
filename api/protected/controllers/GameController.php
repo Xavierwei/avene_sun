@@ -55,11 +55,10 @@ class GameController extends Controller
 //		$criteria->select='*,count(tel)';
 //		}
 
-		$count = $game->count($criteria);
 
 		ini_set('date.timezone','Asia/Chongqing');
         $start_date=intval(strtotime($start_date));
-        $end_date=intval(strtotime($end_date));
+        $end_date=intval(strtotime($end_date.' 23:59:59'));
 
         if($start_date)
         {
@@ -75,11 +74,15 @@ class GameController extends Controller
 
 
         $criteria->select='*,count(tel)';
-		$criteria->limit = $pagenum;
-		$criteria->offset = ($page - 1 ) * $pagenum;
         $criteria->group= 'tel';
         $criteria->order = 'datetime DESC';
         $criteria->having='count(tel) < 2';
+
+
+        $count = $game->count($criteria);
+
+        $criteria->limit = $pagenum;
+        $criteria->offset = ($page - 1 ) * $pagenum;
 		$games = $game->findAll($criteria);
 
 		$retdata = array();
@@ -151,7 +154,7 @@ class GameController extends Controller
 
 	    ini_set('date.timezone','Asia/Chongqing');
         $start_date=intval(strtotime($start_date));
-        $end_date=intval(strtotime($end_date));
+        $end_date=intval(strtotime($end_date.' 23:59:59'));
         // echo $start_date."<br>";
         // echo $end_date;
         // die;
